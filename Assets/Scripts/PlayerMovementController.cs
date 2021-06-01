@@ -5,43 +5,53 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovementController : MonoBehaviour
 {
-    public float runSpeed = 2;
-    public float strafeSpeed = 20;
-    public float jumpForce = 400;
+    [Header("Run/Jumping")]
+    [SerializeField] float runSpeed = 2;
+    [SerializeField] float jumpForce = 400;
 
-    public float timeToDoubleTap = .5f;
-    public float strafeLength = .5f;
-    public float strafeCooldown = 1.0f;
-    float tapTime = 0;
+    [Header("Strafing")]
+    [SerializeField] float strafeSpeed = 20;
+    [SerializeField] float timeToDoubleTap = .5f;
+    [SerializeField] float strafeLength = .5f;
+    [SerializeField] float strafeCooldown = 1.0f;
+
+    Dictionary<InputControl,float> tapTime;
     float strafeTimer = 0;
 
-    PlayerControls controls;
-
-    public bool onLand = true;
-    public bool onGround = false;
-
-    public Vector2 inputDir;
-
+    [Header("Physics Checks")]
+    [SerializeField] float checkRadius = 0.1f;
     public Transform groundCheck;
-    public float groundCheckRadius = 0.1f;
-    public LayerMask groundLayer;
+    public Transform[] leftWallCheck;
+    public Transform[] rightWallCheck;
+    [SerializeField] LayerMask groundLayer;
+    [SerializeField] LayerMask waterLayer;
+    [SerializeField] bool onLand = true;
+    [SerializeField] bool onGround = false;
+    [SerializeField] bool walledLeft = false;
+    [SerializeField] bool walledRight = false;
 
+    PlayerControls controls;
     Rigidbody2D rb;
+    Vector2 inputDir;
 
     void Awake()
     {
         controls = new PlayerControls();
 
-        controls.Player.Strafe.performed += _ => AttemptStrafe();
         controls.Player.Jump.performed += _ => AttemptJump();
 
-       // controls.Player.MovementInput.performed += ctx => UpdateDirInput(ctx.ReadValue<Vector2>());
+        controls.Player.Strafe.performed += ctx => AttemptStrafe(ctx.control);
+
+        controls.Player.MovementInput.performed += ctx => UpdateDirInput(ctx.ReadValue<Vector2>());
+        controls.Player.MovementInput.started += ctx => UpdateDirInput(ctx.ReadValue<Vector2>());
+        controls.Player.MovementInput.canceled += ctx => UpdateDirInput(ctx.ReadValue<Vector2>());
     }
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        tapTime = new Dictionary<InputControl, float>();
     }
 
     private void OnEnable()
@@ -64,14 +74,34 @@ public class PlayerMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        InputCheck();
-        if (tapTime > 0) tapTime -= Time.deltaTime;
-        if (strafeTimer > 0) strafeTimer -= Time.deltaTime;
+        //InputCheck();
+        if(tapTime.Count > 0)
+        foreach (InputControl e in new ArrayList(tapTime.Keys))
+        {
+            if (tapTime[e] > 0) tapTime[e] -= Time.deltaTime;
+        }
     }
 
     void FixedUpdate()
     {
+
+        if (strafeTimer > 0) strafeTimer -= Time.fixedDeltaTime;
+
         CheckForGround();
+        CheckForWalls(ref walledLeft,ref leftWallCheck);
+        CheckForWalls(ref walledRight,ref rightWallCheck);
+
+        if(strafeTimer < strafeCooldown)
+        {
+            if(walledLeft)
+            {
+                inputDir.x = Mathf.Max(0, inputDir.x);
+            }
+            else if(walledRight)
+            {
+                inputDir.x = Mathf.Min(0, inputDir.x);
+            }
+        }
 
         if (onLand)
         {
@@ -85,7 +115,26 @@ public class PlayerMovementController : MonoBehaviour
 
     void CheckForGround()
     {
-        onGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer) != null;
+        onGround = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer) != null;
+
+        bool prevLand = onLand;
+        onLand = Physics2D.OverlapCircle(groundCheck.position, checkRadius, waterLayer) == null;
+        
+        if(onLand && !prevLand)
+        {
+            //strafeTimer = Mathf.Min(strafeTimer, strafeCooldown);
+            rb.velocity = new Vector2(rb.velocity.x,0);
+            rb.AddForce(new Vector2(0, jumpForce/2));
+        }
+    }
+
+    void CheckForWalls(ref bool result, ref Transform[] checks)
+    {
+        result = false;
+        foreach(Transform t in checks)
+        {
+            result = result || Physics2D.OverlapCircle(t.position, checkRadius, groundLayer) != null;
+        }
     }
 
     void InputCheck()
@@ -101,14 +150,18 @@ public class PlayerMovementController : MonoBehaviour
 
     void WaterMovement()
     {
+        Vector2 vel;
+
         rb.gravityScale = .5f;
 
         float speed = runSpeed;
         if (strafeTimer > strafeCooldown)
             speed = strafeSpeed;
 
-        if(Mathf.Abs(inputDir.y) > .1f) rb.velocity = inputDir * speed;
-        else rb.velocity = new Vector2(inputDir.x * speed, rb.velocity.y);
+        if(Mathf.Abs(inputDir.y) > .1f) vel = inputDir * speed;
+        else vel = new Vector2(inputDir.x * speed, rb.velocity.y);
+
+        rb.velocity = Vector2.Lerp(rb.velocity,vel,.2f);
     }
 
     void GroundMovement()
@@ -126,23 +179,33 @@ public class PlayerMovementController : MonoBehaviour
     {
         if (onGround)
         {
+            rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, jumpForce));
             onGround = false;
         }
     }
 
-    public void AttemptStrafe()
+    public void AttemptStrafe(InputControl key)
     {
-        if (tapTime > 0 && strafeTimer <= 0)
+        if(!tapTime.ContainsKey(key))
+        {
+            tapTime.Add(key, 0);
+        }
+
+        float time = tapTime[key];
+
+        if (time > 0 && strafeTimer <= 0)
         {
             strafeTimer = strafeLength + strafeCooldown;
-            tapTime = 0;
-            Debug.Log("stafe");
+            time = 0;
         }
         else
         {
-            tapTime = timeToDoubleTap;
-            Debug.Log("click detect");
+            time = timeToDoubleTap;
         }
+
+        //Debug.Log(key.name);
+
+        tapTime[key] = time;
     }
 }

@@ -25,10 +25,10 @@ public class PlayerMovementController : MonoBehaviour
     public Transform[] rightWallCheck;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] LayerMask waterLayer;
-    [SerializeField] bool onLand = true;
-    [SerializeField] bool onGround = false;
-    [SerializeField] bool walledLeft = false;
-    [SerializeField] bool walledRight = false;
+    bool onLand = true;
+    bool onGround = false;
+    bool walledLeft = false;
+    bool walledRight = false;
 
     PlayerControls controls;
     Rigidbody2D rb;

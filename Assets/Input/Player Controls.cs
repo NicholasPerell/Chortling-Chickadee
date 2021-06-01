@@ -41,6 +41,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Mouse Pos"",
+                    ""type"": ""Value"",
+                    ""id"": ""0b9c7200-6765-4074-8b5c-3182fc9927bd"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -100,10 +108,76 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""4bbbe719-5973-4df4-baef-5165a4318906"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement Input"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""84c6c843-cbfd-4967-bd1c-3f2bdb4aa8a5"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement Input"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""717e9350-316f-4bf3-9a9d-46e0e38512b6"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement Input"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""a0dd99ca-1b13-4e8f-b250-f65a8df40ca6"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement Input"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""84e95714-36bf-4385-a38d-9df5eacdf48c"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement Input"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""d51eaf63-3663-4eb8-8026-dff79614eddf"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b9437662-71d4-4013-97b1-6bb5253515ff"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Jump"",
@@ -153,6 +227,61 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""Strafe"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8e994cf4-86c1-40fd-98e2-b46fd1970e4e"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Strafe"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""36416c9b-37af-4ecf-8b25-0eb9b5e0c879"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Strafe"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1bef0f10-14f7-45a4-8051-6fadf4e08393"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Strafe"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3410df5a-c693-429c-857e-bbcc01400b89"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Strafe"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7b64ee1b-8715-4398-aecf-fb5fe4ca9942"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Mouse Pos"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -164,6 +293,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Player_MovementInput = m_Player.FindAction("Movement Input", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Strafe = m_Player.FindAction("Strafe", throwIfNotFound: true);
+        m_Player_MousePos = m_Player.FindAction("Mouse Pos", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -216,6 +346,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_MovementInput;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Strafe;
+    private readonly InputAction m_Player_MousePos;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -223,6 +354,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @MovementInput => m_Wrapper.m_Player_MovementInput;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Strafe => m_Wrapper.m_Player_Strafe;
+        public InputAction @MousePos => m_Wrapper.m_Player_MousePos;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -241,6 +373,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Strafe.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStrafe;
                 @Strafe.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStrafe;
                 @Strafe.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStrafe;
+                @MousePos.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMousePos;
+                @MousePos.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMousePos;
+                @MousePos.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMousePos;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -254,6 +389,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Strafe.started += instance.OnStrafe;
                 @Strafe.performed += instance.OnStrafe;
                 @Strafe.canceled += instance.OnStrafe;
+                @MousePos.started += instance.OnMousePos;
+                @MousePos.performed += instance.OnMousePos;
+                @MousePos.canceled += instance.OnMousePos;
             }
         }
     }
@@ -263,5 +401,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnMovementInput(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnStrafe(InputAction.CallbackContext context);
+        void OnMousePos(InputAction.CallbackContext context);
     }
 }

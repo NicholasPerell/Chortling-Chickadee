@@ -96,9 +96,10 @@ GameObject:
   - component: {fileID: 5069705327537142899}
   - component: {fileID: 5069705327537142900}
   - component: {fileID: 5069705327537142896}
+  - component: {fileID: 3415133064175695874}
   m_Layer: 0
   m_Name: Player Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -244,10 +245,24 @@ MonoBehaviour:
   waterLayer:
     serializedVersion: 2
     m_Bits: 16
-  onLand: 1
-  onGround: 0
-  walledLeft: 0
-  walledRight: 0
+--- !u!114 &3415133064175695874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5069705327537142901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ddf1c9937b105f4d8f32caae06c9802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 10
+  currentMaxHealth: 10
+  endGameMaxHealth: 30
+  sandDollars: 0
+  items: 
+  abilities: 
 --- !u!1 &5069705327861974014
 GameObject:
   m_ObjectHideFlags: 0

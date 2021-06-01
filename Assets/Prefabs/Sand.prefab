@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 621193230789719468}
   - component: {fileID: 621193230789719470}
   - component: {fileID: 621193230789719469}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Drip Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4848,7 +4848,7 @@ GameObject:
   - component: {fileID: 621193231156569129}
   - component: {fileID: 621193231156569131}
   - component: {fileID: 621193231156569130}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9653,7 +9653,9 @@ GameObject:
   m_Component:
   - component: {fileID: 621193231454436452}
   - component: {fileID: 621193231454436453}
-  m_Layer: 0
+  - component: {fileID: 2034413086}
+  - component: {fileID: 2034413087}
+  m_Layer: 6
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9690,3 +9692,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   turningSpeed: 720
+--- !u!58 &2034413086
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621193231454436451}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!50 &2034413087
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621193231454436451}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

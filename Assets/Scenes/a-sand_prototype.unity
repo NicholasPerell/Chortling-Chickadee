@@ -1025,7 +1025,7 @@ MonoBehaviour:
   runSpeed: 2
   jumpForce: 350
   strafeSpeed: 20
-  timeToDoubleTap: 0.01
+  timeToDoubleTap: 0.35
   strafeLength: 0.1
   strafeCooldown: 0.5
   checkRadius: 0.05

@@ -9690,8 +9690,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9baa4014ad3fd4fa0ff7caf0340dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 5
   turningSpeed: 720
+  particleLength: 6
+  particleDensity: 15
+  mainTrail: {fileID: 621193231156569131}
+  flakeTrail: {fileID: 621193230789719469}
 --- !u!58 &2034413086
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9707,7 +9711,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.1987623
 --- !u!50 &2034413087
 Rigidbody2D:
   serializedVersion: 4

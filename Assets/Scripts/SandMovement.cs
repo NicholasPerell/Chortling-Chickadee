@@ -7,6 +7,12 @@ public class SandMovement : MonoBehaviour
 {
     public float speed;
     public float turningSpeed;
+    public float particleLength = 6;
+    public float particleDensity = 15;
+
+    public ParticleSystem mainTrail;
+    public ParticleSystem flakeTrail;
+
     Vector2 direction;
 
     Vector2 inputDir;
@@ -38,6 +44,12 @@ public class SandMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         direction = Vector2.right;
+
+        mainTrail.startLifetime = particleLength / speed;
+        flakeTrail.startLifetime = particleLength / speed;
+
+        mainTrail.emissionRate = speed * particleDensity;
+        flakeTrail.emissionRate = (int)(speed * particleDensity * 0.1f);
     }
 
     // Update is called once per frame

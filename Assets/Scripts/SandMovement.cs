@@ -55,12 +55,14 @@ public class SandMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        inputDir = Camera.main.ScreenToWorldPoint(mosPos) - transform.position;
     }
 
+    Vector2 mosPos;
     void CheckInput(Vector2 pos)
     {
-        inputDir = Camera.main.ScreenToWorldPoint(pos)-transform.position;
+        mosPos = pos;
+        inputDir = Camera.main.ScreenToWorldPoint(mosPos)-transform.position;
     }
 
     private void FixedUpdate()

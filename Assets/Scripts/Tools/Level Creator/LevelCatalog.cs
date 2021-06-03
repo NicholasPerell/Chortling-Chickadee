@@ -20,7 +20,9 @@ public struct LevelExitData
 public struct LevelData
 {
     public Texture2D levelTexture;
-    public Texture2D artTexture;
+    public Texture2D foregroundArtTexture;
+    public Texture2D waterTexture;
+    public Texture2D backgroundArtTexture;
     public LevelExitData[] exits;
 }
 
@@ -53,7 +55,7 @@ public class LevelCatalog : MonoBehaviour
 
     void GenerateArea(string name)
     {
-        levelManager.LoadLevel(catalog[name].levelTexture, catalog[name].artTexture);
+        levelManager.LoadLevel(catalog[name].levelTexture, catalog[name].foregroundArtTexture, catalog[name].waterTexture, catalog[name].backgroundArtTexture);
         currentLvl = catalog[name];
     }
 

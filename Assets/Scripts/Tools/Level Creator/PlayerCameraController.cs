@@ -25,18 +25,18 @@ public class PlayerCameraController : MonoBehaviour
 
         float cameraHalfHeight = cam.orthographicSize;
 
-        if (desiredPos.y - cameraHalfHeight < 0 && desiredPos.y + cameraHalfHeight > lvl.currentLvl.artTexture.height)
-            desiredPos.y = lvl.currentLvl.artTexture.height / 2;
+        if (desiredPos.y - cameraHalfHeight < 0 && desiredPos.y + cameraHalfHeight > lvl.currentLvl.levelTexture.height)
+            desiredPos.y = lvl.currentLvl.levelTexture.height / 2;
         else
-            desiredPos.y = Mathf.Clamp(desiredPos.y, cameraHalfHeight, lvl.currentLvl.artTexture.height - cameraHalfHeight);
+            desiredPos.y = Mathf.Clamp(desiredPos.y, cameraHalfHeight, lvl.currentLvl.levelTexture.height - cameraHalfHeight);
 
 
         float cameraHalfWidth = cam.orthographicSize * cam.aspect;
 
-        if (desiredPos.x - cameraHalfWidth < 0 && desiredPos.x + cameraHalfWidth > lvl.currentLvl.artTexture.width)
-            desiredPos.x = lvl.currentLvl.artTexture.width / 2;
+        if (desiredPos.x - cameraHalfWidth < 0 && desiredPos.x + cameraHalfWidth > lvl.currentLvl.levelTexture.width)
+            desiredPos.x = lvl.currentLvl.levelTexture.width / 2;
         else
-            desiredPos.x = Mathf.Clamp(desiredPos.x, cameraHalfWidth, lvl.currentLvl.artTexture.width - cameraHalfWidth);
+            desiredPos.x = Mathf.Clamp(desiredPos.x, cameraHalfWidth, lvl.currentLvl.levelTexture.width - cameraHalfWidth);
 
         transform.position = new Vector3(desiredPos.x, desiredPos.y, transform.position.z);
     }

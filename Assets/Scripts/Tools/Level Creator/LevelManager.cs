@@ -24,13 +24,17 @@ public class LevelManager : MonoBehaviour
     [Header("Texture & Keys",order = 0)]
     [Space(10.0f,order = 1)]
     public Texture2D levelTexture;
-    public Texture2D artTexture;
+    public Texture2D foregroundArtTexture;
+    public Texture2D waterTexture;
+    public Texture2D backgroundArtTexture;
     public levelKey levelMapDictionary;
     public artKey[] artMapDictionary;
 
     [Header("Tilemaps")]
     public Tilemap levelTilemap;
-    public Tilemap artTilemap;
+    public Tilemap foregroundArtTilemap;
+    public Tilemap waterTilemap;
+    public Tilemap backgroundArtTilemap;
 
     [Header("DEBUGGING")]
     public bool loadTileMapAsLevelOnStart = false;
@@ -54,12 +58,14 @@ public class LevelManager : MonoBehaviour
 
     void LoadLevel()
     {
-        LoadLevel(levelTexture, artTexture);
+        LoadLevel(levelTexture, foregroundArtTexture, waterTexture, backgroundArtTexture);
     }
 
-    public void LoadLevel(Texture2D lvl, Texture2D art)
+    public void LoadLevel(Texture2D lvl, Texture2D fg, Texture2D wat, Texture2D bg)
     {
-        LoadTextureOntoGrid(ref artTilemap, ref art, ref artMapDictionary);
+        LoadTextureOntoGrid(ref foregroundArtTilemap, ref fg, ref artMapDictionary);
+        LoadTextureOntoGrid(ref waterTilemap, ref wat, ref artMapDictionary);
+        LoadTextureOntoGrid(ref backgroundArtTilemap, ref bg, ref artMapDictionary);
         GenerateLevelFromTexture(ref lvl);
     }
 
@@ -74,9 +80,9 @@ public class LevelManager : MonoBehaviour
             Destroy(transform.GetChild(i).gameObject);
         }
 
-        for (int x = 0; x < levelTexture.width; x++)
+        for (int x = 0; x < texture.width; x++)
         {
-            for (int y = 0; y < levelTexture.height; y++)
+            for (int y = 0; y < texture.height; y++)
             {
                 SpawnTile(x, y, ref texture);
             }
@@ -87,7 +93,9 @@ public class LevelManager : MonoBehaviour
     void LoadAllTexturesOntoGrid()
     {
         LoadTextureOntoGrid(ref levelTilemap, ref levelTexture, ref levelMapDictionary.artKeys);
-        LoadTextureOntoGrid(ref artTilemap, ref artTexture, ref artMapDictionary);
+        LoadTextureOntoGrid(ref foregroundArtTilemap, ref foregroundArtTexture, ref artMapDictionary);
+        LoadTextureOntoGrid(ref waterTilemap, ref waterTexture, ref artMapDictionary);
+        LoadTextureOntoGrid(ref backgroundArtTilemap, ref backgroundArtTexture, ref artMapDictionary);
     }
 
     void LoadTextureOntoGrid(ref Tilemap tilemap, ref Texture2D texture, ref artKey[] keys)
@@ -140,9 +148,13 @@ public class LevelManager : MonoBehaviour
     void SaveAllGridsToTextures()
     {
         SaveGridToTexture(ref levelTilemap, ref levelTexture, ref levelMapDictionary.artKeys);
-        SaveGridToTexture(ref artTilemap, ref artTexture, ref artMapDictionary);
+        SaveGridToTexture(ref foregroundArtTilemap, ref foregroundArtTexture, ref artMapDictionary);
+        SaveGridToTexture(ref waterTilemap, ref waterTexture, ref artMapDictionary);
+        SaveGridToTexture(ref backgroundArtTilemap, ref backgroundArtTexture, ref artMapDictionary);
         SaveTexture(levelTexture);
-        SaveTexture(artTexture);
+        SaveTexture(foregroundArtTexture);
+        SaveTexture(waterTexture);
+        SaveTexture(backgroundArtTexture);
     }
 
     void SaveGridToTexture(ref Tilemap tilemap, ref Texture2D texture, ref artKey[] keys)
@@ -176,7 +188,11 @@ public class LevelManager : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(new Vector2(artTexture.width/2, artTexture.height/2) + new Vector2(0.0f, 0.5f), new Vector2(artTexture.width, artTexture.height));
+        Gizmos.DrawWireCube(new Vector2(foregroundArtTexture.width/2, foregroundArtTexture.height/2) + new Vector2(0.0f, 0.5f), new Vector2(foregroundArtTexture.width, foregroundArtTexture.height));
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireCube(new Vector2(waterTexture.width / 2, waterTexture.height / 2) + new Vector2(0.0f, 0.5f), new Vector2(waterTexture.width, waterTexture.height));
+        Gizmos.color = Color.gray;
+        Gizmos.DrawWireCube(new Vector2(backgroundArtTexture.width / 2, backgroundArtTexture.height / 2) + new Vector2(0.0f, 0.5f), new Vector2(backgroundArtTexture.width, backgroundArtTexture.height));
         Gizmos.color = Color.magenta;
         Gizmos.DrawWireCube(new Vector2(levelTexture.width / 2, levelTexture.height / 2) + new Vector2(0.0f, 0.5f), new Vector2(levelTexture.width, levelTexture.height));
     }
@@ -219,8 +235,16 @@ public class LevelManager : MonoBehaviour
         levelTexture = newTexture;
 
         Texture2D newATexture = new Texture2D(newSize.x, newSize.y);
-        newATexture.name = "Art" + newName;
-        artTexture = newATexture;
+        newATexture.name = "ForegroundArt" + newName;
+        foregroundArtTexture = newATexture;
+
+        Texture2D newBTexture = new Texture2D(newSize.x, newSize.y);
+        newBTexture.name = "Water" + newName;
+        waterTexture = newBTexture;
+
+        Texture2D newCTexture = new Texture2D(newSize.x, newSize.y);
+        newCTexture.name = "BackgroundArt" + newName;
+        backgroundArtTexture = newCTexture;
 
         Debug.Log("New texture added. Must use \"Save Level For Editor\" to write file to the database.");
     }

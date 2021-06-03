@@ -21,19 +21,29 @@ public class artKey
 
 public class LevelManager : MonoBehaviour
 {
+    [Header("Texture & Keys",order = 0)]
+    [Space(10.0f,order = 1)]
     public Texture2D levelTexture;
     public Texture2D artTexture;
-    public Color[] groundColorKey = { Color.green, Color.black };
     public levelKey levelMapDictionary;
     public artKey[] artMapDictionary;
 
+    [Header("Tilemaps")]
     public Tilemap levelTilemap;
     public Tilemap artTilemap;
+
+    [Header("DEBUGGING")]
+    public bool loadTileMapAsLevelOnStart = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(loadTileMapAsLevelOnStart)
+        {
+            Texture2D tmp = new Texture2D(levelTexture.width,levelTexture.height);
+            SaveGridToTexture(ref levelTilemap, ref tmp, ref levelMapDictionary.artKeys);
+            GenerateLevelFromTexture(ref tmp);
+        }
     }
 
     // Update is called once per frame
@@ -42,11 +52,44 @@ public class LevelManager : MonoBehaviour
         
     }
 
+    void LoadLevel()
+    {
+        LoadLevel(levelTexture, artTexture);
+    }
+
+    void LoadLevel(Texture2D lvl, Texture2D art)
+    {
+        LoadTextureOntoGrid(ref artTilemap, ref art, ref artMapDictionary);
+        GenerateLevelFromTexture(ref lvl);
+    }
+
+    void GenerateLevelFromTexture(ref Texture2D texture)
+    {
+        levelTilemap.ClearAllTiles();
+
+        int childs = transform.childCount;
+        //transform.GetChild(0).position = new Vector3(-.5f, -.5f, 0f);
+        for (int i = childs - 1; i >= 0; i--)
+        {
+            DestroyImmediate(transform.GetChild(i).gameObject);
+        }
+
+        for (int x = 0; x < levelTexture.width; x++)
+        {
+            for (int y = 0; y < levelTexture.height; y++)
+            {
+                SpawnTile(x, y, ref texture);
+            }
+        }
+    }
+
     [ContextMenu("Load Level For Editor")]
     void LoadAllTexturesOntoGrid()
     {
         LoadTextureOntoGrid(ref levelTilemap, ref levelTexture, ref levelMapDictionary.artKeys);
         LoadTextureOntoGrid(ref artTilemap, ref artTexture, ref artMapDictionary);
+        SaveTexture(levelTexture);
+        SaveTexture(artTexture);
     }
 
     void LoadTextureOntoGrid(ref Tilemap tilemap, ref Texture2D texture, ref artKey[] keys)
@@ -74,24 +117,25 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    //void SpawnTile(int x, int y)
-    //{
-    //    Color color = levelTexture.GetPixel(x, y);
-    //    foreach (Color key in groundColorKey)
-    //        if (color.Equals(key))
-    //        {
-    //            groundTileMap.SetTile(new Vector3Int(x, y, 0), groundTile);
-    //            return;
-    //        }
-    //
-    //    foreach (levelKey key in levelMapDictionary)
-    //    {
-    //        if (color.Equals(key.color))
-    //        {
-    //            Instantiate(key.prefab, new Vector2(x, y), Quaternion.identity, transform);
-    //        }
-    //    }
-    //}
+    void SpawnTile(int x, int y, ref Texture2D texture)
+    {
+        Color color = texture.GetPixel(x, y);
+        for (int i = 0; i < levelMapDictionary.artKeys.Length; i++)
+        {
+            artKey key = levelMapDictionary.artKeys[i];
+            if (color.Equals(key.color))
+            {
+                if (levelMapDictionary.prefab[i] != null)
+                {
+                    Instantiate(levelMapDictionary.prefab[i], new Vector2(x + .5f, y + .5f), Quaternion.identity, transform);
+                }
+                else
+                {
+                    levelTilemap.SetTile(new Vector3Int(x, y, 0), key.tile);
+                }
+            }
+        }
+    }
 
     [ContextMenu("Save Level For Editor")]
     void SaveAllGridsToTextures()
@@ -111,7 +155,6 @@ public class LevelManager : MonoBehaviour
             }
         }
         texture.Apply();
-        SaveTexture(texture);
     }
 
     void SetPixel(int x, int y, ref Tilemap tilemap, ref Texture2D texture, ref artKey[] keys)
@@ -136,7 +179,6 @@ public class LevelManager : MonoBehaviour
         Gizmos.color = Color.magenta;
         Gizmos.DrawWireCube(new Vector2(levelTexture.width / 2, levelTexture.height / 2) + new Vector2(0.0f, 0.5f), new Vector2(levelTexture.width, levelTexture.height));
     }
-
     
     protected void SaveTexture(Texture2D texture)
     {
@@ -144,22 +186,5 @@ public class LevelManager : MonoBehaviour
         System.IO.File.WriteAllBytes(path, texture.EncodeToPNG());
         Debug.Log(path);
     }
-
-    //protected Texture2D RetriveTexture(Texture2D texture)
-    //{
-
-    //    Texture2D newTexture = new Texture2D(texture.width, texture.height);
-
-    //    if (File.Exists(path))
-    //    {
-    //        newTexture.LoadImage(File.ReadAllBytes(path));
-    //    }
-    //    else
-    //    {
-    //        newTexture = texture;
-    //    }
-
-    //    return newTexture;
-    //}
 
 }

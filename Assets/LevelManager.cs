@@ -111,6 +111,7 @@ public class LevelManager : MonoBehaviour
             }
         }
         texture.Apply();
+        SaveTexture(texture);
     }
 
     void SetPixel(int x, int y, ref Tilemap tilemap, ref Texture2D texture, ref artKey[] keys)
@@ -135,5 +136,30 @@ public class LevelManager : MonoBehaviour
         Gizmos.color = Color.magenta;
         Gizmos.DrawWireCube(new Vector2(levelTexture.width / 2, levelTexture.height / 2) + new Vector2(0.0f, 0.5f), new Vector2(levelTexture.width, levelTexture.height));
     }
+
+    
+    protected void SaveTexture(Texture2D texture)
+    {
+        string path = Application.dataPath + "/Textures/Level Textures/" + texture.name + ".png";
+        System.IO.File.WriteAllBytes(path, texture.EncodeToPNG());
+        Debug.Log(path);
+    }
+
+    //protected Texture2D RetriveTexture(Texture2D texture)
+    //{
+
+    //    Texture2D newTexture = new Texture2D(texture.width, texture.height);
+
+    //    if (File.Exists(path))
+    //    {
+    //        newTexture.LoadImage(File.ReadAllBytes(path));
+    //    }
+    //    else
+    //    {
+    //        newTexture = texture;
+    //    }
+
+    //    return newTexture;
+    //}
 
 }

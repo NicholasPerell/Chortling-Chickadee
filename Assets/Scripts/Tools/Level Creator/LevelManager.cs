@@ -57,7 +57,7 @@ public class LevelManager : MonoBehaviour
         LoadLevel(levelTexture, artTexture);
     }
 
-    void LoadLevel(Texture2D lvl, Texture2D art)
+    public void LoadLevel(Texture2D lvl, Texture2D art)
     {
         LoadTextureOntoGrid(ref artTilemap, ref art, ref artMapDictionary);
         GenerateLevelFromTexture(ref lvl);
@@ -71,7 +71,7 @@ public class LevelManager : MonoBehaviour
         //transform.GetChild(0).position = new Vector3(-.5f, -.5f, 0f);
         for (int i = childs - 1; i >= 0; i--)
         {
-            DestroyImmediate(transform.GetChild(i).gameObject);
+            Destroy(transform.GetChild(i).gameObject);
         }
 
         for (int x = 0; x < levelTexture.width; x++)
@@ -88,8 +88,6 @@ public class LevelManager : MonoBehaviour
     {
         LoadTextureOntoGrid(ref levelTilemap, ref levelTexture, ref levelMapDictionary.artKeys);
         LoadTextureOntoGrid(ref artTilemap, ref artTexture, ref artMapDictionary);
-        SaveTexture(levelTexture);
-        SaveTexture(artTexture);
     }
 
     void LoadTextureOntoGrid(ref Tilemap tilemap, ref Texture2D texture, ref artKey[] keys)
@@ -113,6 +111,7 @@ public class LevelManager : MonoBehaviour
             if (color.Equals(key.color))
             {
                 tilemap.SetTile(new Vector3Int(x, y, 0), key.tile);
+                return;
             }
         }
     }
@@ -142,6 +141,8 @@ public class LevelManager : MonoBehaviour
     {
         SaveGridToTexture(ref levelTilemap, ref levelTexture, ref levelMapDictionary.artKeys);
         SaveGridToTexture(ref artTilemap, ref artTexture, ref artMapDictionary);
+        SaveTexture(levelTexture);
+        SaveTexture(artTexture);
     }
 
     void SaveGridToTexture(ref Tilemap tilemap, ref Texture2D texture, ref artKey[] keys)
@@ -187,4 +188,40 @@ public class LevelManager : MonoBehaviour
         Debug.Log(path);
     }
 
+    //protected Texture2D RetriveTexture(Texture2D texture)
+    //{
+    //    string path = Application.dataPath + "/Textures/Level Textures/" + texture.name + ".png";
+    //    Texture2D newTexture = new Texture2D(texture.width, texture.height);
+    //    newTexture.LoadImage(System.IO.File.ReadAllBytes(path));
+    //    newTexture.name = texture.name;
+    //
+    //    Debug.Log(path);
+    //
+    //    return newTexture;
+    //}
+
+
+    [Header("Create Blank File Settings (Make sure name is not being used!)")]
+    [SerializeField] string newName;
+    [SerializeField] Vector2Int newSize;
+
+    [ContextMenu("New Blank Texture (Make sure name is not being used!)")]
+    void NewImageSet()
+    {
+        if(newName == "")
+        {
+            Debug.LogError("Requires a level name to create new texture.");
+            return;
+        }
+
+        Texture2D newTexture = new Texture2D(newSize.x,newSize.y);
+        newTexture.name = "Level" + newName;
+        levelTexture = newTexture;
+
+        Texture2D newATexture = new Texture2D(newSize.x, newSize.y);
+        newATexture.name = "Art" + newName;
+        artTexture = newATexture;
+
+        Debug.Log("New texture added. Must use \"Save Level For Editor\" to write file to the database.");
+    }
 }

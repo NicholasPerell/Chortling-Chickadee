@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1399521651164407782}
   - component: {fileID: 1399521651164407783}
+  - component: {fileID: 314804384}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -49,16 +50,52 @@ MonoBehaviour:
     artKeys:
     - color: {r: 0, g: 0, b: 0, a: 1}
       tile: {fileID: 11400000, guid: ebf7632ddf039f7468c22f79bd8a3207, type: 2}
-    - color: {r: 0.003921569, g: 1, b: 0, a: 1}
-      tile: {fileID: 11400000, guid: f68545ad346214a4bbd9b3ce464ddabf, type: 2}
+    - color: {r: 0.5019608, g: 0.5019608, b: 0.99607843, a: 1}
+      tile: {fileID: 11400000, guid: 0d4048c8ed3777b4385913db1d0b2b84, type: 2}
+    - color: {r: 0.5019608, g: 0.5019608, b: 0.99215686, a: 1}
+      tile: {fileID: 11400000, guid: a5ee4c84c5f99cf44a04f1e8248527a3, type: 2}
+    - color: {r: 0.5019608, g: 0.5019608, b: 0.9882353, a: 1}
+      tile: {fileID: 11400000, guid: 5dd73c8589c7b9a4ca3b53a4f13b1dc0, type: 2}
+    - color: {r: 0.5019608, g: 1, b: 0.9882353, a: 1}
+      tile: {fileID: 11400000, guid: a7b4fc57cc6c4f84e859550148439e95, type: 2}
     prefab:
     - {fileID: 0}
-    - {fileID: 621193231011119210, guid: 27ae4b5b6b7237447addeb0d55629333, type: 3}
+    - {fileID: 6612540415799428813, guid: 3c3abb5a8d91a0b41a75e176f07f73f3, type: 3}
+    - {fileID: 5854047370599244370, guid: 7647903935f82cc4cbd6cedfd3d50147, type: 3}
+    - {fileID: 6043222747366510898, guid: 2b1ff2b5655a4c34c961db0f5bf62c28, type: 3}
+    - {fileID: 5846612343797649915, guid: 58813f6d98dbda846a8323334b3b2c42, type: 3}
   artMapDictionary:
-  - color: {r: 0, g: 0, b: 0, a: 1}
-    tile: {fileID: 11400000, guid: ebf7632ddf039f7468c22f79bd8a3207, type: 2}
   - color: {r: 1, g: 0, b: 0, a: 1}
-    tile: {fileID: 11400000, guid: f68545ad346214a4bbd9b3ce464ddabf, type: 2}
+    tile: {fileID: 11400000, guid: f86627a9c3487524a808631520344e75, type: 2}
+  - color: {r: 0, g: 0, b: 0, a: 1}
+    tile: {fileID: 11400000, guid: cbec9be6de05c3947ad04e75efadbe30, type: 2}
   levelTilemap: {fileID: 0}
   artTilemap: {fileID: 0}
-  loadTileMapAsLevelOnStart: 1
+  loadTileMapAsLevelOnStart: 0
+--- !u!114 &314804384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399521651164407776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c4bf6540de94fb47b8b4d2d2cfbe846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameStartingLevel: Test
+  levelCatalog:
+  - name: Test
+    data:
+      levelTexture: {fileID: 2800000, guid: 85c38b502e616ad418808262c547951c, type: 3}
+      artTexture: {fileID: 2800000, guid: e970cd0dbc1b84241b85359e5c85c52f, type: 3}
+      exits:
+      - nameExitsTo: Test
+        exitNumber: 1
+      - nameExitsTo: Test
+        exitNumber: 0
+  currentLvl:
+    levelTexture: {fileID: 0}
+    artTexture: {fileID: 0}
+    exits: []

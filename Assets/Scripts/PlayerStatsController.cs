@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,9 +10,10 @@ public enum Items
 
 public enum SandAbilities
 {
+    NONE = -1,
     PROJECTILE,
     GRAB,
-    SHEILD,
+    SHIELD,
     SCAPHANDRE
 }
 
@@ -21,6 +23,12 @@ public class PlayerStatsController : MonoBehaviour
     [SerializeField] public float currentHealth;
     [SerializeField] public float currentMaxHealth;
     [SerializeField] public float endGameMaxHealth;
+
+    //[Header("Sand Meter")]
+    //[SerializeField] public float currentSand;
+    //[SerializeField] public float currentMaxSand;
+    //[SerializeField] public float endGameMaxSand;
+    //[SerializeField] public float secondsToRefillSand;
 
     [Header("Collectables")]
     [SerializeField] int sandDollars;
@@ -38,12 +46,19 @@ public class PlayerStatsController : MonoBehaviour
     void Start()
     {
         currentHealth = currentMaxHealth;
+        //currentSand = currentMaxSand;
+        //secondsToRefillSand = 1 / secondsToRefillSand;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        RechargeSand();
+    }
+
+    void RechargeSand()
+    {
+        //currentSand = Mathf.Min(currentSand + Time.deltaTime * secondsToRefillSand, currentMaxSand);
     }
 
     public void ChangeHealth(float delta)

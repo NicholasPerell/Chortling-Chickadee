@@ -17,6 +17,8 @@ public class SandMovement : MonoBehaviour
 
     Vector2 inputDir;
 
+    Transform player;
+    
     PlayerControls controls;
     Rigidbody2D rb;
     void Awake()
@@ -31,18 +33,38 @@ public class SandMovement : MonoBehaviour
     {
         controls.Player.Enable();
         controls.Player.MousePos.Enable();
+
+        if(player != null)
+            transform.position = player.position;
+
+        direction = inputDir;
+
+        returning = false;
+        GetComponent<CircleCollider2D>().enabled = true;
     }
 
     private void OnDisable()
     {
         controls.Player.Disable();
         controls.Player.MousePos.Disable();
+
+
+        if (player != null)
+            transform.position = player.position;
+        inputDir = Camera.main.ScreenToWorldPoint(mosPos) - transform.position;
+
+        returning = false;
+        GetComponent<CircleCollider2D>().enabled = true;
     }
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        transform.position = player.position;
+
         direction = Vector2.right;
 
         mainTrail.startLifetime = particleLength / speed;
@@ -67,6 +89,7 @@ public class SandMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+
         if (inputDir.sqrMagnitude > 0.1f)
         {
             float angleDiff = Vector2.SignedAngle(direction, inputDir);
@@ -77,8 +100,31 @@ public class SandMovement : MonoBehaviour
             direction = Quaternion.Euler(0, 0, turning) * direction;
         }
 
+        if (returning)
+        {
+            direction = player.position - transform.position;
+            CheckForReturned();
+        }
+
         rb.velocity = direction.normalized * speed;
         //Vector2 vel = direction.normalized * speed * Time.fixedDeltaTime;
         //transform.position += new Vector3(vel.x, vel.y, transform.position.z);
+    }
+
+
+    void CheckForReturned()
+    {
+        if((player.position - transform.position).magnitude < 1.0f)
+        {
+            GameObject.FindObjectOfType<SandAbilityManager>().AttemptEndThrow();
+            gameObject.SetActive(false);
+        }
+    }
+
+    bool returning = false;
+    public void TurnBack()
+    {
+        returning = true;
+        GetComponent<CircleCollider2D>().enabled = false;
     }
 }

@@ -4887,7 +4887,7 @@ GameObject:
   - component: {fileID: 5069705327537142896}
   - component: {fileID: 3415133064175695874}
   - component: {fileID: 9150392492675701513}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player Character
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5050,10 +5050,6 @@ MonoBehaviour:
   currentHealth: 10
   currentMaxHealth: 10
   endGameMaxHealth: 30
-  currentSand: 0
-  currentMaxSand: 0
-  endGameMaxSand: 0
-  secondsToRefillSand: 0
   sandDollars: 0
   items: 
   abilities: 
@@ -5069,6 +5065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a9d99b38ce47646920916cfbecc8b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inUse: 0
 --- !u!1 &5069705327861974014
 GameObject:
   m_ObjectHideFlags: 0

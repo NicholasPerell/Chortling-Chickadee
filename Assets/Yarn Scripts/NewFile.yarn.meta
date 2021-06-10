@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: f6eb4caad897afc4d87a55da1b9161ad
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - NewFile-Lyle.Start-0
+  - NewFile-Lyle.Start-1
+  - NewFile-Lyle.Start-2
+  - NewFile-Lyle.Start-3
+  - NewFile-Lyle.Start-4
+  - NewFile-Lyle.Start-5
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: f6eb4caad897afc4d87a55da1b9161ad, type: 3}
+  localizations: []

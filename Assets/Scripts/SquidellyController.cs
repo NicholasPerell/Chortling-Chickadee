@@ -22,7 +22,8 @@ public class SquidellyController : MonoBehaviour
     private GameObject player;
     private float playerDistance;
     private float circleAngle;
-    private bool clockwise;
+    private bool clockwise = false;
+    private bool colliding = false;
     private float count;
 
     // make state machine it go speed kachow
@@ -35,7 +36,7 @@ public class SquidellyController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         playerDistance = Vector3.Distance(gameObject.transform.position, player.transform.position);
 
@@ -73,17 +74,25 @@ public class SquidellyController : MonoBehaviour
         }
         else
             Debug.Log("Not Attacking Player");
-
-        // circle player
-        //transform.position = circleRadius * new Vector3(Mathf.Cos(Time.time * speed), Mathf.Sin(Time.time * speed), 0);
-        // run away
-        //transform.position = Vector2.MoveTowards(gameObject.transform.position, -1 * player.transform.position, speed * Time.deltaTime);
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Wall")
+        {
+            colliding = true;
             clockwise = !clockwise;
+            Debug.Log("Enter");
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Wall")
+        {
+            colliding = false;
+            Debug.Log("Exit");
+        }
     }
 
     public void takeDamage(float damageTaken)

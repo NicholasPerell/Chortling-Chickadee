@@ -14,11 +14,16 @@ public class SquidellyController : MonoBehaviour
     private float circleSpeed = 3f;
     [SerializeField]
     private float runSpeed = 1f;
+    [SerializeField]
+    private float attackTimer = 2f;
+    [SerializeField]
+    private Transform projectile;
 
     private GameObject player;
     private float playerDistance;
     private float circleAngle;
     private bool clockwise;
+    private float count;
 
     // make state machine it go speed kachow
     // if (hp <= 2) -> else (state machine)
@@ -52,6 +57,13 @@ public class SquidellyController : MonoBehaviour
             {
                 transform.RotateAround(player.transform.position, Vector3.forward, (circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
                 transform.Rotate(0, 0, -(circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
+            }
+
+            count += Time.deltaTime;
+            if (count >= attackTimer)
+            {
+                Instantiate(projectile, gameObject.transform.position, Quaternion.identity);
+                count = 0;
             }
         }
         else if (playerDistance <= vision)

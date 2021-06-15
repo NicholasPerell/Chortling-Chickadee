@@ -5,11 +5,17 @@ using UnityEngine.InputSystem;
 
 public class SandMovement : MonoBehaviour
 {
+    [Header("Usual Stats")]
     public float speed;
     public float turningSpeed;
     public float particleLength = 6;
     public float particleDensity = 15;
 
+    [Header("Mous-Affected Speeds")]
+    [SerializeField] float atMouseSpeed;
+    [SerializeField] float radiusOfEffect;
+
+    [Header("Sand Trails")]
     public ParticleSystem mainTrail;
     public ParticleSystem flakeTrail;
 
@@ -100,13 +106,20 @@ public class SandMovement : MonoBehaviour
             direction = Quaternion.Euler(0, 0, turning) * direction;
         }
 
+        float setSpeed;
+
         if (returning)
         {
+            setSpeed = speed;
             direction = player.position - transform.position;
             CheckForReturned();
         }
+        else
+        {
+            setSpeed = Mathf.Lerp(atMouseSpeed, speed, inputDir.sqrMagnitude / (radiusOfEffect * radiusOfEffect));
+        }
 
-        rb.velocity = direction.normalized * speed;
+        rb.velocity = direction.normalized * setSpeed;
         //Vector2 vel = direction.normalized * speed * Time.fixedDeltaTime;
         //transform.position += new Vector3(vel.x, vel.y, transform.position.z);
     }

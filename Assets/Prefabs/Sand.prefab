@@ -9694,6 +9694,8 @@ MonoBehaviour:
   turningSpeed: 720
   particleLength: 6
   particleDensity: 15
+  atMouseSpeed: 20
+  radiusOfEffect: 3
   mainTrail: {fileID: 621193231156569131}
   flakeTrail: {fileID: 621193230789719469}
 --- !u!58 &2034413086

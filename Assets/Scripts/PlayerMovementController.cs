@@ -13,10 +13,11 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] float strafeSpeed = 20;
     [SerializeField] float timeToDoubleTap = .5f;
     [SerializeField] float strafeLength = .5f;
-    [SerializeField] float strafeCooldown = 1.0f;
+    [SerializeField] public float strafeCooldown = 1.0f;
 
     Dictionary<InputControl,float> tapTime;
-    float strafeTimer = 0;
+    [HideInInspector]
+    public float strafeTimer = 0;
 
     [Header("Physics Checks")]
     [SerializeField] float checkRadius = 0.1f;

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5574283554849219953}
   - component: {fileID: 1211677388766553366}
   m_Layer: 6
-  m_Name: Particles
+  m_Name: Shield Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5019,6 +5019,7 @@ MonoBehaviour:
   timeToDoubleTap: 0.4
   strafeLength: 0.1
   strafeCooldown: 0.5
+  strafeTimer: 0
   checkRadius: 0.05
   groundCheck: {fileID: 5069705329228568869}
   leftWallCheck:

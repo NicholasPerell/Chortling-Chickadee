@@ -5,24 +5,20 @@ using UnityEngine;
 public class ProjectileController : MonoBehaviour
 {
     [SerializeField]
-    private float projectileSpeed = 3f;
+    private float damage = 1.0f;
+    [SerializeField]
+    private LayerMask diesContactingWith;
 
-    private GameObject player;
-    private GameObject circleEnemy;
-
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        player = GameObject.Find("Player");
-        circleEnemy = GameObject.Find("CircleEnemy");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        transform.position = Vector2.MoveTowards(gameObject.transform.position, player.transform.position, projectileSpeed * Time.deltaTime);
-
-        if (gameObject.transform.position == player.transform.position)
+        if(other.tag == "Player")
+        {
+            other.GetComponent<PlayerStatsController>().ChangeHealth(-damage);
             Destroy(gameObject);
+        }
+        else if(other.name == "Shield Particles" || diesContactingWith == (diesContactingWith | (1 << other.gameObject.layer)))
+        {
+            Destroy(gameObject);
+        }
     }
 }

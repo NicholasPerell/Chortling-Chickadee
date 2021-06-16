@@ -12,9 +12,8 @@ public enum SandAbilities
 {
     NONE = -1,
     PROJECTILE,
-    GRAB,
     SHIELD,
-    SCAPHANDRE
+    GRAB
 }
 
 public class PlayerStatsController : MonoBehaviour
@@ -37,6 +36,8 @@ public class PlayerStatsController : MonoBehaviour
     [Header("Collectables")]
     [SerializeField] List<SandAbilities> abilities;
 
+    PlayerMovementController movement;
+
     private void Awake()
     {
         
@@ -45,6 +46,8 @@ public class PlayerStatsController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        movement = GetComponent<PlayerMovementController>();
+
         currentHealth = currentMaxHealth;
         //currentSand = currentMaxSand;
         //secondsToRefillSand = 1 / secondsToRefillSand;
@@ -63,6 +66,8 @@ public class PlayerStatsController : MonoBehaviour
 
     public void ChangeHealth(float delta)
     {
+        if (delta < 0 && movement.strafeTimer > movement.strafeCooldown) return;
+
         currentHealth += delta;
         if(currentHealth <= 0)
         {

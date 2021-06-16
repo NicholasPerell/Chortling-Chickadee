@@ -17,7 +17,7 @@ public class SquidellyController : MonoBehaviour
     [SerializeField]
     private float attackTimer = 2f;
     [SerializeField]
-    private Transform projectile;
+    private GameObject projectile;
 
     private GameObject player;
     private float playerDistance;
@@ -32,7 +32,7 @@ public class SquidellyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame

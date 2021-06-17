@@ -5050,11 +5050,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 10
   currentMaxHealth: 10
-  endGameMaxHealth: 30
+  endGameMaxHealth: 20
   currentSand: 1
   currentMaxSand: 1
-  endGameMaxSand: 1
-  secondsToRefillSand: 1
+  endGameMaxSand: 3
+  secondsToRefillSand: 0.25
   plannedSand: 0
   glassCost: 0.25
   shieldCost: 0.15

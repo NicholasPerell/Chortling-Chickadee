@@ -111,6 +111,7 @@ public class PlayerStatsController : MonoBehaviour
         if (!hasAbility[index] || inUse[index] || currentSand - costs[index] < 0) return false;
 
         inUse[index] = true;
+        currentSand -= costs[index];
         return true;
     }
 

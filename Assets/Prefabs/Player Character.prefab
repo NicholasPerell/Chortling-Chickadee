@@ -5051,9 +5051,15 @@ MonoBehaviour:
   currentHealth: 10
   currentMaxHealth: 10
   endGameMaxHealth: 30
-  sandDollars: 0
-  items: 
-  abilities: 
+  currentSand: 1
+  currentMaxSand: 1
+  endGameMaxSand: 1
+  secondsToRefillSand: 1
+  plannedSand: 0
+  glassCost: 0.25
+  shieldCost: 0.15
+  grabCost: 0
+  hasAbility: 010101
 --- !u!114 &9150392492675701513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5066,7 +5072,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a9d99b38ce47646920916cfbecc8b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inUse: 0
 --- !u!1 &5069705327861974014
 GameObject:
   m_ObjectHideFlags: 0

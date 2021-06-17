@@ -5,15 +5,11 @@ using UnityEngine.InputSystem;
 
 public class SandAbilityManager : MonoBehaviour
 {
-    //[SerializeField] float thrownCostPerDistance;
-    //[SerializeField] float glassCost;
-    //[SerializeField] float grabCost;
-    //[SerializeField] float shieldCost;
 
     PlayerStatsController stats;
 
     PlayerControls controls;
-    public SandAbilities inUse;
+    //public SandAbilities inUse;
 
     GameObject sandShield;
     GameObject sandTrail;
@@ -53,9 +49,6 @@ public class SandAbilityManager : MonoBehaviour
     void Start()
     {
         stats = GetComponent<PlayerStatsController>();
-        inUse = SandAbilities.NONE;
-
-
         sandShield.SetActive(false);
         sandTrail.SetActive(false);
     }
@@ -69,42 +62,41 @@ public class SandAbilityManager : MonoBehaviour
 
     void AttemptThrow()
     {
-        if(inUse == SandAbilities.NONE)
+        if(stats.ActivateSand(SandAbilities.PROJECTILE))
         {
-            inUse = SandAbilities.PROJECTILE;
             sandTrail.SetActive(true);
         }
     }
     void AttemptGrab()
     {
 
-        if (inUse == SandAbilities.PROJECTILE)
+        if (stats.ActivateSand(SandAbilities.GRAB))
         {
-            inUse = SandAbilities.GRAB;
+            //inUse = SandAbilities.GRAB;
         }
     }
 
     void AttemptShield()
     {
 
-        if (inUse == SandAbilities.NONE)
+        if (stats.ActivateSand(SandAbilities.SHIELD))
         {
-            inUse = SandAbilities.SHIELD;
             sandShield.SetActive(true);
         }
     }
 
     public void AttemptEndThrow()
     {
-        inUse = SandAbilities.NONE;
-        sandTrail.SetActive(false);
+        if (stats.DeactivateSand(SandAbilities.PROJECTILE))
+        {
+            sandTrail.SetActive(false);
+        }
     }
 
     void AttemptEndShield()
     {
-        if (inUse == SandAbilities.SHIELD)
+        if (stats.DeactivateSand(SandAbilities.SHIELD))
         {
-            inUse = SandAbilities.NONE;
             sandShield.SetActive(false);
         }
     }

@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class SandMovement : MonoBehaviour
 {
+    
     [Header("Usual Stats")]
     public float speed;
     public float turningSpeed;

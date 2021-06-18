@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Yarn.Unity;
 
@@ -30,5 +31,10 @@ public class SlideDeckController : MonoBehaviour
         {
             Debug.LogError("Ran out of slides on the slide deck");
         }
+    }
+
+    public void NextScene(int i)
+    {
+        SceneManager.LoadScene(i);
     }
 }

@@ -189,16 +189,16 @@ public class LevelManager : MonoBehaviour
     {
         Gizmos.color = Color.red;
         if(foregroundArtTexture != null)
-            Gizmos.DrawWireCube(new Vector2(foregroundArtTexture.width/2, foregroundArtTexture.height/2) + new Vector2(0.0f, 0.5f), new Vector2(foregroundArtTexture.width, foregroundArtTexture.height));
+            Gizmos.DrawWireCube(new Vector2(foregroundArtTexture.width/2, foregroundArtTexture.height/2) + new Vector2(0.0f, 0.0f), new Vector2(foregroundArtTexture.width, foregroundArtTexture.height));
         Gizmos.color = Color.blue;
         if (waterTexture != null)
-            Gizmos.DrawWireCube(new Vector2(waterTexture.width / 2, waterTexture.height / 2) + new Vector2(0.0f, 0.5f), new Vector2(waterTexture.width, waterTexture.height));
+            Gizmos.DrawWireCube(new Vector2(waterTexture.width / 2, waterTexture.height / 2) + new Vector2(0.0f, 0.0f), new Vector2(waterTexture.width, waterTexture.height));
         Gizmos.color = Color.gray;
         if (backgroundArtTexture != null)
-            Gizmos.DrawWireCube(new Vector2(backgroundArtTexture.width / 2, backgroundArtTexture.height / 2) + new Vector2(0.0f, 0.5f), new Vector2(backgroundArtTexture.width, backgroundArtTexture.height));
+            Gizmos.DrawWireCube(new Vector2(backgroundArtTexture.width / 2, backgroundArtTexture.height / 2) + new Vector2(0.0f, 0.0f), new Vector2(backgroundArtTexture.width, backgroundArtTexture.height));
         Gizmos.color = Color.magenta;
         if (levelTexture != null)
-            Gizmos.DrawWireCube(new Vector2(levelTexture.width / 2, levelTexture.height / 2) + new Vector2(0.0f, 0.5f), new Vector2(levelTexture.width, levelTexture.height));
+            Gizmos.DrawWireCube(new Vector2(levelTexture.width / 2, levelTexture.height / 2) + new Vector2(0.0f, 0.0f), new Vector2(levelTexture.width, levelTexture.height));
     }
     
     protected void SaveTexture(Texture2D texture)

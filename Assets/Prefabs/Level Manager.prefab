@@ -71,6 +71,114 @@ MonoBehaviour:
     tile: {fileID: 11400000, guid: f86627a9c3487524a808631520344e75, type: 2}
   - color: {r: 0, g: 0, b: 0, a: 1}
     tile: {fileID: 11400000, guid: cbec9be6de05c3947ad04e75efadbe30, type: 2}
+  - color: {r: 1, g: 0.54509807, b: 0.007843138, a: 1}
+    tile: {fileID: 11400000, guid: db0465365ebf7b94992e1f44b5d2ab58, type: 2}
+  - color: {r: 1, g: 0.54509807, b: 0.011764706, a: 1}
+    tile: {fileID: 11400000, guid: b21059d0e1f7bb043890df95c0bd7919, type: 2}
+  - color: {r: 1, g: 0.54509807, b: 0.015686275, a: 1}
+    tile: {fileID: 11400000, guid: 78f6d990a9a89624bbadfec2c4ddb986, type: 2}
+  - color: {r: 1, g: 0.54509807, b: 0.019607844, a: 1}
+    tile: {fileID: 11400000, guid: c87f867b379448e47b3fa740f398cc1c, type: 2}
+  - color: {r: 1, g: 0.54509807, b: 0.023529412, a: 1}
+    tile: {fileID: 11400000, guid: 5ee82a1dd35355f44b7f507005a78414, type: 2}
+  - color: {r: 1, g: 0.54509807, b: 0.02745098, a: 1}
+    tile: {fileID: 11400000, guid: 2ecf59a31f4beda4d80c979fc58d6937, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.003921569, a: 1}
+    tile: {fileID: 11400000, guid: 2bf76a5b3bfdad94980fecf8373c8302, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.007843138, a: 1}
+    tile: {fileID: 11400000, guid: 9bf22128ee1d9934d8536c397a73c30b, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.011764706, a: 1}
+    tile: {fileID: 11400000, guid: 0d41577104171d04a8301db5ec3b73f1, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.015686275, a: 1}
+    tile: {fileID: 11400000, guid: 500c5d9171be07849b938c164c53a4ff, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.019607844, a: 1}
+    tile: {fileID: 11400000, guid: a37b7fca7ecde5048aa3b37417c6bed7, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.023529412, a: 1}
+    tile: {fileID: 11400000, guid: 510c415f0ddb1de4e9c37adb618d054b, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.02745098, a: 1}
+    tile: {fileID: 11400000, guid: 31e2c298c77e97a41b012b333feb3a33, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.03137255, a: 1}
+    tile: {fileID: 11400000, guid: f0c901a143c992e45867172c8ce6ac60, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.03529412, a: 1}
+    tile: {fileID: 11400000, guid: 5d2fc57de72624846b7945ba518da6d9, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.0627451, a: 1}
+    tile: {fileID: 11400000, guid: 4c80bd34b0e5c7941a4ac2e6bdaa0d09, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.06666667, a: 1}
+    tile: {fileID: 11400000, guid: 0fa1c730b5792e4478442b0fba0d7de9, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.07058824, a: 1}
+    tile: {fileID: 11400000, guid: 55022b0ce18521b4d8a03e714800e55e, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.07450981, a: 1}
+    tile: {fileID: 11400000, guid: 33b03c6736d3c9e49b752e85ef4d0479, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.078431375, a: 1}
+    tile: {fileID: 11400000, guid: 902bbc00d6e4be64baee36502a8b02c7, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.08235294, a: 1}
+    tile: {fileID: 11400000, guid: d6323f2948cfc4449b22e5216a1a247e, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.08627451, a: 1}
+    tile: {fileID: 11400000, guid: b2b77d620baeb4a46a655242dfce0258, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.09019608, a: 1}
+    tile: {fileID: 11400000, guid: 9cbde43cb8b6acb419480b6b6aea5a6b, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.09411765, a: 1}
+    tile: {fileID: 11400000, guid: e996792b83ae6ef469487ee14d28cdcc, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.09803922, a: 1}
+    tile: {fileID: 11400000, guid: c423a966f1680244d83ae246099a8e0d, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.1254902, a: 1}
+    tile: {fileID: 11400000, guid: 0f67d40c27a33eb47b33d753f0f4b454, type: 2}
+  - color: {r: 0.1882353, g: 0.43529412, b: 0.12941177, a: 1}
+    tile: {fileID: 11400000, guid: 789de613a83463e498e8390e5488c68f, type: 2}
+  - color: {r: 0, g: 1, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: 04e0f6596ad921546a113772aa9089b7, type: 2}
+  - color: {r: 0.003921569, g: 1, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: bde3b7ae9810e7049a9712d836883803, type: 2}
+  - color: {r: 0.007843138, g: 1, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: 694333dbb9ae33140b55ff536547c92c, type: 2}
+  - color: {r: 0.011764706, g: 1, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: 2780137e51b978f4eac6de68050b8a08, type: 2}
+  - color: {r: 0.015686275, g: 1, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: 3356c807892a21b408c21280f18f3fea, type: 2}
+  - color: {r: 0.019607844, g: 1, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: c5cc66c67fd934a4ead44ff9a02f6b99, type: 2}
+  - color: {r: 0.023529412, g: 1, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: d51d9d62bc4a9b7499ab980693f8cf42, type: 2}
+  - color: {r: 0.02745098, g: 1, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: 5690ae5d1e3fc074bbcd13b4fa56c5bd, type: 2}
+  - color: {r: 0.03137255, g: 1, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: 5321462ee6b73854993a21171a26e17a, type: 2}
+  - color: {r: 0.03529412, g: 1, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: e1995eabb743025488712ec8955430f2, type: 2}
+  - color: {r: 0.0627451, g: 1, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: 8375cd6a5c1477f4b8b1276c67c6e956, type: 2}
+  - color: {r: 0, g: 0.5254902, b: 0.9411765, a: 1}
+    tile: {fileID: 11400000, guid: 0c5d8f7b1021f8e45980074dc63d5730, type: 2}
+  - color: {r: 0, g: 0.5254902, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: 279397754c3c3cf43b7a54b30354a115, type: 2}
+  - color: {r: 0.003921569, g: 0.5254902, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: affefc2decc3fdd47a42a0ce8e33541a, type: 2}
+  - color: {r: 0.007843138, g: 0.5254902, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: 1524133366ce5cc4483e15a17c86c192, type: 2}
+  - color: {r: 0.011764706, g: 0.5254902, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: c7d7f1164b6288a47a72cbc050a0d398, type: 2}
+  - color: {r: 0.015686275, g: 0.5254902, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: 7d284a9e3bbf743449f4402a080e3b81, type: 2}
+  - color: {r: 0.019607844, g: 0.5254902, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: 9990460e1adeec44f8037c2620545d57, type: 2}
+  - color: {r: 0.023529412, g: 0.5254902, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: 2cdd1236127ec434794c2cd64a3df59c, type: 2}
+  - color: {r: 0.02745098, g: 0.5254902, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: a711b7d78fee2d1418d074982ebcbbd3, type: 2}
+  - color: {r: 0.03137255, g: 0.5254902, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: 725c6039e3eb161488ff364c5aa9a9a5, type: 2}
+  - color: {r: 0.03529412, g: 0.5254902, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: f0fb21975ce665145bd8d36a73c53277, type: 2}
+  - color: {r: 0.0627451, g: 0.5254902, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: 339afc85e8f69924a93454d108f01795, type: 2}
+  - color: {r: 0.06666667, g: 0.5254902, b: 1, a: 1}
+    tile: {fileID: 11400000, guid: a7ee8e165de2d994ea0cdcc8da585224, type: 2}
+  - color: {r: 0.19607843, g: 0, b: 0, a: 1}
+    tile: {fileID: 11400000, guid: 288d30110c3554740b05bb7ec419b1f2, type: 2}
+  - color: {r: 0.39215687, g: 0, b: 0, a: 1}
+    tile: {fileID: 11400000, guid: d15b1fb49a13b7646919aacad6991765, type: 2}
+  - color: {r: 0.39215687, g: 0.19607843, b: 0, a: 1}
+    tile: {fileID: 11400000, guid: 11f83e5210ddd044c9cc72c5199efb14, type: 2}
   levelTilemap: {fileID: 0}
   foregroundArtTilemap: {fileID: 0}
   waterTilemap: {fileID: 0}

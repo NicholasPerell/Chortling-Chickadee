@@ -60,12 +60,18 @@ MonoBehaviour:
       tile: {fileID: 11400000, guid: 5dd73c8589c7b9a4ca3b53a4f13b1dc0, type: 2}
     - color: {r: 0.5019608, g: 1, b: 0.9882353, a: 1}
       tile: {fileID: 11400000, guid: a7b4fc57cc6c4f84e859550148439e95, type: 2}
+    - color: {r: 0.5058824, g: 0, b: 1, a: 1}
+      tile: {fileID: 11400000, guid: 2a893dfe991f372498c9f995749b3ee6, type: 2}
+    - color: {r: 0.50980395, g: 0, b: 1, a: 1}
+      tile: {fileID: 11400000, guid: 4df0821fb4fbb904690ca006e55efbdc, type: 2}
     prefab:
     - {fileID: 0}
     - {fileID: 6612540415799428813, guid: 3c3abb5a8d91a0b41a75e176f07f73f3, type: 3}
     - {fileID: 5854047370599244370, guid: 7647903935f82cc4cbd6cedfd3d50147, type: 3}
     - {fileID: 6043222747366510898, guid: 2b1ff2b5655a4c34c961db0f5bf62c28, type: 3}
     - {fileID: 5846612343797649915, guid: 58813f6d98dbda846a8323334b3b2c42, type: 3}
+    - {fileID: 6525990118627851968, guid: cf220a8d6ec552e40937327e2aab141d, type: 3}
+    - {fileID: 4432154952624556825, guid: 271694b170e326e4da2274a0298cdd3a, type: 3}
   artMapDictionary:
   - color: {r: 1, g: 0, b: 0, a: 1}
     tile: {fileID: 11400000, guid: f86627a9c3487524a808631520344e75, type: 2}

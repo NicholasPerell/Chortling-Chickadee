@@ -20,12 +20,13 @@ public class PlayerMovementController : MonoBehaviour
     public float strafeTimer = 0;
 
     [Header("Physics Checks")]
-    [SerializeField] float checkRadius = 0.1f;
+    [SerializeField] public float checkRadius = 0.1f;
     public Transform groundCheck;
     public Transform[] leftWallCheck;
     public Transform[] rightWallCheck;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] LayerMask wallLayer;
+    [SerializeField] public LayerMask dropLayer;
     [SerializeField] LayerMask waterLayer;
     bool onLand = true;
     bool onGround = false;
@@ -210,4 +211,5 @@ public class PlayerMovementController : MonoBehaviour
 
         tapTime[key] = time;
     }
+
 }

@@ -25,6 +25,7 @@ public class PlayerMovementController : MonoBehaviour
     public Transform[] leftWallCheck;
     public Transform[] rightWallCheck;
     [SerializeField] LayerMask groundLayer;
+    [SerializeField] LayerMask wallLayer;
     [SerializeField] LayerMask waterLayer;
     bool onLand = true;
     bool onGround = false;
@@ -134,7 +135,7 @@ public class PlayerMovementController : MonoBehaviour
         result = false;
         foreach(Transform t in checks)
         {
-            result = result || Physics2D.OverlapCircle(t.position, checkRadius, groundLayer) != null;
+            result = result || Physics2D.OverlapCircle(t.position, checkRadius, wallLayer) != null;
         }
     }
 

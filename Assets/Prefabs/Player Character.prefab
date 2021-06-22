@@ -5032,6 +5032,9 @@ MonoBehaviour:
   - {fileID: 5069705328755227795}
   groundLayer:
     serializedVersion: 2
+    m_Bits: 1032
+  wallLayer:
+    serializedVersion: 2
     m_Bits: 8
   waterLayer:
     serializedVersion: 2

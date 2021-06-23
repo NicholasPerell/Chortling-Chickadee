@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6804257539440917639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4, y: 4, z: 0}
-  m_LocalScale: {x: 1, y: 6, z: 1}
+  m_LocalScale: {x: 1, y: 7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -123,5 +123,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38afdf60692d4aa4dbe1ed82a941557a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceToBreak: 4
+  forceToBreak: 3
   shatterPrefab: {fileID: 513216089801880014, guid: 47427397d74b6ea4199613e2974129e0, type: 3}

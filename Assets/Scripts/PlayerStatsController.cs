@@ -46,10 +46,11 @@ public class PlayerStatsController : MonoBehaviour
     bool[] inUse = { false, false, false};
 
     PlayerMovementController movement;
+    Animator anim;
 
     private void Awake()
     {
-        
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Start is called before the first frame update
@@ -101,6 +102,12 @@ public class PlayerStatsController : MonoBehaviour
             Debug.Log("Player Death");
             //Destroy(this.gameObject);
         }
+
+        if(delta < 0)
+        {
+            anim.SetTrigger("Hurt");
+        }
+
         return true;
     }
 

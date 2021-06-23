@@ -15,8 +15,12 @@ public class SandAbilityManager : MonoBehaviour
     GameObject sandTrail;
     GameObject sandGrab;
 
+    Animator anim;
+
     void Awake()
     {
+        anim = GetComponentInChildren<Animator>();
+
         sandShield = gameObject.GetComponentInChildren<FacePlayerMouse>().gameObject;
         sandTrail = GameObject.Find("Glass Sand Ability Projectile");
         sandGrab = GameObject.FindObjectOfType<GrabbingSandAbility>().transform.parent.gameObject;
@@ -70,6 +74,7 @@ public class SandAbilityManager : MonoBehaviour
         if(stats.ActivateSand(SandAbilities.PROJECTILE))
         {
             sandTrail.SetActive(true);
+            anim.SetTrigger("Attack");
         }
     }
     void AttemptGrab()
@@ -78,6 +83,7 @@ public class SandAbilityManager : MonoBehaviour
         if (stats.ActivateSand(SandAbilities.GRAB))
         {
             sandGrab.SetActive(true);
+            anim.SetTrigger("Attack");
         }
     }
 
@@ -87,6 +93,7 @@ public class SandAbilityManager : MonoBehaviour
         if (stats.ActivateSand(SandAbilities.SHIELD))
         {
             sandShield.SetActive(true);
+            anim.SetTrigger("Attack");
         }
     }
 

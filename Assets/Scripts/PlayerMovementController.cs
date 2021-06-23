@@ -37,8 +37,13 @@ public class PlayerMovementController : MonoBehaviour
     Rigidbody2D rb;
     Vector2 inputDir;
 
-    void Awake()
+    [Header("Animation")]
+    public Transform appearanceModel;
+    Animator anim;
+
+    private void Awake()
     {
+        anim = GetComponentInChildren<Animator>();
         controls = new PlayerControls();
 
         controls.Player.Jump.performed += _ => AttemptJump();
@@ -87,7 +92,6 @@ public class PlayerMovementController : MonoBehaviour
 
     void FixedUpdate()
     {
-
         if (strafeTimer > 0) strafeTimer -= Time.fixedDeltaTime;
 
         CheckForGround();
@@ -114,6 +118,8 @@ public class PlayerMovementController : MonoBehaviour
         {
             WaterMovement();
         }
+
+        SendAnimationData();
     }
 
     void CheckForGround()
@@ -210,6 +216,18 @@ public class PlayerMovementController : MonoBehaviour
         //Debug.Log(key.name);
 
         tapTime[key] = time;
+    }
+
+    void SendAnimationData()
+    {
+        anim.SetFloat("Speed",Mathf.Abs(rb.velocity.x));
+        anim.SetBool("OnLand",onLand);
+        anim.SetBool("Strafing", strafeTimer > strafeCooldown);
+
+        if (rb.velocity.x > 0)
+            appearanceModel.localScale = new Vector3(1, 1, 1);
+        else if (rb.velocity.x < 0)
+            appearanceModel.localScale = new Vector3(-1, 1, 1);
     }
 
 }

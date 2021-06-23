@@ -15,7 +15,7 @@ public class levelKey
 [System.Serializable]
 public class artKey
 {
-    public Color color;
+    public Color32 color;
     public TileBase tile;
 }
 

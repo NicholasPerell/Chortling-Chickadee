@@ -97,6 +97,22 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Grab"",
+                    ""type"": ""Button"",
+                    ""id"": ""0b75f4cc-dfba-4e59-908a-bc5a3e3eeb03"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""End Grab"",
+                    ""type"": ""Button"",
+                    ""id"": ""41d61ff0-cf08-42cd-98a5-687dc5705856"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -418,6 +434,28 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""Drop"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a59f85d3-d47a-4143-85e3-d8e6e847bbb6"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Grab"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a7136186-862c-4957-9b7a-7fbf5a4886c5"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""End Grab"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -436,6 +474,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Player_GrabSand = m_Player.FindAction("Grab Sand", throwIfNotFound: true);
         m_Player_ShieldSand = m_Player.FindAction("Shield Sand", throwIfNotFound: true);
         m_Player_EndShieldSand = m_Player.FindAction("End Shield Sand", throwIfNotFound: true);
+        m_Player_Grab = m_Player.FindAction("Grab", throwIfNotFound: true);
+        m_Player_EndGrab = m_Player.FindAction("End Grab", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -495,6 +535,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_GrabSand;
     private readonly InputAction m_Player_ShieldSand;
     private readonly InputAction m_Player_EndShieldSand;
+    private readonly InputAction m_Player_Grab;
+    private readonly InputAction m_Player_EndGrab;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -509,6 +551,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @GrabSand => m_Wrapper.m_Player_GrabSand;
         public InputAction @ShieldSand => m_Wrapper.m_Player_ShieldSand;
         public InputAction @EndShieldSand => m_Wrapper.m_Player_EndShieldSand;
+        public InputAction @Grab => m_Wrapper.m_Player_Grab;
+        public InputAction @EndGrab => m_Wrapper.m_Player_EndGrab;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -548,6 +592,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @EndShieldSand.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndShieldSand;
                 @EndShieldSand.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndShieldSand;
                 @EndShieldSand.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndShieldSand;
+                @Grab.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGrab;
+                @Grab.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGrab;
+                @Grab.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGrab;
+                @EndGrab.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndGrab;
+                @EndGrab.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndGrab;
+                @EndGrab.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndGrab;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -582,6 +632,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @EndShieldSand.started += instance.OnEndShieldSand;
                 @EndShieldSand.performed += instance.OnEndShieldSand;
                 @EndShieldSand.canceled += instance.OnEndShieldSand;
+                @Grab.started += instance.OnGrab;
+                @Grab.performed += instance.OnGrab;
+                @Grab.canceled += instance.OnGrab;
+                @EndGrab.started += instance.OnEndGrab;
+                @EndGrab.performed += instance.OnEndGrab;
+                @EndGrab.canceled += instance.OnEndGrab;
             }
         }
     }
@@ -598,5 +654,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnGrabSand(InputAction.CallbackContext context);
         void OnShieldSand(InputAction.CallbackContext context);
         void OnEndShieldSand(InputAction.CallbackContext context);
+        void OnGrab(InputAction.CallbackContext context);
+        void OnEndGrab(InputAction.CallbackContext context);
     }
 }

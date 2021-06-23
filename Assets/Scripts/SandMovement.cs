@@ -5,7 +5,9 @@ using UnityEngine.InputSystem;
 
 public class SandMovement : MonoBehaviour
 {
-    
+    [Header("Type")]
+    [SerializeField] bool isGlass = true;
+
     [Header("Usual Stats")]
     public float speed;
     public float turningSpeed;
@@ -73,12 +75,13 @@ public class SandMovement : MonoBehaviour
         transform.position = player.position;
 
         direction = Vector2.right;
-
+#pragma warning disable 0618
         mainTrail.startLifetime = particleLength / speed;
         flakeTrail.startLifetime = particleLength / speed;
 
         mainTrail.emissionRate = speed * particleDensity;
         flakeTrail.emissionRate = (int)(speed * particleDensity * 0.1f);
+#pragma warning restore 0618
     }
 
     // Update is called once per frame
@@ -130,8 +133,16 @@ public class SandMovement : MonoBehaviour
     {
         if((player.position - transform.position).magnitude < 1.0f)
         {
-            GameObject.FindObjectOfType<SandAbilityManager>().AttemptEndThrow();
-            gameObject.SetActive(false);
+            //TODO add grab/glass bool
+            if (isGlass)
+            {
+                GameObject.FindObjectOfType<SandAbilityManager>().AttemptEndThrow();
+            }
+            else
+            {
+                GameObject.FindObjectOfType<SandAbilityManager>().AttemptEndGrab();
+            }
+            //gameObject.SetActive(false);
         }
     }
 
@@ -140,5 +151,9 @@ public class SandMovement : MonoBehaviour
     {
         returning = true;
         GetComponent<CircleCollider2D>().enabled = false;
+        if(!isGlass)
+        {
+            GetComponent<GrabbingSandAbility>().AttemptEndAttach();
+        }
     }
 }

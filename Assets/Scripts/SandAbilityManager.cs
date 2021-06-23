@@ -13,11 +13,13 @@ public class SandAbilityManager : MonoBehaviour
 
     GameObject sandShield;
     GameObject sandTrail;
+    GameObject sandGrab;
 
     void Awake()
     {
         sandShield = gameObject.GetComponentInChildren<FacePlayerMouse>().gameObject;
-        sandTrail = GameObject.FindObjectOfType<SandMovement>().gameObject;
+        sandTrail = GameObject.Find("Glass Sand Ability Projectile");
+        sandGrab = GameObject.FindObjectOfType<GrabbingSandAbility>().transform.parent.gameObject;
 
         controls = new PlayerControls();
         controls.Player.ThrowSand.performed += _ => AttemptThrow();
@@ -25,6 +27,8 @@ public class SandAbilityManager : MonoBehaviour
         controls.Player.GrabSand.performed += _ => AttemptGrab();
         controls.Player.ShieldSand.performed += _ => AttemptShield();
         controls.Player.EndShieldSand.performed += _ => AttemptEndShield();
+        controls.Player.GrabSand.performed += _ => AttemptGrab();
+        controls.Player.GrabSand.canceled += _ => sandGrab.GetComponentInChildren<SandMovement>().TurnBack();
     }
 
     void OnEnable()
@@ -51,6 +55,7 @@ public class SandAbilityManager : MonoBehaviour
         stats = GetComponent<PlayerStatsController>();
         sandShield.SetActive(false);
         sandTrail.SetActive(false);
+        sandGrab.SetActive(false);
     }
 
 
@@ -72,7 +77,7 @@ public class SandAbilityManager : MonoBehaviour
 
         if (stats.ActivateSand(SandAbilities.GRAB))
         {
-            //inUse = SandAbilities.GRAB;
+            sandGrab.SetActive(true);
         }
     }
 
@@ -90,6 +95,14 @@ public class SandAbilityManager : MonoBehaviour
         if (stats.DeactivateSand(SandAbilities.PROJECTILE))
         {
             sandTrail.SetActive(false);
+        }
+    }
+
+    public void AttemptEndGrab()
+    {
+        if (stats.DeactivateSand(SandAbilities.GRAB))
+        {
+            sandGrab.SetActive(false);
         }
     }
 

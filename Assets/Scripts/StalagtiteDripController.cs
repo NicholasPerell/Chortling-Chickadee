@@ -24,7 +24,7 @@ public class StalagtiteDripController : MonoBehaviour
         {
             time = Random.Range(spawnRateMin,spawnRateMax);
             int index = Random.Range(0, spawnPoints.Length);
-            Instantiate(projectilePrefab, spawnPoints[index].transform.position, Quaternion.identity);
+            Instantiate(projectilePrefab, spawnPoints[index].transform.position, Quaternion.identity, transform.parent);
         }
 
     }

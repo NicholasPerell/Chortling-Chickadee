@@ -587,6 +587,70 @@ MonoBehaviour:
       serializedVersion: 2
       rgba: 4282345529
     tile: {fileID: 11400000, guid: 56b7f15efaf205146bd0978f0d63113a, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4282345785
+    tile: {fileID: 11400000, guid: 4a87f6a5d80303f43b3b36ef6e506b46, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4282346041
+    tile: {fileID: 11400000, guid: 45a3000b8f1742344877fba8f024dde2, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4282346297
+    tile: {fileID: 11400000, guid: 6754be8c546b16e41a639cbabaeee07d, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4282346553
+    tile: {fileID: 11400000, guid: 4d54cc694fc38424aadb15b4e047a888, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4282346809
+    tile: {fileID: 11400000, guid: 50574d423f45bc84d8296c49d102208a, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4282347065
+    tile: {fileID: 11400000, guid: 51ee898d5027e014f896524de223a884, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4282347321
+    tile: {fileID: 11400000, guid: 4534ac8b0ce1c7b42bb73194dd4f0a40, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4282347577
+    tile: {fileID: 11400000, guid: 5b205144079e4de4eafab861aabe6a6d, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4282347833
+    tile: {fileID: 11400000, guid: 4300639168c2c8843b418424ad110e92, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4282348089
+    tile: {fileID: 11400000, guid: 7560da0ff9f49314fa00a89d2cbb6fc3, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4282348345
+    tile: {fileID: 11400000, guid: 249f38306c6635c4a8549dd04a56c7ed, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4282348601
+    tile: {fileID: 11400000, guid: 3ae209d949e39ed4583e3334102df540, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4282348857
+    tile: {fileID: 11400000, guid: c60f2b0ec6b4dcd48aded61a1810a52a, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4282349113
+    tile: {fileID: 11400000, guid: 208d1d7dc660ca84c8c0a2bca4a931c3, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4282349625
+    tile: {fileID: 11400000, guid: 877cfb6e2dccda54baccc40af2e3ad66, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4282349369
+    tile: {fileID: 11400000, guid: 94ff133a39baaca4081201b56e18be1e, type: 2}
   levelTilemap: {fileID: 0}
   foregroundArtTilemap: {fileID: 0}
   waterTilemap: {fileID: 0}

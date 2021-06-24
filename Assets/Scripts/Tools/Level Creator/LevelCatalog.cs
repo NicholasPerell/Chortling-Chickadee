@@ -57,11 +57,17 @@ public class LevelCatalog : MonoBehaviour
     {
         levelManager.LoadLevel(catalog[name].levelTexture, catalog[name].foregroundArtTexture, catalog[name].waterTexture, catalog[name].backgroundArtTexture);
         currentLvl = catalog[name];
+        Camera.main.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, Camera.main.transform.position.z);
     }
 
 
     public void ExitLevel(int id)
     {
+        foreach (LevelExit exit in GameObject.FindObjectsOfType<LevelExit>())
+        {
+            exit.id = -10;
+        }
+
         LevelExitData levelExitData = currentLvl.exits[id];
         GenerateArea(levelExitData.nameExitsTo);
 
@@ -70,6 +76,7 @@ public class LevelCatalog : MonoBehaviour
             if(exit.id == levelExitData.exitNumber)
             {
                 player.transform.position = exit.transform.position;
+                Camera.main.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, Camera.main.transform.position.z);
             }
         }
     }

@@ -133,7 +133,7 @@ public class PlayerMovementController : MonoBehaviour
         {
             //strafeTimer = Mathf.Min(strafeTimer, strafeCooldown);
             rb.velocity = new Vector2(rb.velocity.x,0);
-            rb.AddForce(new Vector2(0, jumpForce/2));
+            rb.AddForce(new Vector2(0, jumpForce * 2/3));
         }
     }
 

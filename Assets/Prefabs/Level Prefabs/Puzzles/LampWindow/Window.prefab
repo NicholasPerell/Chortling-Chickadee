@@ -123,5 +123,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38afdf60692d4aa4dbe1ed82a941557a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceToBreak: 3
+  forceToBreak: 5
   shatterPrefab: {fileID: 513216089801880014, guid: 47427397d74b6ea4199613e2974129e0, type: 3}

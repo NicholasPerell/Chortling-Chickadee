@@ -229,5 +229,4 @@ public class PlayerMovementController : MonoBehaviour
         else if (rb.velocity.x < 0)
             appearanceModel.localScale = new Vector3(-1, 1, 1);
     }
-
 }

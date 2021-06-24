@@ -113,7 +113,7 @@ public class SandAbilityManager : MonoBehaviour
         }
     }
 
-    void AttemptEndShield()
+    public void AttemptEndShield()
     {
         if (stats.DeactivateSand(SandAbilities.SHIELD))
         {

@@ -35,6 +35,7 @@ public class PlayerStatsController : MonoBehaviour
     [SerializeField] float glassCost;
     [SerializeField] float shieldCost;
     [SerializeField] float grabCost;
+    [SerializeField] float grabCostPerUnit;
     float[] costs = { 0.0f, 0.0f, 0.0f };
 
     //[Header("Collectables")]
@@ -46,7 +47,10 @@ public class PlayerStatsController : MonoBehaviour
     bool[] inUse = { false, false, false};
 
     PlayerMovementController movement;
+    SandAbilityManager abilMan;
     Animator anim;
+
+    bool empty;
 
     private void Awake()
     {
@@ -57,6 +61,7 @@ public class PlayerStatsController : MonoBehaviour
     void Start()
     {
         movement = GetComponent<PlayerMovementController>();
+        abilMan = GetComponent<SandAbilityManager>();
 
         costs[0] = glassCost;
         costs[1] = shieldCost;
@@ -66,6 +71,8 @@ public class PlayerStatsController : MonoBehaviour
         currentSand = currentMaxSand;
         plannedSand = currentSand;
         secondsToRefillSand = 1 / secondsToRefillSand;
+
+        empty = false;
     }
 
     // Update is called once per frame
@@ -85,11 +92,30 @@ public class PlayerStatsController : MonoBehaviour
                 plannedSand -= costs[i];
             }
         }
+
+        if(inUse[(int)SandAbilities.GRAB])
+        {
+            float dist = Vector3.Distance(transform.position, GameObject.FindObjectOfType<GrabbingSandAbility>().transform.position);
+            plannedSand -= dist * grabCostPerUnit;
+        }
+
+        if(plannedSand <= 0)
+        {
+            empty = true;
+            plannedSand = 0;
+            abilMan.AttemptEndGrab();
+            abilMan.AttemptEndThrow();
+            abilMan.AttemptEndShield();
+        }
     }
 
     void RechargeSand()
     {
         currentSand = Mathf.Min(currentSand + Time.deltaTime * secondsToRefillSand, plannedSand);
+        if(currentMaxSand == currentSand)
+        {
+            empty = false;
+        }
     }
 
     public bool ChangeHealth(float delta)
@@ -115,7 +141,7 @@ public class PlayerStatsController : MonoBehaviour
     {
         int index = (int)ability;
 
-        if (!hasAbility[index] || inUse[index] || currentSand - costs[index] < 0) return false;
+        if (empty || !hasAbility[index] || inUse[index] || currentSand - costs[index] < 0) return false;
 
         inUse[index] = true;
         currentSand -= costs[index];

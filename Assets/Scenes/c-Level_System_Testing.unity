@@ -233,7 +233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 314804384, guid: 15073aaf41ea46941ae10075a271212a, type: 3}
       propertyPath: nameStartingLevel
-      value: Chandelier Puzzle
+      value: Beginning Level
       objectReference: {fileID: 0}
     - target: {fileID: 314804384, guid: 15073aaf41ea46941ae10075a271212a, type: 3}
       propertyPath: levelCatalog.Array.size
@@ -2359,6 +2359,14 @@ PrefabInstance:
     - target: {fileID: 5173961341629906814, guid: a750f54ddb583a14c88fb200ab74b500, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 100.661
+      objectReference: {fileID: 0}
+    - target: {fileID: 7561132176391724337, guid: a750f54ddb583a14c88fb200ab74b500, type: 3}
+      propertyPath: currentMaxHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7561132176391724337, guid: a750f54ddb583a14c88fb200ab74b500, type: 3}
+      propertyPath: endGameMaxHealth
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a750f54ddb583a14c88fb200ab74b500, type: 3}

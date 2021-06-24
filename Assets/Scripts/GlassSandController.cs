@@ -28,7 +28,7 @@ public class GlassSandController : MonoBehaviour
             if (prevTrigger == false)
             {
                 //TODO update this to the new general enemy component once the Squidelly controller is untangled
-                collider.gameObject.GetComponent<SquidellyController>().takeDamage(damage);
+                collider.gameObject.GetComponent<CircleEnemyController>().takeDamage(damage);
             }
         }
 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: fb924e07be274cc4cb635c9e54e384dc
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - EarnShield-EarnShield.Start-0
+  - EarnShield-EarnShield.Start-1
+  - EarnShield-EarnShield.Start-2
+  - EarnShield-EarnShield.Start-3
+  - EarnShield-EarnShield.Start-4
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

@@ -11,9 +11,9 @@ public enum Items
 public enum SandAbilities
 {
     NONE = -1,
-    PROJECTILE,
-    SHIELD,
-    GRAB
+    PROJECTILE = 0,
+    SHIELD = 1,
+    GRAB = 2
 }
 
 public class PlayerStatsController : MonoBehaviour
@@ -43,7 +43,7 @@ public class PlayerStatsController : MonoBehaviour
     //[SerializeField] List<Items> items;
 
     [Header("Collectables")]
-    [SerializeField] bool[] hasAbility = { true, true, true };
+    [SerializeField] public bool[] hasAbility = { true, true, true };
     bool[] inUse = { false, false, false};
 
     PlayerMovementController movement;

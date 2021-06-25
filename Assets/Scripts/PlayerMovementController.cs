@@ -98,6 +98,7 @@ public class PlayerMovementController : MonoBehaviour
         CheckForWalls(ref walledLeft,ref leftWallCheck);
         CheckForWalls(ref walledRight,ref rightWallCheck);
 
+        //Prevent pushing into the walls/getting stuck
         if(strafeTimer < strafeCooldown)
         {
             if(walledLeft)
@@ -165,7 +166,9 @@ public class PlayerMovementController : MonoBehaviour
 
         float speed = runSpeed;
         if (strafeTimer > strafeCooldown)
+        {
             speed = strafeSpeed;
+        }
 
         if(Mathf.Abs(inputDir.y) > .1f) vel = inputDir * speed;
         else vel = new Vector2(inputDir.x * speed, rb.velocity.y);
@@ -177,9 +180,12 @@ public class PlayerMovementController : MonoBehaviour
     {
         rb.gravityScale = 1.0f;
 
+        //Make this a function that returns float
         float speed = runSpeed;
         if (strafeTimer > strafeCooldown)
+        {
             speed = strafeSpeed;
+        }
 
         rb.velocity = new Vector2(inputDir.x * speed, rb.velocity.y);
     }
@@ -212,8 +218,6 @@ public class PlayerMovementController : MonoBehaviour
         {
             time = timeToDoubleTap;
         }
-
-        //Debug.Log(key.name);
 
         tapTime[key] = time;
     }

@@ -233,7 +233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 314804384, guid: 15073aaf41ea46941ae10075a271212a, type: 3}
       propertyPath: nameStartingLevel
-      value: Chandelier Puzzle
+      value: Beginning Level
       objectReference: {fileID: 0}
     - target: {fileID: 314804384, guid: 15073aaf41ea46941ae10075a271212a, type: 3}
       propertyPath: levelCatalog.Array.size

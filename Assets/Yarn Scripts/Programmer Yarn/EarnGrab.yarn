@@ -1,0 +1,14 @@
+title: EarnGrab.Start
+tags: 
+colorID: 0
+position: -210,-32
+---
+<<Bestow SandProjectileEarn>>
+You have gained magic sand!
+This has unlocked the ability to use sand to GRAB.
+Hold the right click button to throw out the grabbing sand that follows your cursor. When over a grabbable object, hold E to grab onto it.
+Releasing E lets go of the object and releasing right click sends the sand back to the player.
+Be careful! The GRAB will use up sand based off how far the grabbing sand is from the player.
+You can only go out so far, especially when you're using other abilities.
+Start by trying to grab that lamp.
+===

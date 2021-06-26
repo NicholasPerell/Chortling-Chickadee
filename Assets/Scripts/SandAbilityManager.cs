@@ -83,6 +83,7 @@ public class SandAbilityManager : MonoBehaviour
         if (stats.ActivateSand(SandAbilities.GRAB))
         {
             sandGrab.SetActive(true);
+            GameObject.FindObjectOfType<GrabbingSandAbility>().transform.position = transform.position;
             anim.SetTrigger("Attack");
         }
     }

@@ -110,6 +110,50 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 4287234303
       tile: {fileID: 11400000, guid: bb6c9f9394737384784e8d6f1c90c700, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287234559
+      tile: {fileID: 11400000, guid: 73fcc085840f19946be8e3d7a1dfd3ab, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287234815
+      tile: {fileID: 11400000, guid: 03c7d2297b17ac4409e1c0250db9280a, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287235071
+      tile: {fileID: 11400000, guid: af535b918c5d371428950fa674e0a72b, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287235327
+      tile: {fileID: 11400000, guid: 71b3028cbe0f6e8408f90c59f701e8c9, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287235583
+      tile: {fileID: 11400000, guid: 2d69b1f3b633bfe4086a527e6e1d765d, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287235839
+      tile: {fileID: 11400000, guid: bda3f218d29450342a9b7cf7d126d43d, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287236095
+      tile: {fileID: 11400000, guid: f046c7354b8289b45a29710de8cfd028, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287236607
+      tile: {fileID: 11400000, guid: 3f69bca9e6daa3744964e480e99ab7a5, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287236863
+      tile: {fileID: 11400000, guid: 6a5ecc99853203c46aaf853a9b342991, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287237119
+      tile: {fileID: 11400000, guid: c21636436368a8c4c9185c33c064e9af, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287237375
+      tile: {fileID: 11400000, guid: 1f32d1707a30ccf40bef3b08d2150481, type: 2}
     prefab:
     - {fileID: 0}
     - {fileID: 6612540415799428813, guid: 3c3abb5a8d91a0b41a75e176f07f73f3, type: 3}
@@ -126,6 +170,17 @@ MonoBehaviour:
     - {fileID: 8142517177238559623, guid: ea1a00feb22b7a040844f8522a3671d5, type: 3}
     - {fileID: 6804257539440917639, guid: 624d334b62dbe2b4281aa65cecaf46c4, type: 3}
     - {fileID: 1796218466394293715, guid: 07280e247bf9aa84989d14af5d69a59e, type: 3}
+    - {fileID: 7649997449133751446, guid: 25c23110d42d55740be856cc0b109702, type: 3}
+    - {fileID: 1398175742542299506, guid: 89e5d7c5c02029643bef16f765f7a788, type: 3}
+    - {fileID: 3425558751415726380, guid: 7f5fa72ba6c5554459d2b9449de92f38, type: 3}
+    - {fileID: 6580632549152304945, guid: bd5015ae1b0808d4380400c12efb5f20, type: 3}
+    - {fileID: 5009746400213294993, guid: 44b55836639c87a4882d5c7e5bee0362, type: 3}
+    - {fileID: 7782144232272973056, guid: ecfc7ad88c9edf74f83400fdc2d98d5f, type: 3}
+    - {fileID: 6231449829856137078, guid: a9aebff667fc1754ebdf80372fec531b, type: 3}
+    - {fileID: 6589702626168666644, guid: 28447baab0671974abec9c96ee848159, type: 3}
+    - {fileID: 7522165989417369324, guid: 1439233ddb66cd448b6f87554ca312bd, type: 3}
+    - {fileID: 7879543683192839864, guid: 67ea4c827dae0f64aac6d13d5b93984e, type: 3}
+    - {fileID: 4570128838942779205, guid: 4bccf8b255fba1f429bd5723c39d6aa3, type: 3}
   artMapDictionary:
   - color:
       serializedVersion: 2

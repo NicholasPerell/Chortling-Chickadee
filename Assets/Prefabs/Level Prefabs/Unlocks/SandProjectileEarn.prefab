@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d11c386dea14b64a900be766216ac4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ability: 1
+  ability: 0
   sandEarnt: 0.26
 --- !u!1 &7649997449400113320
 GameObject:

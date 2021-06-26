@@ -8,6 +8,11 @@ public class EarningController : MonoBehaviour
     [SerializeField] SandAbilities ability;
     [SerializeField] float sandEarnt;
 
+    private void Start()
+    {
+        name = "SandProjectileEarn";
+    }
+
     [YarnCommand("Bestow")]
     public void BestowAbility()
     {

@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7649997449133751446, guid: 25c23110d42d55740be856cc0b109702, type: 3}
       propertyPath: m_Name
-      value: SandShieldEarn
+      value: SandShieldEarn Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7649997449133751447, guid: 25c23110d42d55740be856cc0b109702, type: 3}
       propertyPath: m_RootOrder
@@ -54,6 +54,10 @@ PrefabInstance:
     - target: {fileID: 7649997449133751447, guid: 25c23110d42d55740be856cc0b109702, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7649997449133751448, guid: 25c23110d42d55740be856cc0b109702, type: 3}
+      propertyPath: ability
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7649997449133751448, guid: 25c23110d42d55740be856cc0b109702, type: 3}
       propertyPath: sandEarnt

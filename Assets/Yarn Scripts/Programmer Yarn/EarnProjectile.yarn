@@ -1,0 +1,11 @@
+title: EarnProjectile.Start
+tags: 
+colorID: 0
+position: -110,68
+---
+<<Bestow SandProjectileEarn>>
+You have gained magic sand!
+This has unlocked the ability to throw sand as a PROJECTILE.
+Hold the left mouse button to throw out sand that will follow your cursor. Let go of the left mouse button to have the sand return to you.
+This sand will hurt enemies as it passes through them. Useful for dealing with any of the crabs that lurk in these waters.
+===

@@ -5,23 +5,25 @@ using UnityEngine.InputSystem;
 
 public class SandAbilityManager : MonoBehaviour
 {
-    //[SerializeField] float thrownCostPerDistance;
-    //[SerializeField] float glassCost;
-    //[SerializeField] float grabCost;
-    //[SerializeField] float shieldCost;
 
     PlayerStatsController stats;
 
     PlayerControls controls;
-    public SandAbilities inUse;
+    //public SandAbilities inUse;
 
     GameObject sandShield;
     GameObject sandTrail;
+    GameObject sandGrab;
+
+    Animator anim;
 
     void Awake()
     {
+        anim = GetComponentInChildren<Animator>();
+
         sandShield = gameObject.GetComponentInChildren<FacePlayerMouse>().gameObject;
-        sandTrail = GameObject.FindObjectOfType<SandMovement>().gameObject;
+        sandTrail = GameObject.Find("Glass Sand Ability Projectile");
+        sandGrab = GameObject.FindObjectOfType<GrabbingSandAbility>().transform.parent.gameObject;
 
         controls = new PlayerControls();
         controls.Player.ThrowSand.performed += _ => AttemptThrow();
@@ -29,6 +31,8 @@ public class SandAbilityManager : MonoBehaviour
         controls.Player.GrabSand.performed += _ => AttemptGrab();
         controls.Player.ShieldSand.performed += _ => AttemptShield();
         controls.Player.EndShieldSand.performed += _ => AttemptEndShield();
+        controls.Player.GrabSand.performed += _ => AttemptGrab();
+        controls.Player.GrabSand.canceled += _ => sandGrab.GetComponentInChildren<SandMovement>().TurnBack();
     }
 
     void OnEnable()
@@ -53,11 +57,9 @@ public class SandAbilityManager : MonoBehaviour
     void Start()
     {
         stats = GetComponent<PlayerStatsController>();
-        inUse = SandAbilities.NONE;
-
-
         sandShield.SetActive(false);
         sandTrail.SetActive(false);
+        sandGrab.SetActive(false);
     }
 
 
@@ -69,42 +71,53 @@ public class SandAbilityManager : MonoBehaviour
 
     void AttemptThrow()
     {
-        if(inUse == SandAbilities.NONE)
+        if(stats.ActivateSand(SandAbilities.PROJECTILE))
         {
-            inUse = SandAbilities.PROJECTILE;
             sandTrail.SetActive(true);
+            anim.SetTrigger("Attack");
         }
     }
     void AttemptGrab()
     {
 
-        if (inUse == SandAbilities.PROJECTILE)
+        if (stats.ActivateSand(SandAbilities.GRAB))
         {
-            inUse = SandAbilities.GRAB;
+            sandGrab.SetActive(true);
+            GameObject.FindObjectOfType<GrabbingSandAbility>().transform.position = transform.position;
+            anim.SetTrigger("Attack");
         }
     }
 
     void AttemptShield()
     {
 
-        if (inUse == SandAbilities.NONE)
+        if (stats.ActivateSand(SandAbilities.SHIELD))
         {
-            inUse = SandAbilities.SHIELD;
             sandShield.SetActive(true);
+            anim.SetTrigger("Attack");
         }
     }
 
     public void AttemptEndThrow()
     {
-        inUse = SandAbilities.NONE;
-        sandTrail.SetActive(false);
+        if (stats.DeactivateSand(SandAbilities.PROJECTILE))
+        {
+            sandTrail.SetActive(false);
+        }
     }
 
-    void AttemptEndShield()
+    public void AttemptEndGrab()
     {
-        if (inUse == SandAbilities.SHIELD)
+        if (stats.DeactivateSand(SandAbilities.GRAB))
         {
-            inUse = SandAbilities.NONE;
+            sandGrab.SetActive(false);
+        }
+    }
+
+    public void AttemptEndShield()
+    {
+        if (stats.DeactivateSand(SandAbilities.SHIELD))
+        {
             sandShield.SetActive(false);
         }
     }

@@ -20,11 +20,13 @@ public class PlayerMovementController : MonoBehaviour
     public float strafeTimer = 0;
 
     [Header("Physics Checks")]
-    [SerializeField] float checkRadius = 0.1f;
+    [SerializeField] public float checkRadius = 0.1f;
     public Transform groundCheck;
     public Transform[] leftWallCheck;
     public Transform[] rightWallCheck;
     [SerializeField] LayerMask groundLayer;
+    [SerializeField] LayerMask wallLayer;
+    [SerializeField] public LayerMask dropLayer;
     [SerializeField] LayerMask waterLayer;
     bool onLand = true;
     bool onGround = false;
@@ -35,8 +37,13 @@ public class PlayerMovementController : MonoBehaviour
     Rigidbody2D rb;
     Vector2 inputDir;
 
-    void Awake()
+    [Header("Animation")]
+    public Transform appearanceModel;
+    Animator anim;
+
+    private void Awake()
     {
+        anim = GetComponentInChildren<Animator>();
         controls = new PlayerControls();
 
         controls.Player.Jump.performed += _ => AttemptJump();
@@ -85,13 +92,13 @@ public class PlayerMovementController : MonoBehaviour
 
     void FixedUpdate()
     {
-
         if (strafeTimer > 0) strafeTimer -= Time.fixedDeltaTime;
 
         CheckForGround();
         CheckForWalls(ref walledLeft,ref leftWallCheck);
         CheckForWalls(ref walledRight,ref rightWallCheck);
 
+        //Prevent pushing into the walls/getting stuck
         if(strafeTimer < strafeCooldown)
         {
             if(walledLeft)
@@ -112,6 +119,8 @@ public class PlayerMovementController : MonoBehaviour
         {
             WaterMovement();
         }
+
+        SendAnimationData();
     }
 
     void CheckForGround()
@@ -125,7 +134,7 @@ public class PlayerMovementController : MonoBehaviour
         {
             //strafeTimer = Mathf.Min(strafeTimer, strafeCooldown);
             rb.velocity = new Vector2(rb.velocity.x,0);
-            rb.AddForce(new Vector2(0, jumpForce/2));
+            rb.AddForce(new Vector2(0, jumpForce * 2/3));
         }
     }
 
@@ -134,7 +143,7 @@ public class PlayerMovementController : MonoBehaviour
         result = false;
         foreach(Transform t in checks)
         {
-            result = result || Physics2D.OverlapCircle(t.position, checkRadius, groundLayer) != null;
+            result = result || Physics2D.OverlapCircle(t.position, checkRadius, wallLayer) != null;
         }
     }
 
@@ -157,7 +166,9 @@ public class PlayerMovementController : MonoBehaviour
 
         float speed = runSpeed;
         if (strafeTimer > strafeCooldown)
+        {
             speed = strafeSpeed;
+        }
 
         if(Mathf.Abs(inputDir.y) > .1f) vel = inputDir * speed;
         else vel = new Vector2(inputDir.x * speed, rb.velocity.y);
@@ -169,9 +180,12 @@ public class PlayerMovementController : MonoBehaviour
     {
         rb.gravityScale = 1.0f;
 
+        //Make this a function that returns float
         float speed = runSpeed;
         if (strafeTimer > strafeCooldown)
+        {
             speed = strafeSpeed;
+        }
 
         rb.velocity = new Vector2(inputDir.x * speed, rb.velocity.y);
     }
@@ -205,8 +219,18 @@ public class PlayerMovementController : MonoBehaviour
             time = timeToDoubleTap;
         }
 
-        //Debug.Log(key.name);
-
         tapTime[key] = time;
+    }
+
+    void SendAnimationData()
+    {
+        anim.SetFloat("Speed",Mathf.Abs(rb.velocity.x));
+        anim.SetBool("OnLand",onLand);
+        anim.SetBool("Strafing", strafeTimer > strafeCooldown);
+
+        if (rb.velocity.x > 0)
+            appearanceModel.localScale = new Vector3(1, 1, 1);
+        else if (rb.velocity.x < 0)
+            appearanceModel.localScale = new Vector3(-1, 1, 1);
     }
 }

@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: 306063f9d30c10f41ac86aebb6703ffd
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - PrologueTester-Prologue.Start-0
+  - PrologueTester-Prologue.Start-1
+  - PrologueTester-Prologue.Start-2
+  - PrologueTester-Prologue.Start-3
+  - PrologueTester-Prologue.Start-4
+  - PrologueTester-Prologue.Start-5
+  - PrologueTester-Prologue.Start-6
+  - PrologueTester-Prologue.Start-7
+  - PrologueTester-Prologue.Start-8
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

@@ -9657,7 +9657,7 @@ GameObject:
   - component: {fileID: 2034413087}
   - component: {fileID: 3170356775155755801}
   m_Layer: 6
-  m_Name: Projectile
+  m_Name: Glass Sand Ability Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9695,8 +9695,8 @@ MonoBehaviour:
   turningSpeed: 720
   particleLength: 6
   particleDensity: 15
-  atMouseSpeed: 20
-  radiusOfEffect: 3
+  atMouseSpeed: 5
+  radiusOfEffect: 1
   mainTrail: {fileID: 621193231156569131}
   flakeTrail: {fileID: 621193230789719469}
 --- !u!58 &2034413086
@@ -9748,7 +9748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b636a9404efc54d90d2982e76c4514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damagePerSpeed: 1
   enemyMask:
     serializedVersion: 2
     m_Bits: 512

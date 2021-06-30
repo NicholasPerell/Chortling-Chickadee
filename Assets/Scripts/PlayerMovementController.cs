@@ -5,9 +5,18 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovementController : MonoBehaviour
 {
-    [Header("Run/Jumping")]
-    [SerializeField] float runSpeed = 2;
+    [Header("Ground Movement")]
+    [SerializeField] float groundRunForce = 100;
+    [SerializeField] float groundMaxRunSpeed = 2;
+    [SerializeField] float groundLinearDrag = .1f;
+    [SerializeField] float groundGravityScale = 3.0f;
     [SerializeField] float jumpForce = 400;
+
+    [Header("Water Movement")]
+    [SerializeField] float waterRunForce = 100;
+    [SerializeField] float waterMaxRunSpeed = 2.5f;
+    [SerializeField] float waterLinearDrag = .1f;
+    [SerializeField] float waterGravityScale = .1f;
 
     [Header("Strafing")]
     [SerializeField] float strafeSpeed = 20;
@@ -15,7 +24,6 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] float strafeLength = .5f;
     [SerializeField] public float strafeCooldown = 1.0f;
 
-    Dictionary<InputControl,float> tapTime;
     [HideInInspector]
     public float strafeTimer = 0;
 
@@ -41,14 +49,18 @@ public class PlayerMovementController : MonoBehaviour
     public Transform appearanceModel;
     Animator anim;
 
+    //[HideInInspector] 
+    public float stunned;
+
     private void Awake()
     {
         anim = GetComponentInChildren<Animator>();
         controls = new PlayerControls();
 
         controls.Player.Jump.performed += _ => AttemptJump();
+        controls.Player.EndJump.performed += _ => AttemptEndJump();
 
-        controls.Player.Strafe.performed += ctx => AttemptStrafe(ctx.control);
+        controls.Player.Strafe.performed += _ => AttemptStrafe();
 
         controls.Player.MovementInput.performed += ctx => UpdateDirInput(ctx.ReadValue<Vector2>());
         controls.Player.MovementInput.started += ctx => UpdateDirInput(ctx.ReadValue<Vector2>());
@@ -58,8 +70,11 @@ public class PlayerMovementController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        stunned = 0;
         rb = GetComponent<Rigidbody2D>();
-        tapTime = new Dictionary<InputControl, float>();
+        rb.gravityScale = groundGravityScale;
+        rb.drag = groundLinearDrag;
+        onLand = true;
     }
 
     private void OnEnable()
@@ -79,15 +94,8 @@ public class PlayerMovementController : MonoBehaviour
         controls.Player.Strafe.Disable();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //InputCheck();
-        if(tapTime.Count > 0)
-        foreach (InputControl e in new ArrayList(tapTime.Keys))
-        {
-            if (tapTime[e] > 0) tapTime[e] -= Time.deltaTime;
-        }
     }
 
     void FixedUpdate()
@@ -111,7 +119,15 @@ public class PlayerMovementController : MonoBehaviour
             }
         }
 
-        if (onLand)
+        if (stunned > 0)
+        {
+            stunned -= Time.fixedDeltaTime;
+        }
+        else if(strafeTimer > strafeCooldown)
+        {
+            StrafeMovement();
+        }
+        else if (onLand)
         {
             GroundMovement();
         }
@@ -132,9 +148,16 @@ public class PlayerMovementController : MonoBehaviour
         
         if(onLand && !prevLand)
         {
-            //strafeTimer = Mathf.Min(strafeTimer, strafeCooldown);
             rb.velocity = new Vector2(rb.velocity.x,0);
             rb.AddForce(new Vector2(0, jumpForce * 2/3));
+
+            rb.gravityScale = groundGravityScale;
+            rb.drag = groundLinearDrag;
+        }
+        else if (!onLand && prevLand)
+        {
+            rb.gravityScale = waterGravityScale;
+            rb.drag = waterLinearDrag;
         }
     }
 
@@ -147,51 +170,51 @@ public class PlayerMovementController : MonoBehaviour
         }
     }
 
-    void InputCheck()
-    {
-       inputDir = controls.Player.MovementInput.ReadValue<Vector2>();
-    }
-
     void UpdateDirInput(Vector2 dir)
     {
-        if(strafeTimer < strafeCooldown)
-        inputDir = dir;
+        if (strafeTimer < strafeCooldown)
+        {
+            inputDir = dir;
+        }
+    }
+
+    void StrafeMovement()
+    {
+        if (onLand)
+        {
+            rb.velocity = new Vector2(inputDir.x * strafeSpeed, 0.0f);
+        }
+        else
+        {
+            rb.velocity = inputDir * strafeSpeed;
+        }
     }
 
     void WaterMovement()
     {
-        Vector2 vel;
-
-        rb.gravityScale = .5f;
-
-        float speed = runSpeed;
-        if (strafeTimer > strafeCooldown)
+        if (Mathf.Abs(inputDir.y) > .1f)
         {
-            speed = strafeSpeed;
+            rb.AddForce(inputDir * waterMaxRunSpeed);
+        }
+        else
+        {
+            rb.AddForce(new Vector2(inputDir.x * waterMaxRunSpeed, 0.0f));
         }
 
-        if(Mathf.Abs(inputDir.y) > .1f) vel = inputDir * speed;
-        else vel = new Vector2(inputDir.x * speed, rb.velocity.y);
-
-        rb.velocity = Vector2.Lerp(rb.velocity,vel,.2f);
+        rb.velocity = Vector2.ClampMagnitude(rb.velocity, waterMaxRunSpeed);
     }
 
     void GroundMovement()
     {
-        rb.gravityScale = 1.0f;
+        rb.AddForce(new Vector2(inputDir.x * groundRunForce, 0.0f));
 
-        //Make this a function that returns float
-        float speed = runSpeed;
-        if (strafeTimer > strafeCooldown)
-        {
-            speed = strafeSpeed;
-        }
-
-        rb.velocity = new Vector2(inputDir.x * speed, rb.velocity.y);
+        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x,-groundMaxRunSpeed, groundMaxRunSpeed), rb.velocity.y);
     }
 
     public void AttemptJump()
     {
+        if (stunned > 0) return;
+
         if (onGround)
         {
             rb.velocity = new Vector2(rb.velocity.x, 0);
@@ -200,26 +223,24 @@ public class PlayerMovementController : MonoBehaviour
         }
     }
 
-    public void AttemptStrafe(InputControl key)
+    void AttemptEndJump()
     {
-        if(!tapTime.ContainsKey(key))
+        if (stunned > 0) return;
+
+        if(onLand && rb.velocity.y > 0)
         {
-            tapTime.Add(key, 0);
+            rb.velocity = new Vector2(rb.velocity.x,rb.velocity.y/2);
         }
+    }
 
-        float time = tapTime[key];
+    public void AttemptStrafe()
+    { 
+        if (stunned > 0) return;
 
-        if (time > 0 && strafeTimer <= 0)
+        if (strafeTimer <= 0)
         {
             strafeTimer = strafeLength + strafeCooldown;
-            time = 0;
         }
-        else
-        {
-            time = timeToDoubleTap;
-        }
-
-        tapTime[key] = time;
     }
 
     void SendAnimationData()

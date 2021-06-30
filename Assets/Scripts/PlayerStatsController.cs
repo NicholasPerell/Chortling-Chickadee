@@ -46,6 +46,11 @@ public class PlayerStatsController : MonoBehaviour
     [SerializeField] public bool[] hasAbility = { true, true, true };
     bool[] inUse = { false, false, false};
 
+    [Header("When Damaged")]
+    [SerializeField] float timeStunned, timeInvulnerable;
+    float invulnerabilityTimer;
+
+
     PlayerMovementController movement;
     SandAbilityManager abilMan;
     Animator anim;
@@ -73,11 +78,15 @@ public class PlayerStatsController : MonoBehaviour
         secondsToRefillSand = 1 / secondsToRefillSand;
 
         empty = false;
+
+        invulnerabilityTimer = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(invulnerabilityTimer > 0) invulnerabilityTimer -= Time.deltaTime;
+
         DeterminePlannedSand();
         RechargeSand();
     }
@@ -120,7 +129,7 @@ public class PlayerStatsController : MonoBehaviour
 
     public bool ChangeHealth(float delta)
     {
-        if (delta < 0 && movement.strafeTimer > movement.strafeCooldown) return false;
+        if (delta < 0 && (movement.strafeTimer > movement.strafeCooldown || invulnerabilityTimer > 0)) return false;
 
         currentHealth += delta;
         if(currentHealth <= 0)
@@ -132,6 +141,8 @@ public class PlayerStatsController : MonoBehaviour
         if(delta < 0)
         {
             anim.SetTrigger("Hurt");
+            movement.stunned = timeStunned;
+            invulnerabilityTimer = timeInvulnerable;
         }
 
         return true;

@@ -28,11 +28,12 @@ public class SandAbilityManager : MonoBehaviour
         controls = new PlayerControls();
         controls.Player.ThrowSand.performed += _ => AttemptThrow();
         controls.Player.ThrowSand.canceled += _ => sandTrail.GetComponent<SandMovement>().TurnBack();
-        controls.Player.GrabSand.performed += _ => AttemptGrab();
         controls.Player.ShieldSand.performed += _ => AttemptShield();
+        controls.Player.ShieldSand.canceled += _ => AttemptEndShield();
         controls.Player.EndShieldSand.performed += _ => AttemptEndShield();
         controls.Player.GrabSand.performed += _ => AttemptGrab();
         controls.Player.GrabSand.canceled += _ => sandGrab.GetComponentInChildren<SandMovement>().TurnBack();
+        controls.Player.EndGrabSand.performed += _ => sandGrab.GetComponentInChildren<SandMovement>().TurnBack();
     }
 
     void OnEnable()

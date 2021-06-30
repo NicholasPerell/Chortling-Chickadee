@@ -20,7 +20,6 @@ public class PlayerMovementController : MonoBehaviour
 
     [Header("Strafing")]
     [SerializeField] float strafeSpeed = 20;
-    [SerializeField] float timeToDoubleTap = .5f;
     [SerializeField] float strafeLength = .5f;
     [SerializeField] public float strafeCooldown = 1.0f;
 

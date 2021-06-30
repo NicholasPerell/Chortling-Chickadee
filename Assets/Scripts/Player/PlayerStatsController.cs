@@ -145,6 +145,8 @@ public class PlayerStatsController : MonoBehaviour
             invulnerabilityTimer = timeInvulnerable;
         }
 
+        currentHealth = Mathf.Min(currentHealth, currentMaxHealth);
+
         return true;
     }
 

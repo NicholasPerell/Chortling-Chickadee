@@ -193,11 +193,11 @@ public class PlayerMovementController : MonoBehaviour
     {
         if (Mathf.Abs(inputDir.y) > .1f)
         {
-            rb.AddForce(inputDir * waterMaxRunSpeed);
+            rb.AddForce(inputDir * waterRunForce);
         }
         else
         {
-            rb.AddForce(new Vector2(inputDir.x * waterMaxRunSpeed, 0.0f));
+            rb.AddForce(new Vector2(inputDir.x * waterRunForce, 0.0f));
         }
 
         rb.velocity = Vector2.ClampMagnitude(rb.velocity, waterMaxRunSpeed);

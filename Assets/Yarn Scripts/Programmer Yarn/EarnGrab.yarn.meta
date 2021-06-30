@@ -8,14 +8,21 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
-  stringIDs: []
-  compilationStatus: 0
-  isSuccesfullyCompiled: 0
+  baseLanguageID: en-US
+  stringIDs:
+  - EarnGrab-EarnGrab.Start-0
+  - EarnGrab-EarnGrab.Start-1
+  - EarnGrab-EarnGrab.Start-2
+  - EarnGrab-EarnGrab.Start-3
+  - EarnGrab-EarnGrab.Start-4
+  - EarnGrab-EarnGrab.Start-5
+  - EarnGrab-EarnGrab.Start-6
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
   compilationErrorMessage: "Error on line 11 at position 41:\nmismatched input ']'
     expecting FORMAT_FUNCTION_EXPRESSION_START\r\nBe careful! The GRAB will use up
     sand [i]based off how far the grabbing sand is from the player.[/i] You can only
     go out so far, especially when you're using other abilities.\r\n                                       
     ^"
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: bd569cb5a5e13b844a792314831d71b4, type: 3}
   localizations: []

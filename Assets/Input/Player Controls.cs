@@ -35,6 +35,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
+                    ""name"": ""End Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""7afa58f9-2906-4c26-80ff-1d601b86008f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
                     ""name"": ""Drop"",
                     ""type"": ""Button"",
                     ""id"": ""62831a8f-9d02-4295-869d-72504a8f233c"",
@@ -75,14 +83,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Grab Sand"",
-                    ""type"": ""Button"",
-                    ""id"": ""f18d6f0d-aab0-43f4-82cb-a571bc413ac0"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
                     ""name"": ""Shield Sand"",
                     ""type"": ""Button"",
                     ""id"": ""54ca2d07-983e-4bca-994d-cabf4c773d2c"",
@@ -94,6 +94,22 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""name"": ""End Shield Sand"",
                     ""type"": ""Button"",
                     ""id"": ""1aea98d7-c165-4b20-9846-56e1d249bfea"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Grab Sand"",
+                    ""type"": ""Button"",
+                    ""id"": ""f18d6f0d-aab0-43f4-82cb-a571bc413ac0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""End Grab Sand"",
+                    ""type"": ""Button"",
+                    ""id"": ""ba2fea7a-de08-44e2-b395-ab4afe035a35"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -174,7 +190,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""2D Vector"",
                     ""id"": ""4bbbe719-5973-4df4-baef-5165a4318906"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=1)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -229,7 +245,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""d51eaf63-3663-4eb8-8026-dff79614eddf"",
-                    ""path"": ""<Keyboard>/w"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
@@ -239,96 +255,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""b9437662-71d4-4013-97b1-6bb5253515ff"",
-                    ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a82faa26-1497-4bc1-a5cb-48eb6662b242"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Strafe"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""fc2a2a11-a3f5-4625-ab47-eee6aef334d5"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Strafe"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a5bc931a-ddd1-41b7-b57a-e5c11ad40268"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Strafe"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""6ecf322c-7c3c-4a48-836e-54cf02256cf1"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Strafe"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8e994cf4-86c1-40fd-98e2-b46fd1970e4e"",
-                    ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Strafe"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""36416c9b-37af-4ecf-8b25-0eb9b5e0c879"",
-                    ""path"": ""<Keyboard>/leftArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Strafe"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""1bef0f10-14f7-45a4-8051-6fadf4e08393"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Strafe"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""3410df5a-c693-429c-857e-bbcc01400b89"",
-                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""path"": ""<Keyboard>/ctrl"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -371,30 +299,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""e0dca296-fa9c-4d01-b9da-e750cb20dde7"",
-                    ""path"": ""<Mouse>/rightButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Grab Sand"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""db647636-3c62-4b80-bdff-fdebff8086fb"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Grab Sand"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""c1e72573-26f7-4a3c-b0a8-2b55d410422d"",
-                    ""path"": ""<Keyboard>/shift"",
+                    ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -405,7 +311,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""a7599a28-7940-481f-80ba-beeeb65041cd"",
-                    ""path"": ""<Keyboard>/shift"",
+                    ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": ""Press(behavior=1)"",
                     ""processors"": """",
                     ""groups"": """",
@@ -456,6 +362,39 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""End Grab"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2474ea16-f5df-435b-88f8-27e4a9559ce5"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""End Grab Sand"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""db647636-3c62-4b80-bdff-fdebff8086fb"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Grab Sand"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3732b143-04d8-49b1-a2a9-2ef80a46087e"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""End Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -466,14 +405,16 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_MovementInput = m_Player.FindAction("Movement Input", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+        m_Player_EndJump = m_Player.FindAction("End Jump", throwIfNotFound: true);
         m_Player_Drop = m_Player.FindAction("Drop", throwIfNotFound: true);
         m_Player_Strafe = m_Player.FindAction("Strafe", throwIfNotFound: true);
         m_Player_MousePos = m_Player.FindAction("Mouse Pos", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_ThrowSand = m_Player.FindAction("Throw Sand", throwIfNotFound: true);
-        m_Player_GrabSand = m_Player.FindAction("Grab Sand", throwIfNotFound: true);
         m_Player_ShieldSand = m_Player.FindAction("Shield Sand", throwIfNotFound: true);
         m_Player_EndShieldSand = m_Player.FindAction("End Shield Sand", throwIfNotFound: true);
+        m_Player_GrabSand = m_Player.FindAction("Grab Sand", throwIfNotFound: true);
+        m_Player_EndGrabSand = m_Player.FindAction("End Grab Sand", throwIfNotFound: true);
         m_Player_Grab = m_Player.FindAction("Grab", throwIfNotFound: true);
         m_Player_EndGrab = m_Player.FindAction("End Grab", throwIfNotFound: true);
     }
@@ -527,14 +468,16 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_MovementInput;
     private readonly InputAction m_Player_Jump;
+    private readonly InputAction m_Player_EndJump;
     private readonly InputAction m_Player_Drop;
     private readonly InputAction m_Player_Strafe;
     private readonly InputAction m_Player_MousePos;
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_ThrowSand;
-    private readonly InputAction m_Player_GrabSand;
     private readonly InputAction m_Player_ShieldSand;
     private readonly InputAction m_Player_EndShieldSand;
+    private readonly InputAction m_Player_GrabSand;
+    private readonly InputAction m_Player_EndGrabSand;
     private readonly InputAction m_Player_Grab;
     private readonly InputAction m_Player_EndGrab;
     public struct PlayerActions
@@ -543,14 +486,16 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public PlayerActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @MovementInput => m_Wrapper.m_Player_MovementInput;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
+        public InputAction @EndJump => m_Wrapper.m_Player_EndJump;
         public InputAction @Drop => m_Wrapper.m_Player_Drop;
         public InputAction @Strafe => m_Wrapper.m_Player_Strafe;
         public InputAction @MousePos => m_Wrapper.m_Player_MousePos;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @ThrowSand => m_Wrapper.m_Player_ThrowSand;
-        public InputAction @GrabSand => m_Wrapper.m_Player_GrabSand;
         public InputAction @ShieldSand => m_Wrapper.m_Player_ShieldSand;
         public InputAction @EndShieldSand => m_Wrapper.m_Player_EndShieldSand;
+        public InputAction @GrabSand => m_Wrapper.m_Player_GrabSand;
+        public InputAction @EndGrabSand => m_Wrapper.m_Player_EndGrabSand;
         public InputAction @Grab => m_Wrapper.m_Player_Grab;
         public InputAction @EndGrab => m_Wrapper.m_Player_EndGrab;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -568,6 +513,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @EndJump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndJump;
+                @EndJump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndJump;
+                @EndJump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndJump;
                 @Drop.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDrop;
                 @Drop.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDrop;
                 @Drop.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDrop;
@@ -583,15 +531,18 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @ThrowSand.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrowSand;
                 @ThrowSand.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrowSand;
                 @ThrowSand.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrowSand;
-                @GrabSand.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGrabSand;
-                @GrabSand.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGrabSand;
-                @GrabSand.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGrabSand;
                 @ShieldSand.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShieldSand;
                 @ShieldSand.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShieldSand;
                 @ShieldSand.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShieldSand;
                 @EndShieldSand.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndShieldSand;
                 @EndShieldSand.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndShieldSand;
                 @EndShieldSand.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndShieldSand;
+                @GrabSand.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGrabSand;
+                @GrabSand.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGrabSand;
+                @GrabSand.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGrabSand;
+                @EndGrabSand.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndGrabSand;
+                @EndGrabSand.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndGrabSand;
+                @EndGrabSand.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndGrabSand;
                 @Grab.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGrab;
                 @Grab.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGrab;
                 @Grab.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGrab;
@@ -608,6 +559,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @EndJump.started += instance.OnEndJump;
+                @EndJump.performed += instance.OnEndJump;
+                @EndJump.canceled += instance.OnEndJump;
                 @Drop.started += instance.OnDrop;
                 @Drop.performed += instance.OnDrop;
                 @Drop.canceled += instance.OnDrop;
@@ -623,15 +577,18 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @ThrowSand.started += instance.OnThrowSand;
                 @ThrowSand.performed += instance.OnThrowSand;
                 @ThrowSand.canceled += instance.OnThrowSand;
-                @GrabSand.started += instance.OnGrabSand;
-                @GrabSand.performed += instance.OnGrabSand;
-                @GrabSand.canceled += instance.OnGrabSand;
                 @ShieldSand.started += instance.OnShieldSand;
                 @ShieldSand.performed += instance.OnShieldSand;
                 @ShieldSand.canceled += instance.OnShieldSand;
                 @EndShieldSand.started += instance.OnEndShieldSand;
                 @EndShieldSand.performed += instance.OnEndShieldSand;
                 @EndShieldSand.canceled += instance.OnEndShieldSand;
+                @GrabSand.started += instance.OnGrabSand;
+                @GrabSand.performed += instance.OnGrabSand;
+                @GrabSand.canceled += instance.OnGrabSand;
+                @EndGrabSand.started += instance.OnEndGrabSand;
+                @EndGrabSand.performed += instance.OnEndGrabSand;
+                @EndGrabSand.canceled += instance.OnEndGrabSand;
                 @Grab.started += instance.OnGrab;
                 @Grab.performed += instance.OnGrab;
                 @Grab.canceled += instance.OnGrab;
@@ -646,14 +603,16 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     {
         void OnMovementInput(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnEndJump(InputAction.CallbackContext context);
         void OnDrop(InputAction.CallbackContext context);
         void OnStrafe(InputAction.CallbackContext context);
         void OnMousePos(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnThrowSand(InputAction.CallbackContext context);
-        void OnGrabSand(InputAction.CallbackContext context);
         void OnShieldSand(InputAction.CallbackContext context);
         void OnEndShieldSand(InputAction.CallbackContext context);
+        void OnGrabSand(InputAction.CallbackContext context);
+        void OnEndGrabSand(InputAction.CallbackContext context);
         void OnGrab(InputAction.CallbackContext context);
         void OnEndGrab(InputAction.CallbackContext context);
     }

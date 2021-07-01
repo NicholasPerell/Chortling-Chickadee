@@ -9691,11 +9691,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9baa4014ad3fd4fa0ff7caf0340dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  isGlass: 1
+  speed: 15
   turningSpeed: 720
   particleLength: 6
   particleDensity: 15
-  atMouseSpeed: 5
+  atMouseSpeed: 17
   radiusOfEffect: 1
   mainTrail: {fileID: 621193231156569131}
   flakeTrail: {fileID: 621193230789719469}

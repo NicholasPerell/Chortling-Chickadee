@@ -154,6 +154,74 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 4287237375
       tile: {fileID: 11400000, guid: 1f32d1707a30ccf40bef3b08d2150481, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287237631
+      tile: {fileID: 11400000, guid: c0388a16bcbfaea499490791e5ab0e09, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287237887
+      tile: {fileID: 11400000, guid: 6df3133738a897e4c80a740165061efd, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287238143
+      tile: {fileID: 11400000, guid: 4a48fab42ef28164783e98b346ef53a2, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287238399
+      tile: {fileID: 11400000, guid: 3bf64341429353344b6e7d1720bae426, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287238655
+      tile: {fileID: 11400000, guid: 6daf6c5d339ff9c41916596e69855039, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287238911
+      tile: {fileID: 11400000, guid: b193e26704e0b0e40a7b076215e898e3, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287239167
+      tile: {fileID: 11400000, guid: ae32d476330684546b9f5d02a95fb704, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287239423
+      tile: {fileID: 11400000, guid: 2e63dfb2399c5bd409bef7ba4c3a636e, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287239679
+      tile: {fileID: 11400000, guid: 7baf706cd0f70ad4aaffb688860de597, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287239935
+      tile: {fileID: 11400000, guid: 5232958d8dfbda24ea9efa8c2ca0db78, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287240191
+      tile: {fileID: 11400000, guid: d91e0c488a8993e42861d1f31a01d958, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287240447
+      tile: {fileID: 11400000, guid: 3b03778c2c1e14e4bbe2b41f5b2c406f, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287240703
+      tile: {fileID: 11400000, guid: abfd25d977390914ca8f20098171985a, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287240959
+      tile: {fileID: 11400000, guid: a7eae05952cde7c489235f449984465f, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287241215
+      tile: {fileID: 11400000, guid: e953cd2dd5e9a314da7ab422d4ca741d, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287241471
+      tile: {fileID: 11400000, guid: 296b173c5a8fb304ca4f46ef30d3fb2f, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287241727
+      tile: {fileID: 11400000, guid: 523e301a2b817394d8c15c6fa61b66fc, type: 2}
     prefab:
     - {fileID: 0}
     - {fileID: 6612540415799428813, guid: 3c3abb5a8d91a0b41a75e176f07f73f3, type: 3}
@@ -181,6 +249,23 @@ MonoBehaviour:
     - {fileID: 7522165989417369324, guid: 1439233ddb66cd448b6f87554ca312bd, type: 3}
     - {fileID: 7879543683192839864, guid: 67ea4c827dae0f64aac6d13d5b93984e, type: 3}
     - {fileID: 4570128838942779205, guid: 4bccf8b255fba1f429bd5723c39d6aa3, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 5448094277396625846, guid: 1199cf71700be914199b5164ade0b2c1, type: 3}
+    - {fileID: 1102658626148588169, guid: 4ba002ef0da185e4fb9674da405f44de, type: 3}
+    - {fileID: 3447634466322732390, guid: 04acaabaebb22a647ae8ab9da2ddd558, type: 3}
   artMapDictionary:
   - color:
       serializedVersion: 2

@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/f-prologue_slide_testing.unity
-    guid: 6aa5a7abc939d8c44921606e70f3afb5
+    path: Assets/Scenes/ee-arttest.unity
+    guid: fbf998733e032b14891c3bf61f295360
   - enabled: 1
-    path: Assets/Scenes/d-yarn_testing.unity
-    guid: 318622d46c6caeb4fb20d8d66c195dbe
+    path: Assets/Scenes/c-Level_System_Testing.unity
+    guid: c5b67bc932bf80740907b7b4cb25c30a
   m_configObjects: {}

@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f1f8be7df4a56ba4fa1f63150ca786d6
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - RoastJuly1st-JunFirst.Start-0
+  - RoastJuly1st-JunFirst.Start-1
+  - RoastJuly1st-JunFirst.Start-2
+  - RoastJuly1st-JunFirst.Start-3
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

@@ -141,7 +141,7 @@ public class PlayerStatsController : MonoBehaviour
         if(delta < 0)
         {
             anim.SetTrigger("Hurt");
-            movement.stunned = timeStunned;
+            Stun();
             invulnerabilityTimer = timeInvulnerable;
         }
 
@@ -169,5 +169,10 @@ public class PlayerStatsController : MonoBehaviour
 
         inUse[index] = false;
         return true;
+    }
+
+    public void Stun()
+    {
+        movement.stunned = timeStunned;
     }
 }

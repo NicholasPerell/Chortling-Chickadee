@@ -10,6 +10,7 @@ public class HazardousSurface : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerStatsController>().ChangeHealth(-damage);
+            collision.gameObject.GetComponent<PlayerStatsController>().Stun();
             collision.rigidbody.velocity = -collision.relativeVelocity.normalized * 10;
         }
     }

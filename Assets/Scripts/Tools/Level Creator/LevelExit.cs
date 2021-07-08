@@ -21,7 +21,7 @@ public class LevelExit : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             Debug.Log("Exit player");
-            GameObject.FindObjectOfType<LevelCatalog>().ExitLevel(id, collision.gameObject.transform.position - transform.position);
+            GameObject.FindObjectOfType<LevelCatalog>().ExitLevel(id);
         }
     }
 }

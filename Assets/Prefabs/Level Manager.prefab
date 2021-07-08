@@ -224,6 +224,10 @@ MonoBehaviour:
       tile: {fileID: 11400000, guid: 523e301a2b817394d8c15c6fa61b66fc, type: 2}
     - color:
         serializedVersion: 2
+        rgba: 4287241983
+      tile: {fileID: 11400000, guid: 523e301a2b817394d8c15c6fa61b66fc, type: 2}
+    - color:
+        serializedVersion: 2
         rgba: 4287242239
       tile: {fileID: 11400000, guid: c4da10ea1bb0fc54c862ec89919b483e, type: 2}
     - color:
@@ -234,14 +238,6 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 4287242751
       tile: {fileID: 11400000, guid: ba2ca369f8e22db49a44fd29af01a47a, type: 2}
-    - color:
-        serializedVersion: 2
-        rgba: 4287243007
-      tile: {fileID: 11400000, guid: 986e1ac3ca582f54a8dd1405162306c9, type: 2}
-    - color:
-        serializedVersion: 2
-        rgba: 4287243263
-      tile: {fileID: 11400000, guid: 181d1d992d3340b4b8551f094f6139a1, type: 2}
     prefab:
     - {fileID: 0}
     - {fileID: 6612540415799428813, guid: 3c3abb5a8d91a0b41a75e176f07f73f3, type: 3}
@@ -289,8 +285,6 @@ MonoBehaviour:
     - {fileID: 716398456343934984, guid: 2bf7e9e3850c35b4585688ad6a80f98f, type: 3}
     - {fileID: 2842665190262688933, guid: 87e767983b0d82444bc7c6ac7ccadd60, type: 3}
     - {fileID: 126411180804552060, guid: dc0666d4b06bf444fb25738713dadb27, type: 3}
-    - {fileID: 3382259181002080720, guid: 529a5cc6745850546910499bb082f31d, type: 3}
-    - {fileID: 993463827591348798, guid: 937fb8f500d03bf4f9ae1097173926ef, type: 3}
   artMapDictionary:
   - color:
       serializedVersion: 2

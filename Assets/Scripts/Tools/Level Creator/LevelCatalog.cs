@@ -61,7 +61,7 @@ public class LevelCatalog : MonoBehaviour
     }
 
 
-    public void ExitLevel(int id)
+    public void ExitLevel(int id, Vector3 offset)
     {
         foreach (LevelExit exit in GameObject.FindObjectsOfType<LevelExit>())
         {
@@ -75,7 +75,7 @@ public class LevelCatalog : MonoBehaviour
         {
             if(exit.id == levelExitData.exitNumber)
             {
-                player.transform.position = exit.transform.position;
+                player.transform.position = exit.transform.position + offset;
                 Camera.main.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, Camera.main.transform.position.z);
             }
         }

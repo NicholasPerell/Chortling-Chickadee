@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueContainer: {fileID: 1662241398882939580}
-  textSpeed: 0.0125
+  textSpeed: 0.003125
   optionButtons: []
   onDialogueStart:
     m_PersistentCalls:
@@ -638,7 +638,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0d140ee9a2df286408cfbda3ec77166a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac3fe93e1d6574d4abb400b6730948b3, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

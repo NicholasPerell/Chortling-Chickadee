@@ -110,12 +110,17 @@ public class PlayerStatsController : MonoBehaviour
 
         if(plannedSand <= 0)
         {
-            empty = true;
-            plannedSand = 0;
-            abilMan.AttemptEndGrab();
-            abilMan.AttemptEndThrow();
-            abilMan.AttemptEndShield();
+            DisableAllSand();
         }
+    }
+
+    void DisableAllSand()
+    {
+        empty = true;
+        plannedSand = 0;
+        abilMan.AttemptEndGrab();
+        abilMan.AttemptEndThrow();
+        abilMan.AttemptEndShield();
     }
 
     void RechargeSand()
@@ -134,11 +139,17 @@ public class PlayerStatsController : MonoBehaviour
         currentHealth += delta;
         if(currentHealth <= 0)
         {
-            Debug.Log("Player Death");
-            //Destroy(this.gameObject);
+            GameManager.TriggerGameOver();
+            
+            //TODO change this to death trigger if we get a death animation
+            anim.SetTrigger("Hurt");
+
+            Destroy(this.movement);
+            DisableAllSand();
+            Destroy(this);
         }
 
-        if(delta < 0)
+        if (delta < 0)
         {
             anim.SetTrigger("Hurt");
             Stun();

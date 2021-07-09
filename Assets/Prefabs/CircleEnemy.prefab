@@ -138,8 +138,8 @@ MonoBehaviour:
   hp: 10
   dmg: 1
   vision: 5
-  circleRadius: 3
-  circleSpeed: 3
+  circleRadius: 4
+  circleSpeed: 1
   runSpeed: 1
   attackTimer: 2
   projectile: {fileID: 1539218486796498029, guid: f69f35d9a42e8a245a59bf54ffd77252, type: 3}

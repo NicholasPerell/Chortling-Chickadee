@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/h-logo_and_audio.unity
+    guid: 5e6e5163011fcb04eacec4cc93391449
+  - enabled: 1
     path: Assets/Scenes/ee-arttest.unity
     guid: fbf998733e032b14891c3bf61f295360
   - enabled: 1

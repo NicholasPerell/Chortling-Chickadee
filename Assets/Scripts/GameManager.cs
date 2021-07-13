@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public enum GameMode
 {
@@ -15,6 +17,7 @@ public enum GameMode
 public class GameManager : MonoBehaviour
 {
     [SerializeField] static float timeToFadeToGameOver = 1.0f;
+    [SerializeField] Image blackScreen;
 
     public GameMode mode = GameMode.PLAYING;
     GameMode previousMode = GameMode.PLAYING;
@@ -53,6 +56,8 @@ public class GameManager : MonoBehaviour
     IEnumerator FadeToBlack()
     {
         //TODO trigger stinger here
+        blackScreen.enabled = true;
+        blackScreen.DOFade(1, timeToFadeToGameOver);
         yield return new WaitForSeconds(timeToFadeToGameOver);
         SceneManager.LoadScene("g-death_screen");
     }

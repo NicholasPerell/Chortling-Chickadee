@@ -150,14 +150,6 @@ PrefabInstance:
       propertyPath: hasAbility.Array.data[2]
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5069705327537142896, guid: c3ffbae7c26c2ec458eb51efd2d315d2, type: 3}
-      propertyPath: jumpForce
-      value: 1200
-      objectReference: {fileID: 0}
-    - target: {fileID: 5069705327537142896, guid: c3ffbae7c26c2ec458eb51efd2d315d2, type: 3}
-      propertyPath: groundGravityScale
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5069705327537142897, guid: c3ffbae7c26c2ec458eb51efd2d315d2, type: 3}
       propertyPath: m_RootOrder
       value: 1

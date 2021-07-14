@@ -39,39 +39,51 @@ public class CircleEnemyController : MonoBehaviour
     {
         playerDistance = Vector3.Distance(gameObject.transform.position, player.transform.position);
 
-        if (hp <= 2)
+        if (!player.GetComponent<PlayerStatsController>().beingAttacked || player.GetComponent<PlayerStatsController>().attackingEnemy == gameObject)
         {
-            Debug.Log("Running Away");
-            transform.position = Vector2.MoveTowards(gameObject.transform.position, -1 * player.transform.position, runSpeed * Time.deltaTime);
-        }
-        else if (playerDistance <= circleRadius)
-        {
-            Debug.Log("Attacking Player");
+            player.GetComponent<PlayerStatsController>().beingAttacked = true;
+            player.GetComponent<PlayerStatsController>().attackingEnemy = gameObject;
 
-            if (clockwise)
+            if (hp <= 0)
             {
-                // change to physics velocity
-                // keep rotatearound but add raycasting instead of collision
-                transform.RotateAround(player.transform.position, Vector3.forward, -(circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
-                transform.Rotate(0, 0, (circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
+                Destroy(gameObject);
+                player.GetComponent<PlayerStatsController>().beingAttacked = false;
+                player.GetComponent<PlayerStatsController>().attackingEnemy = null;
             }
-            else
+            else if (hp <= 2)
             {
-                transform.RotateAround(player.transform.position, Vector3.forward, (circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
-                transform.Rotate(0, 0, -(circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
+                Debug.Log("Running Away");
+                transform.position = Vector2.MoveTowards(gameObject.transform.position, -1 * player.transform.position, runSpeed * Time.deltaTime);
             }
+            else if (playerDistance <= circleRadius)
+            {
+                Debug.Log("Attacking Player");
 
-            count += Time.deltaTime;
-            if (count >= attackTimer)
-            {
-                Instantiate(projectile, gameObject.transform.position, Quaternion.identity);
-                count = 0;
+                if (clockwise)
+                {
+                    // change to physics velocity
+                    // keep rotatearound but add raycasting instead of collision
+                    transform.RotateAround(player.transform.position, Vector3.forward, -(circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
+                    transform.Rotate(0, 0, (circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
+                }
+                else
+                {
+                    transform.RotateAround(player.transform.position, Vector3.forward, (circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
+                    transform.Rotate(0, 0, -(circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
+                }
+
+                count += Time.deltaTime;
+                if (count >= attackTimer)
+                {
+                    Instantiate(projectile, gameObject.transform.position, Quaternion.identity);
+                    count = 0;
+                }
             }
-        }
-        else if (playerDistance <= vision)
-        {
-            Debug.Log("Moving To Player");
-            transform.position = Vector2.MoveTowards(gameObject.transform.position, player.transform.position, runSpeed * Time.deltaTime);
+            else if (playerDistance <= vision)
+            {
+                Debug.Log("Moving To Player");
+                transform.position = Vector2.MoveTowards(gameObject.transform.position, player.transform.position, runSpeed * Time.deltaTime);
+            }
         }
         else
             Debug.Log("Not Attacking Player");

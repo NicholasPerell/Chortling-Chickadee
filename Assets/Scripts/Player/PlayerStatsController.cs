@@ -49,6 +49,8 @@ public class PlayerStatsController : MonoBehaviour
     [Header("When Damaged")]
     [SerializeField] float timeStunned, timeInvulnerable;
     float invulnerabilityTimer;
+    public bool beingAttacked;
+    public GameObject attackingEnemy;
 
 
     PlayerMovementController movement;
@@ -80,6 +82,8 @@ public class PlayerStatsController : MonoBehaviour
         empty = false;
 
         invulnerabilityTimer = 0;
+
+        beingAttacked = false;
     }
 
     // Update is called once per frame

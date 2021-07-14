@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{c5312923-2cb4-4fc2-a12e-1e08a33d6edb}">
+		<property name="assetPath">
+			<value>THIS_IS_SAND_LOOP.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>100</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{365ad903-b4aa-4a39-ab5b-ed3b96e88edb}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -53,7 +53,7 @@ public class PlayerStatsController : MonoBehaviour
 
     PlayerMovementController movement;
     SandAbilityManager abilMan;
-    Animator anim;
+    [SerializeField] Animator anim;
 
     bool empty;
 

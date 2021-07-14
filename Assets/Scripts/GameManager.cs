@@ -28,12 +28,22 @@ public class GameManager : MonoBehaviour
 
     public static event PassGameMode ChangeGameMode;
 
+    public GameMode disMode;
+    public GameMode disPreviousMode;
+
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
         mode = GameMode.PLAYING;
         previousMode = GameMode.PLAYING;
+        Time.timeScale = 1;
+    }
+
+    private void Update()
+    {
+        disMode = mode;
+        disPreviousMode = previousMode;
     }
 
     public static void SetMode(int mode)

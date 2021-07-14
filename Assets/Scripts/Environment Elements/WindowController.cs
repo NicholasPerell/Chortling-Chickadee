@@ -19,10 +19,19 @@ public class WindowController : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    Debug.Log(collision.relativeVelocity.magnitude);
+    //    if (collision.gameObject.name == "Grabbable Object" && collision.relativeVelocity.magnitude > forceToBreak)
+    //    {
+    //        Instantiate(shatterPrefab, transform.position, transform.rotation, transform.parent);
+    //        Destroy(this.gameObject);
+    //    }
+    //}
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.relativeVelocity.magnitude);
-        if (collision.gameObject.name == "Grabbable Object" && collision.relativeVelocity.magnitude > forceToBreak)
+        if (collision.gameObject.name == "Grabbable Object")
         {
             Instantiate(shatterPrefab, transform.position, transform.rotation, transform.parent);
             Destroy(this.gameObject);

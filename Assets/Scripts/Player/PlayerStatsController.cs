@@ -143,8 +143,7 @@ public class PlayerStatsController : MonoBehaviour
         {
             GameManager.TriggerGameOver();
             
-            //TODO change this to death trigger if we get a death animation
-            anim.SetTrigger("Hurt");
+            anim.SetTrigger("Death");
 
             Destroy(this.movement);
             DisableAllSand();

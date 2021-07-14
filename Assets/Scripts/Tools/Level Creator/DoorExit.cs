@@ -60,12 +60,12 @@ public class DoorExit : MonoBehaviour
 
     void UpdateIcon()
     {
-        worldSpaceUI.SetActive(!active && inRange && gameManager.mode == GameMode.PLAYING);
+        worldSpaceUI.SetActive(!active && inRange && GameManager.mode == GameMode.PLAYING);
     }
 
     void AttemptForInteraction()
     {
-        if (!active && inRange && gameManager.mode == GameMode.PLAYING)
+        if (!active && inRange && GameManager.mode == GameMode.PLAYING)
         {
             GetComponent<LevelExit>().ChangeLevel(GameObject.FindGameObjectWithTag("Player"));
         }

@@ -80,6 +80,8 @@ public class PlayerStatsController : MonoBehaviour
         empty = false;
 
         invulnerabilityTimer = 0;
+
+        GameManager.ChangeGameMode += HandleGameMode;
     }
 
     // Update is called once per frame
@@ -185,5 +187,19 @@ public class PlayerStatsController : MonoBehaviour
     public void Stun()
     {
         movement.stunned = timeStunned;
+    }
+
+    void HandleGameMode(GameMode mode)
+    {
+        switch(mode)
+        {
+            case GameMode.PLAYING:
+            case GameMode.PAUSE:
+                anim.updateMode = AnimatorUpdateMode.Normal;
+                break;
+            case GameMode.INTERACTING:
+                anim.updateMode = AnimatorUpdateMode.UnscaledTime;
+                break;
+        }
     }
 }

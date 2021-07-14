@@ -14,46 +14,70 @@ public enum GameMode
     DEATH
 }
 
+public delegate void PassGameMode(GameMode mode);
+
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] static float timeToFadeToGameOver = 1.0f;
+    [SerializeField] float timeToFadeToGameOver = 1.0f;
     [SerializeField] Image blackScreen;
 
-    public GameMode mode = GameMode.PLAYING;
-    GameMode previousMode = GameMode.PLAYING;
+    public static GameMode mode = GameMode.PLAYING;
+    static GameMode previousMode = GameMode.PLAYING;
 
     public static GameManager instance;
+
+    public static event PassGameMode ChangeGameMode;
 
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
+        mode = GameMode.PLAYING;
+        previousMode = GameMode.PLAYING;
     }
 
-    public void SetMode(int mode)
+    public static void SetMode(int mode)
     {
         SetMode((GameMode)mode);
     }
 
-    public void SetMode(GameMode newMode)
+    public static void SetMode(GameMode newMode)
     {
+        if(mode != GameMode.PAUSE)
         previousMode = mode;
         mode = newMode;
+
+        switch(newMode)
+        {
+            case GameMode.PAUSE:
+            case GameMode.INTERACTING:
+                Time.timeScale = 0;
+                break;
+            case GameMode.PLAYING:
+                Time.timeScale = 1;
+                break;
+        }
+
+        ChangeGameMode?.Invoke(newMode);
     }
 
-    public void RevertMode()
+    public static void RevertMode()
     {
-        GameMode tmp = mode;
-        mode = previousMode;
-        previousMode = tmp;
+        SetMode(previousMode);
     }
 
     public static void TriggerGameOver()
     {
-        instance.StartCoroutine(nameof(FadeToBlack));
+        SetMode(GameMode.DEATH);
+        instance.StartCoroutine(nameof(FadeToBlackDeath));
     }
 
-    IEnumerator FadeToBlack()
+    public static void QuitLevel()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    IEnumerator FadeToBlackDeath()
     {
         //TODO trigger stinger here
         blackScreen.enabled = true;

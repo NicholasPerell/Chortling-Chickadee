@@ -129,6 +129,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""9afc413d-366e-4bd2-9c4d-8348c85c0339"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -395,6 +403,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""End Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c76bf7bb-45e1-4384-a68c-3af6a48c6c04"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -417,6 +436,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Player_EndGrabSand = m_Player.FindAction("End Grab Sand", throwIfNotFound: true);
         m_Player_Grab = m_Player.FindAction("Grab", throwIfNotFound: true);
         m_Player_EndGrab = m_Player.FindAction("End Grab", throwIfNotFound: true);
+        m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -480,6 +500,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_EndGrabSand;
     private readonly InputAction m_Player_Grab;
     private readonly InputAction m_Player_EndGrab;
+    private readonly InputAction m_Player_Pause;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -498,6 +519,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @EndGrabSand => m_Wrapper.m_Player_EndGrabSand;
         public InputAction @Grab => m_Wrapper.m_Player_Grab;
         public InputAction @EndGrab => m_Wrapper.m_Player_EndGrab;
+        public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -549,6 +571,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @EndGrab.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndGrab;
                 @EndGrab.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndGrab;
                 @EndGrab.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndGrab;
+                @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -595,6 +620,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @EndGrab.started += instance.OnEndGrab;
                 @EndGrab.performed += instance.OnEndGrab;
                 @EndGrab.canceled += instance.OnEndGrab;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -615,5 +643,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnEndGrabSand(InputAction.CallbackContext context);
         void OnGrab(InputAction.CallbackContext context);
         void OnEndGrab(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

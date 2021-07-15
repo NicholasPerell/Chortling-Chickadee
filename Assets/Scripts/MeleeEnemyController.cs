@@ -31,7 +31,31 @@ public class MeleeEnemyController : MonoBehaviour
     {
         playerDistance = Vector3.Distance(transform.position, player.transform.position);
 
-        if (!player.GetComponent<PlayerStatsController>().beingAttacked || player.GetComponent<PlayerStatsController>().attackingEnemy == gameObject)
+        if (playerDistance <= vision)
+        {
+            if (!player.GetComponent<PlayerStatsController>().beingAttacked || player.GetComponent<PlayerStatsController>().attackingEnemy == gameObject)
+            {
+                player.GetComponent<PlayerStatsController>().beingAttacked = true;
+                player.GetComponent<PlayerStatsController>().attackingEnemy = gameObject;
+
+                if (hp <= 0)
+                {
+                    Destroy(gameObject);
+                    player.GetComponent<PlayerStatsController>().beingAttacked = false;
+                    player.GetComponent<PlayerStatsController>().attackingEnemy = null;
+                }
+                else if (playerDistance <= attackRange)
+                {
+                    transform.position = new Vector3(player.transform.position.x + attackRange * Mathf.Cos(attackSpeed * count), transform.position.y, transform.position.z);
+                    count += Time.deltaTime;
+                }
+                else
+                {
+                    transform.position = Vector2.MoveTowards(gameObject.transform.position, player.transform.position, runSpeed * Time.deltaTime);
+                }
+            }
+        }
+        /*if (!player.GetComponent<PlayerStatsController>().beingAttacked || player.GetComponent<PlayerStatsController>().attackingEnemy == gameObject)
         {
             player.GetComponent<PlayerStatsController>().beingAttacked = true;
             player.GetComponent<PlayerStatsController>().attackingEnemy = gameObject;
@@ -49,7 +73,7 @@ public class MeleeEnemyController : MonoBehaviour
             }
             else if (playerDistance <= vision)
                 transform.position = Vector2.MoveTowards(gameObject.transform.position, player.transform.position, runSpeed * Time.deltaTime);
-        }
+        }*/
     }
 
     public void takeDamage(float damageTaken)

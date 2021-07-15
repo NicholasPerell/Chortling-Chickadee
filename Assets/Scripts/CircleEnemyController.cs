@@ -39,7 +39,57 @@ public class CircleEnemyController : MonoBehaviour
     {
         playerDistance = Vector3.Distance(gameObject.transform.position, player.transform.position);
 
-        if (!player.GetComponent<PlayerStatsController>().beingAttacked || player.GetComponent<PlayerStatsController>().attackingEnemy == gameObject)
+
+        if (playerDistance <= vision)
+        {
+            if (!player.GetComponent<PlayerStatsController>().beingAttacked || player.GetComponent<PlayerStatsController>().attackingEnemy == gameObject)
+            {
+                player.GetComponent<PlayerStatsController>().beingAttacked = true;
+                player.GetComponent<PlayerStatsController>().attackingEnemy = gameObject;
+
+                if (hp <= 0)
+                {
+                    Destroy(gameObject);
+                    player.GetComponent<PlayerStatsController>().beingAttacked = false;
+                    player.GetComponent<PlayerStatsController>().attackingEnemy = null;
+                }
+                else if (hp <= 2)
+                {
+                    Debug.Log("Running Away");
+                    transform.position = Vector2.MoveTowards(gameObject.transform.position, -1 * player.transform.position, runSpeed * Time.deltaTime);
+                }
+                else if (playerDistance <= circleRadius)
+                {
+                    Debug.Log("Attacking Player");
+
+                    if (clockwise)
+                    {
+                        // change to physics velocity
+                        // keep rotatearound but add raycasting instead of collision
+                        transform.RotateAround(player.transform.position, Vector3.forward, -(circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
+                        transform.Rotate(0, 0, (circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
+                    }
+                    else
+                    {
+                        transform.RotateAround(player.transform.position, Vector3.forward, (circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
+                        transform.Rotate(0, 0, -(circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
+                    }
+
+                    count += Time.deltaTime;
+                    if (count >= attackTimer)
+                    {
+                        Instantiate(projectile, gameObject.transform.position, Quaternion.identity);
+                        count = 0;
+                    }
+                }
+                else
+                {
+                    Debug.Log("Moving To Player");
+                    transform.position = Vector2.MoveTowards(gameObject.transform.position, player.transform.position, runSpeed * Time.deltaTime);
+                }
+            }
+        }
+        /*if (!player.GetComponent<PlayerStatsController>().beingAttacked || player.GetComponent<PlayerStatsController>().attackingEnemy == gameObject)
         {
             player.GetComponent<PlayerStatsController>().beingAttacked = true;
             player.GetComponent<PlayerStatsController>().attackingEnemy = gameObject;
@@ -84,7 +134,7 @@ public class CircleEnemyController : MonoBehaviour
                 Debug.Log("Moving To Player");
                 transform.position = Vector2.MoveTowards(gameObject.transform.position, player.transform.position, runSpeed * Time.deltaTime);
             }
-        }
+        }*/
         else
             Debug.Log("Not Attacking Player");
     }

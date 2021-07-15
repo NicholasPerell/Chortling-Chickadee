@@ -141,16 +141,17 @@ public class PlayerStatsController : MonoBehaviour
         currentHealth += delta;
         if(currentHealth <= 0)
         {
+
+            anim.SetBool("Dead",true);
             GameManager.TriggerGameOver();
             
-            anim.SetTrigger("Death");
 
             Destroy(this.movement);
             DisableAllSand();
             Destroy(this);
+            return true;
         }
-
-        if (delta < 0)
+        else if (delta < 0)
         {
             anim.SetTrigger("Hurt");
             Stun();
@@ -190,6 +191,8 @@ public class PlayerStatsController : MonoBehaviour
 
     void HandleGameMode(GameMode mode)
     {
+        if (anim == null) return;
+
         switch(mode)
         {
             case GameMode.PLAYING:

@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1102658626148588169, guid: 4ba002ef0da185e4fb9674da405f44de, type: 3}
       propertyPath: m_Name
-      value: Wooden Pillar Spike Down
+      value: Wooden Pillar Spike Down Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1102658626859434960, guid: 4ba002ef0da185e4fb9674da405f44de, type: 3}
       propertyPath: m_LocalPosition.x
@@ -82,6 +82,10 @@ PrefabInstance:
     - target: {fileID: 1102658626859434960, guid: 4ba002ef0da185e4fb9674da405f44de, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 1102658626859434962, guid: 4ba002ef0da185e4fb9674da405f44de, type: 3}
+      propertyPath: bounce
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ba002ef0da185e4fb9674da405f44de, type: 3}

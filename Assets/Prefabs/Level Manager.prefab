@@ -246,6 +246,30 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 4287243519
       tile: {fileID: 11400000, guid: cc9746f6d5caaa74aa32bff0ff175151, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287243775
+      tile: {fileID: 11400000, guid: 146d03d25e3a1604181af4912089930b, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287244031
+      tile: {fileID: 11400000, guid: 6511818685b91704ea0eae9207a97de7, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287244287
+      tile: {fileID: 11400000, guid: 60d4cc955212eff4098a7cabbe2db3cb, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287244543
+      tile: {fileID: 11400000, guid: 713cea39c41870a41b2785d13a3e16f9, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287244799
+      tile: {fileID: 11400000, guid: 3812f502d11dba5488998b78e3efbe2e, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287245055
+      tile: {fileID: 11400000, guid: 077095d65359f904d8199cb7418cf28f, type: 2}
     prefab:
     - {fileID: 0}
     - {fileID: 6612540415799428813, guid: 3c3abb5a8d91a0b41a75e176f07f73f3, type: 3}
@@ -296,6 +320,12 @@ MonoBehaviour:
     - {fileID: 3382259181002080720, guid: 529a5cc6745850546910499bb082f31d, type: 3}
     - {fileID: 993463827591348798, guid: 937fb8f500d03bf4f9ae1097173926ef, type: 3}
     - {fileID: 7752375048654921276, guid: 043c698b5a6b5334ba464cbed46ebf78, type: 3}
+    - {fileID: 1419426044586446225, guid: 17b8d8a7769c7f34c8a2bd2294f81ae6, type: 3}
+    - {fileID: 6643867468992866002, guid: a5a435ea827130d499644dded74d2ca0, type: 3}
+    - {fileID: 7761523476102792157, guid: 97426b39932823e4294dd7b0de3343db, type: 3}
+    - {fileID: 6194890952298066376, guid: aa8d245ff6da204498127e70d17f0f7b, type: 3}
+    - {fileID: 1206229007995246286, guid: 131394ea911795849a34cc6fa99ad967, type: 3}
+    - {fileID: 4176359950795653385, guid: 55fc4a0e8a4642b4b9778d90985a2abc, type: 3}
   artMapDictionary:
   - color:
       serializedVersion: 2

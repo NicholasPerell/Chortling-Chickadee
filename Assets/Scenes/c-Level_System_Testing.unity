@@ -13581,20 +13581,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440164, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: startNode
-      value: 
+      value: JulFirst.Start
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440164, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: startAutomatically
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440164, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: yarnScripts.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440164, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: yarnScripts.Array.data[0]
       value: 
-      objectReference: {fileID: 2480198943629176163, guid: bb2d20887d45622478fa83e95262f1ce, type: 3}
+      objectReference: {fileID: 2480198943629176163, guid: f1f8be7df4a56ba4fa1f63150ca786d6, type: 3}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: textSpeed
       value: 0

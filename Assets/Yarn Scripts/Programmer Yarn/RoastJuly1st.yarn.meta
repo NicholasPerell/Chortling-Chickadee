@@ -8,14 +8,14 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
+  baseLanguageID: en-US
   stringIDs:
-  - RoastJuly1st-JunFirst.Start-0
-  - RoastJuly1st-JunFirst.Start-1
-  - RoastJuly1st-JunFirst.Start-2
-  - RoastJuly1st-JunFirst.Start-3
+  - RoastJuly1st-JulFirst.Start-0
+  - RoastJuly1st-JulFirst.Start-1
+  - RoastJuly1st-JulFirst.Start-2
+  - RoastJuly1st-JulFirst.Start-3
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: f1f8be7df4a56ba4fa1f63150ca786d6, type: 3}
   localizations: []

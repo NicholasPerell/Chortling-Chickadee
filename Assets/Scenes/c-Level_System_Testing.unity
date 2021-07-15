@@ -13549,7 +13549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f56830675b87024dabfcb14c45d8b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToFadeToGameOver: 1
+  timeToFadeToGameOver: 3
   blackScreen: {fileID: 258763977}
   disMode: 0
   disPreviousMode: 0

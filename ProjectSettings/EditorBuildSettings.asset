@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/g-death_screen.unity
     guid: c7483492086a1404e983ee81ab47cfb3
+  - enabled: 1
+    path: Assets/Scenes/f-prologue_slide_testing.unity
+    guid: 6aa5a7abc939d8c44921606e70f3afb5
   m_configObjects: {}

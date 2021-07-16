@@ -85,7 +85,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1102658626859434962, guid: 4ba002ef0da185e4fb9674da405f44de, type: 3}
       propertyPath: bounce
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ba002ef0da185e4fb9674da405f44de, type: 3}

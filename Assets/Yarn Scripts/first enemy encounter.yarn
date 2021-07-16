@@ -1,0 +1,8 @@
+title: First Enemy Encounter Start
+tags: 
+colorID: 0
+position: 13,-4
+---
+<<ChangeSpeaker SpeakerDisplay Ocean>>
+You land-folk never last terribly long. You should have known better to tread here.
+===

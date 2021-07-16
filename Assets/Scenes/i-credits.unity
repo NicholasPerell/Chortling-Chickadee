@@ -198,6 +198,95 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53427473}
   m_CullTransparentMesh: 1
+--- !u!1 &235914809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 235914810}
+  - component: {fileID: 235914813}
+  - component: {fileID: 235914812}
+  - component: {fileID: 235914811}
+  m_Layer: 5
+  m_Name: Blackout
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &235914810
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235914809}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.93297, y: 0.93297, z: 0.93297}
+  m_Children: []
+  m_Father: {fileID: 1205733280}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 107.25, y: 60.351685}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &235914811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235914809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c187ff73d575248a9cf2c51f50d9ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToFadeIn: 1
+--- !u!114 &235914812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235914809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &235914813
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235914809}
+  m_CullTransparentMesh: 1
 --- !u!1 &370653151
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,8 +623,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 22.7
+  m_fontSizeBase: 22.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 1
@@ -670,96 +759,48 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'General Production
 
-    
 
-    
 
-    
 
-    
 
     Atlas
 
-    
 
-    
 
-    
 
-    
 
-    
 
     World
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
     Enemies
 
-    
 
-    
 
-    
 
-    
 
-    
 
     Narrative
 
-    
 
-    
 
-    
 
-    
 
     UI
 
-    
-
-    
-
-    
-
-    
-
-    Music/SFX
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
 
 
-'
+
+
+    Music/SFX'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47b953b7c87711743a41a7ef0c7c4a81, type: 2}
   m_sharedMaterial: {fileID: -1991376877534288334, guid: 47b953b7c87711743a41a7ef0c7c4a81, type: 2}
@@ -786,8 +827,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.55
-  m_fontSizeBase: 16.55
+  m_fontSize: 22.7
+  m_fontSizeBase: 22.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 1
@@ -929,6 +970,7 @@ RectTransform:
   m_Children:
   - {fileID: 475573609}
   - {fileID: 1444439260}
+  - {fileID: 235914810}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1392,97 +1434,80 @@ MonoBehaviour:
 
     Lead Artist
 
-    
 
-    
+
+    Gameplay Designer
 
     Gameplay
-    Designer
-
-    Gameplay Programmer
+    Programmer
 
     Player Artist & Animator
 
-    Player
-    SFX
+    Player SFX
 
-    
 
-    
 
     Level Designer
 
-    
 
-    Puzzle Designer
+    Puzzle
+    Designer
 
-    Environment
-    Artist & Animator
+    Environment Artist & Animator
 
     Art Implementation
 
-    
 
-    
 
-    Levels Systems
-    Programmer
+    Levels
+    Systems Programmer
 
-    
 
-    
 
     AI Designer
 
     AI Programmer
 
-    Crab Artist
-    & Animator
+    Crab Artist & Animator
 
-    Enemy SFX
+    Enemy
+    SFX
 
-    
 
-    
 
     Narrative Designer
 
     Writer
 
-    Prologue
-    Artist
+    Prologue Artist
 
-    
 
-    
 
     UI Artist
 
-    UI SFX
+    UI
+    SFX
 
     UI Programmer
 
-    
 
-    
 
-    Musical
-    Composer
+    Musical Composer
 
-    
 
     Non-diagetic SFX
 
-    Music Implementation
+    Music
+    Implementation
 
     SFX Implementation
 
-    Sound
-    Programmer
+    Sound Programmer
 
     Live Clarinet
 
-    Live Flute'
+    Live
+    Flute'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47b953b7c87711743a41a7ef0c7c4a81, type: 2}
   m_sharedMaterial: {fileID: -1991376877534288334, guid: 47b953b7c87711743a41a7ef0c7c4a81, type: 2}

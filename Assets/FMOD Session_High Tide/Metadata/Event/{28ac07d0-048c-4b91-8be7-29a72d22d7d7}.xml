@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{28ac07d0-048c-4b91-8be7-29a72d22d7d7}">
 		<property name="name">
-			<value>Map SFX Close</value>
+			<value>MapSFXClose</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>

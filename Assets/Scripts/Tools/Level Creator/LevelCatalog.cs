@@ -36,6 +36,8 @@ public class LevelCatalog : MonoBehaviour
 
     [HideInInspector]
     public LevelData currentLvl;
+    [HideInInspector]
+    public string currentLvlName;
 
     private GameObject player;
 

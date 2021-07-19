@@ -1367,7 +1367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBeforeMoving: 1.5
   amountToMoveUp: 2
-  timeToLerp: 30
+  timeToLerp: 60
   timer: 0
 --- !u!1 &1692560038
 GameObject:

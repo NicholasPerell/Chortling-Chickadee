@@ -89,52 +89,6 @@ public class CircleEnemyController : MonoBehaviour
                 }
             }
         }
-        /*if (!player.GetComponent<PlayerStatsController>().beingAttacked || player.GetComponent<PlayerStatsController>().attackingEnemy == gameObject)
-        {
-            player.GetComponent<PlayerStatsController>().beingAttacked = true;
-            player.GetComponent<PlayerStatsController>().attackingEnemy = gameObject;
-
-            if (hp <= 0)
-            {
-                Destroy(gameObject);
-                player.GetComponent<PlayerStatsController>().beingAttacked = false;
-                player.GetComponent<PlayerStatsController>().attackingEnemy = null;
-            }
-            else if (hp <= 2)
-            {
-                Debug.Log("Running Away");
-                transform.position = Vector2.MoveTowards(gameObject.transform.position, -1 * player.transform.position, runSpeed * Time.deltaTime);
-            }
-            else if (playerDistance <= circleRadius)
-            {
-                Debug.Log("Attacking Player");
-
-                if (clockwise)
-                {
-                    // change to physics velocity
-                    // keep rotatearound but add raycasting instead of collision
-                    transform.RotateAround(player.transform.position, Vector3.forward, -(circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
-                    transform.Rotate(0, 0, (circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
-                }
-                else
-                {
-                    transform.RotateAround(player.transform.position, Vector3.forward, (circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
-                    transform.Rotate(0, 0, -(circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
-                }
-
-                count += Time.deltaTime;
-                if (count >= attackTimer)
-                {
-                    Instantiate(projectile, gameObject.transform.position, Quaternion.identity);
-                    count = 0;
-                }
-            }
-            else if (playerDistance <= vision)
-            {
-                Debug.Log("Moving To Player");
-                transform.position = Vector2.MoveTowards(gameObject.transform.position, player.transform.position, runSpeed * Time.deltaTime);
-            }
-        }*/
         else
             Debug.Log("Not Attacking Player");
     }
@@ -153,6 +107,16 @@ public class CircleEnemyController : MonoBehaviour
         if (col.gameObject.tag == "Wall")
         {
             Debug.Log("Exit");
+        }
+    }
+
+    void OnTriggerEnter2D(Collision2D col)
+    {
+        if (collision.gameObject.tag == "Player" && )
+        {
+            collision.gameObject.GetComponent<PlayerStatsController>().ChangeHealth(-damage);
+            collision.gameObject.GetComponent<PlayerStatsController>().Stun();
+            collision.rigidbody.velocity = -collision.relativeVelocity.normalized * 10;
         }
     }
 

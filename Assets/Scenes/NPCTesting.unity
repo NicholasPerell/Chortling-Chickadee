@@ -395,7 +395,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CircleEnemy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6172538162128485639, guid: ea1a00feb22b7a040844f8522a3671d5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ea1a00feb22b7a040844f8522a3671d5, type: 3}
 --- !u!1 &1148184847
 GameObject:

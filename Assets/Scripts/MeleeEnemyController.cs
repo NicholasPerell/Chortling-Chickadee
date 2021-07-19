@@ -55,25 +55,16 @@ public class MeleeEnemyController : MonoBehaviour
                 }
             }
         }
-        /*if (!player.GetComponent<PlayerStatsController>().beingAttacked || player.GetComponent<PlayerStatsController>().attackingEnemy == gameObject)
-        {
-            player.GetComponent<PlayerStatsController>().beingAttacked = true;
-            player.GetComponent<PlayerStatsController>().attackingEnemy = gameObject;
+    }
 
-            if (hp <= 0)
-            {
-                Destroy(gameObject);
-                player.GetComponent<PlayerStatsController>().beingAttacked = false;
-                player.GetComponent<PlayerStatsController>().attackingEnemy = null;
-            }
-            else if (playerDistance <= attackRange)
-            {
-                transform.position = new Vector3(player.transform.position.x + attackRange * Mathf.Cos(attackSpeed * count), transform.position.y, transform.position.z);
-                count += Time.deltaTime;
-            }
-            else if (playerDistance <= vision)
-                transform.position = Vector2.MoveTowards(gameObject.transform.position, player.transform.position, runSpeed * Time.deltaTime);
-        }*/
+    void OnTriggerEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player" && player.GetComponent<PlayerStatsController>().attackingEnemy != gameObject)
+        {
+            col.gameObject.GetComponent<PlayerStatsController>().ChangeHealth(-dmg);
+            col.gameObject.GetComponent<PlayerStatsController>().Stun();
+            col.rigidbody.velocity = -col.relativeVelocity.normalized * 10;
+        }
     }
 
     public void takeDamage(float damageTaken)

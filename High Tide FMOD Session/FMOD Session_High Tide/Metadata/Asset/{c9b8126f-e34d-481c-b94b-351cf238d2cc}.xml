@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EncodableAsset" id="{c9b8126f-e34d-481c-b94b-351cf238d2cc}">
+		<property name="assetPath">
+			<value>SFXAssets/EnemySFX/CrabSFX/MeleeCrab/MeleeActions/MeleeDeath/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{365ad903-b4aa-4a39-ab5b-ed3b96e88edb}</destination>
+		</relationship>
+	</object>
+</objects>

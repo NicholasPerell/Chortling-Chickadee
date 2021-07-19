@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{d9fd4547-2110-41b7-a81d-21112ea5f73c}">
+		<property name="name">
+			<value>Celeste On</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ddf7e68a-8126-4433-bf15-d012fb3ab049}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{4ae0866a-0bfe-4af1-8c88-d78f29eb85fa}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{4ae0866a-0bfe-4af1-8c88-d78f29eb85fa}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.5</value>
+		</property>
+	</object>
+</objects>

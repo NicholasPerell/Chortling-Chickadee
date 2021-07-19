@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{25c4758f-dc1c-45a7-aeb2-33f9396d8382}">
+		<property name="name">
+			<value>Flute On</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ddf7e68a-8126-4433-bf15-d012fb3ab049}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{ba1f9032-1562-4fdf-8edd-b12b72a35634}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{ba1f9032-1562-4fdf-8edd-b12b72a35634}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.5</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{23c63a4d-7f46-4908-936b-9196ffc666f9}">
+		<property name="name">
+			<value>Cello On</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ddf7e68a-8126-4433-bf15-d012fb3ab049}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{adbce55c-285e-471e-a4eb-9e356063f2b5}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{adbce55c-285e-471e-a4eb-9e356063f2b5}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.5</value>
+		</property>
+	</object>
+</objects>

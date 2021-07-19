@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EncodableAsset" id="{366fafb8-9399-4270-81b0-af22540a2b8d}">
+		<property name="assetPath">
+			<value>SFXAssets/EnemySFX/CrabSFX/MeleeCrab/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{365ad903-b4aa-4a39-ab5b-ed3b96e88edb}</destination>
+		</relationship>
+	</object>
+</objects>

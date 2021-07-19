@@ -399,8 +399,9 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/FMOD Session_High Tide/High Tide FMOD Session.fspro
-  sourceBankPath: Assets/FMOD Session_High Tide/Build
+  sourceProjectPath: High Tide FMOD Session/FMOD Session_High Tide/High Tide FMOD
+    Session.fspro
+  sourceBankPath: High Tide FMOD Session/FMOD Session_High Tide/Build
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -421,7 +422,8 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks: []
+  MasterBanks:
+  - Master
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{230f65b0-a0c5-47e1-9bd3-311ce74b3c69}">
+		<property name="name">
+			<value>Timpani On</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ddf7e68a-8126-4433-bf15-d012fb3ab049}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{871afe5c-fade-488b-aa6f-6e2272b1cc84}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{871afe5c-fade-488b-aa6f-6e2272b1cc84}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.5</value>
+		</property>
+	</object>
+</objects>

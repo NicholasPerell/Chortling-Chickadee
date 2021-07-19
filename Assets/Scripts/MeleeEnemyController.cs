@@ -57,13 +57,13 @@ public class MeleeEnemyController : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player" && player.GetComponent<PlayerStatsController>().attackingEnemy != gameObject)
         {
             col.gameObject.GetComponent<PlayerStatsController>().ChangeHealth(-dmg);
             col.gameObject.GetComponent<PlayerStatsController>().Stun();
-            col.rigidbody.velocity = -col.relativeVelocity.normalized * 10;
+            col.GetComponent<Rigidbody>().velocity = -col.relativeVelocity.normalized * 10;
         }
     }
 

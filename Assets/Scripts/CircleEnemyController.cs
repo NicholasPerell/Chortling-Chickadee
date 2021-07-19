@@ -110,13 +110,13 @@ public class CircleEnemyController : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if (collision.gameObject.tag == "Player" && )
+        if (col.gameObject.tag == "Player" && player.GetComponent<PlayerStatsController>().attackingEnemy != gameObject)
         {
-            collision.gameObject.GetComponent<PlayerStatsController>().ChangeHealth(-damage);
-            collision.gameObject.GetComponent<PlayerStatsController>().Stun();
-            collision.rigidbody.velocity = -collision.relativeVelocity.normalized * 10;
+            col.gameObject.GetComponent<PlayerStatsController>().ChangeHealth(-dmg);
+            col.gameObject.GetComponent<PlayerStatsController>().Stun();
+            col.GetComponent<Rigidbody>().velocity = -col.GetComponent<Rigidbody>().relativeVelocity.normalized * 10;
         }
     }
 

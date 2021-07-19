@@ -41,13 +41,12 @@ public class MainMenuManager : MonoBehaviour
 
     public void ToCredits()
     {
-        //TODO put in correct scene once the credit scene # is determined
-        //UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(5);
     }
 
     public void LoadGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(4);
     }
 
     public void QuitGame()

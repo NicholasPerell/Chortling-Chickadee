@@ -40,7 +40,7 @@ public class PlayerDialogueContinuer : MonoBehaviour
     // Update is called once per frame
     void AttemptContinue()
     {
-        if(gameManager.mode == GameMode.INTERACTING && active)
+        if(GameManager.mode == GameMode.INTERACTING && active)
             dialogueUI.MarkLineComplete();
     }
 

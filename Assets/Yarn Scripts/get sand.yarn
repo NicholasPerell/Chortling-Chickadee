@@ -1,0 +1,10 @@
+title: get sand Start
+tags: 
+colorID: 0
+position: -451,-1070
+---
+<<ChangeSpeaker SpeakerDisplay Mystery>>
+We've been asleep for so long. Thank you for waking us at last.
+<<ChangeSpeaker SpeakerDisplay Ocean>>
+What is this? No... That can't be.
+===

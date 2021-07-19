@@ -11,25 +11,30 @@ public class GrabbingSandAbility : MonoBehaviour
 
     DistanceJoint2D dist;
 
-    private void Awake()
-    {
-        controls = new PlayerControls();
-        controls.Player.Grab.performed += _ => AttemptGrabAttach();
-        controls.Player.EndGrab.performed += _ => AttemptEndAttach();
-    }
+    //private void Awake()
+    //{
+    //    controls = new PlayerControls();
+    //    controls.Player.Grab.performed += _ => AttemptGrabAttach();
+    //    controls.Player.EndGrab.performed += _ => AttemptEndAttach();
+    //}
 
-    private void OnEnable()
-    {
-        controls.Player.Enable();
-        controls.Player.Grab.Enable();
-        controls.Player.EndGrab.Enable();
-    }
+    //private void OnEnable()
+    //{
+    //    controls.Player.Enable();
+    //    controls.Player.Grab.Enable();
+    //    controls.Player.EndGrab.Enable();
+    //}
 
-    private void OnDisable()
+    //private void OnDisable()
+    //{
+    //    controls.Player.Disable();
+    //    controls.Player.Grab.Disable();
+    //    controls.Player.EndGrab.Disable();
+    //}
+
+    private void Update()
     {
-        controls.Player.Disable();
-        controls.Player.Grab.Disable();
-        controls.Player.EndGrab.Disable();
+        AttemptGrabAttach();
     }
 
     private void AttemptGrabAttach()

@@ -53,7 +53,7 @@ public class PlayerStatsController : MonoBehaviour
 
     PlayerMovementController movement;
     SandAbilityManager abilMan;
-    Animator anim;
+    [SerializeField] Animator anim;
 
     bool empty;
 
@@ -80,6 +80,8 @@ public class PlayerStatsController : MonoBehaviour
         empty = false;
 
         invulnerabilityTimer = 0;
+
+        GameManager.ChangeGameMode += HandleGameMode;
     }
 
     // Update is called once per frame
@@ -139,17 +141,17 @@ public class PlayerStatsController : MonoBehaviour
         currentHealth += delta;
         if(currentHealth <= 0)
         {
+
+            anim.SetBool("Dead",true);
             GameManager.TriggerGameOver();
             
-            //TODO change this to death trigger if we get a death animation
-            anim.SetTrigger("Hurt");
 
             Destroy(this.movement);
             DisableAllSand();
             Destroy(this);
+            return true;
         }
-
-        if (delta < 0)
+        else if (delta < 0)
         {
             anim.SetTrigger("Hurt");
             Stun();
@@ -185,5 +187,21 @@ public class PlayerStatsController : MonoBehaviour
     public void Stun()
     {
         movement.stunned = timeStunned;
+    }
+
+    void HandleGameMode(GameMode mode)
+    {
+        if (anim == null) return;
+
+        switch(mode)
+        {
+            case GameMode.PLAYING:
+            case GameMode.PAUSE:
+                anim.updateMode = AnimatorUpdateMode.Normal;
+                break;
+            case GameMode.INTERACTING:
+                anim.updateMode = AnimatorUpdateMode.UnscaledTime;
+                break;
+        }
     }
 }

@@ -11,6 +11,7 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] float groundLinearDrag = .1f;
     [SerializeField] float groundGravityScale = 3.0f;
     [SerializeField] float jumpForce = 400;
+    [SerializeField] float velocityCut = 0.125f;
 
     [Header("Water Movement")]
     [SerializeField] float waterRunForce = 100;
@@ -228,7 +229,7 @@ public class PlayerMovementController : MonoBehaviour
 
         if(onLand && rb.velocity.y > 0)
         {
-            rb.velocity = new Vector2(rb.velocity.x,rb.velocity.y/2);
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * velocityCut);
         }
     }
 
@@ -248,9 +249,11 @@ public class PlayerMovementController : MonoBehaviour
         anim.SetBool("OnLand",onLand);
         anim.SetBool("Strafing", strafeTimer > strafeCooldown);
 
-        if (rb.velocity.x > 0)
+        float buffering = 0.5f;
+
+        if (rb.velocity.x > buffering)
             appearanceModel.localScale = new Vector3(1, 1, 1);
-        else if (rb.velocity.x < 0)
+        else if (rb.velocity.x < -buffering)
             appearanceModel.localScale = new Vector3(-1, 1, 1);
     }
 }

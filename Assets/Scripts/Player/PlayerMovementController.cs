@@ -11,7 +11,8 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] float groundLinearDrag = .1f;
     [SerializeField] float groundGravityScale = 3.0f;
     [SerializeField] float jumpForce = 400;
-    [SerializeField] float velocityCut = 0.125f;
+    [SerializeField] float jumpCutForce = 10f;
+    bool pushingDown = false;
 
     [Header("Water Movement")]
     [SerializeField] float waterRunForce = 100;
@@ -111,6 +112,8 @@ public class PlayerMovementController : MonoBehaviour
         {
             effectiveDir = inputDir;
         }
+
+        HandleJumpPushDown();
 
         //Prevent pushing into the walls/getting stuck
         if (strafeTimer < strafeCooldown)
@@ -232,7 +235,8 @@ public class PlayerMovementController : MonoBehaviour
 
         if(onLand && rb.velocity.y > 0)
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * velocityCut);
+            //rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * velocityCut);
+            pushingDown = true;
         }
     }
 
@@ -286,5 +290,21 @@ public class PlayerMovementController : MonoBehaviour
             appearanceModel.localScale = new Vector3(1, 1, 1);
         else if (rb.velocity.x < -buffering)
             appearanceModel.localScale = new Vector3(-1, 1, 1);
+    }
+
+    void HandleJumpPushDown()
+    {
+        if(strafeCooldown < strafeTimer ||
+            !onLand ||
+            onGround||
+            rb.velocity.y <= 0)
+        {
+            pushingDown = false;
+        }
+
+        if (pushingDown)
+        {
+            rb.AddForce(new Vector2(0, -jumpCutForce));
+        }
     }
 }

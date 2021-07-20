@@ -2258,6 +2258,10 @@ PrefabInstance:
       value: 860
       objectReference: {fileID: 0}
     - target: {fileID: 130959430865475907, guid: a750f54ddb583a14c88fb200ab74b500, type: 3}
+      propertyPath: jumpCutForce
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 130959430865475907, guid: a750f54ddb583a14c88fb200ab74b500, type: 3}
       propertyPath: groundMaxRunSpeed
       value: 7.5
       objectReference: {fileID: 0}

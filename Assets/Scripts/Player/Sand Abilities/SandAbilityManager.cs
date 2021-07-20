@@ -76,6 +76,7 @@ public class SandAbilityManager : MonoBehaviour
         {
             sandTrail.SetActive(true);
             anim.SetTrigger("Attack");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Sand Attack");
         }
     }
     void AttemptGrab()
@@ -86,6 +87,7 @@ public class SandAbilityManager : MonoBehaviour
             sandGrab.SetActive(true);
             GameObject.FindObjectOfType<GrabbingSandAbility>().transform.position = transform.position;
             anim.SetTrigger("Attack");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Sand Grab Launch");
         }
     }
 
@@ -96,6 +98,7 @@ public class SandAbilityManager : MonoBehaviour
         {
             sandShield.SetActive(true);
             anim.SetTrigger("Attack");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Sand Block");
         }
     }
 

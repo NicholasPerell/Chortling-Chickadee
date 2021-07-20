@@ -167,7 +167,11 @@ public class PlayerStatsController : MonoBehaviour
     {
         int index = (int)ability;
 
-        if (empty || !hasAbility[index] || inUse[index] || currentSand - costs[index] < 0) return false;
+        if (empty || !hasAbility[index] || inUse[index] || currentSand - costs[index] < 0) 
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/No Sand");
+            return false;
+        } 
 
         inUse[index] = true;
         currentSand -= costs[index];

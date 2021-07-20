@@ -196,6 +196,10 @@ PrefabInstance:
       propertyPath: m_Bounds.m_Extent.y
       value: 0.31494007
       objectReference: {fileID: 0}
+    - target: {fileID: -2382247631699645013, guid: abba945aa0348504ebe5003bc4647547, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -2269839903915461734, guid: abba945aa0348504ebe5003bc4647547, type: 3}
       propertyPath: m_Bounds.m_Center.x
       value: 0.0000019073486
@@ -516,7 +520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5448094277396625846, guid: 1199cf71700be914199b5164ade0b2c1, type: 3}
       propertyPath: m_Name
-      value: MeleeEnemy (BLUE)
+      value: MeleeEnemy (BLUE) Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1199cf71700be914199b5164ade0b2c1, type: 3}

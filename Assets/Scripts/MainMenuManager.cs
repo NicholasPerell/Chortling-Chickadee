@@ -47,6 +47,7 @@ public class MainMenuManager : MonoBehaviour
     public void LoadGame()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(4);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Newgame");
     }
 
     public void QuitGame()

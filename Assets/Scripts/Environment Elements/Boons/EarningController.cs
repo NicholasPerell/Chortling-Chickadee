@@ -20,6 +20,7 @@ public class EarningController : MonoBehaviour
 
         ply.currentMaxSand = ply.currentMaxSand + sandEarnt;
         ply.hasAbility[(int)ability] = true;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Catalyst Unlock");
 
         Destroy(this.gameObject);
     }

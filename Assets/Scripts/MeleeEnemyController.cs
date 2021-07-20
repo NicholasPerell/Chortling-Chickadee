@@ -11,8 +11,6 @@ public class MeleeEnemyController : MonoBehaviour
     [SerializeField]
     private float runSpeed = 1f;
     [SerializeField]
-    private float attackTimer = 2f;
-    [SerializeField]
     private float attackRange = 3f;
     [SerializeField]
     private float attackSpeed = 3f;
@@ -21,9 +19,12 @@ public class MeleeEnemyController : MonoBehaviour
     private float playerDistance;
     private float count;
 
+    private Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponentInChildren<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         count = 0f;
     }
@@ -33,17 +34,55 @@ public class MeleeEnemyController : MonoBehaviour
     {
         playerDistance = Vector3.Distance(transform.position, player.transform.position);
 
-        if (playerDistance <= attackRange)
+        if (playerDistance <= vision)
         {
-            transform.position = new Vector3(player.transform.position.x + attackRange * Mathf.Cos(attackSpeed * count), transform.position.y, transform.position.z);
-            count += Time.deltaTime;
+            if (!player.GetComponent<PlayerStatsController>().beingAttacked || player.GetComponent<PlayerStatsController>().attackingEnemy == gameObject)
+            {
+
+                anim.SetBool("Moving", true);
+
+                player.GetComponent<PlayerStatsController>().beingAttacked = true;
+                player.GetComponent<PlayerStatsController>().attackingEnemy = gameObject;
+
+                if (hp <= 0)
+                {
+                    Destroy(gameObject);
+                    player.GetComponent<PlayerStatsController>().beingAttacked = false;
+                    player.GetComponent<PlayerStatsController>().attackingEnemy = null;
+                }
+                else if (playerDistance <= attackRange)
+                {
+                    transform.position = new Vector3(player.transform.position.x + attackRange * Mathf.Cos(attackSpeed * count), transform.position.y, transform.position.z);
+                    count += Time.deltaTime;
+                }
+                else
+                {
+                    transform.position = Vector2.MoveTowards(gameObject.transform.position, player.transform.position, runSpeed * Time.deltaTime);
+                }
+            }
         }
-        else if (playerDistance <= vision)
-            transform.position = Vector2.MoveTowards(gameObject.transform.position, player.transform.position, runSpeed * Time.deltaTime);
+        else
+        {
+
+            anim.SetBool("Moving", false);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            col.gameObject.GetComponent<PlayerStatsController>().ChangeHealth(-dmg);
+            Vector2 relativeVelocity = transform.position - col.gameObject.transform.position;
+            col.GetComponent<Rigidbody2D>().velocity = -relativeVelocity.normalized * 10;
+
+            anim.SetTrigger("Attack");
+        }
     }
 
     public void takeDamage(float damageTaken)
     {
+        anim.SetTrigger("Hurt");
         hp -= damageTaken;
     }
 

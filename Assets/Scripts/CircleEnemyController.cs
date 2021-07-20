@@ -25,6 +25,8 @@ public class CircleEnemyController : MonoBehaviour
     private bool clockwise = false;
     private float count;
 
+    private Animator anim;
+
     // make state machine it go speed kachow
     // if (hp <= 2) -> else (state machine)
 
@@ -32,6 +34,7 @@ public class CircleEnemyController : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -39,42 +42,62 @@ public class CircleEnemyController : MonoBehaviour
     {
         playerDistance = Vector3.Distance(gameObject.transform.position, player.transform.position);
 
-        if (hp <= 2)
-        {
-            Debug.Log("Running Away");
-            transform.position = Vector2.MoveTowards(gameObject.transform.position, -1 * player.transform.position, runSpeed * Time.deltaTime);
-        }
-        else if (playerDistance <= circleRadius)
-        {
-            Debug.Log("Attacking Player");
 
-            if (clockwise)
-            {
-                // change to physics velocity
-                // keep rotatearound but add raycasting instead of collision
-                transform.RotateAround(player.transform.position, Vector3.forward, -(circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
-                transform.Rotate(0, 0, (circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
-            }
-            else
-            {
-                transform.RotateAround(player.transform.position, Vector3.forward, (circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
-                transform.Rotate(0, 0, -(circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
-            }
-
-            count += Time.deltaTime;
-            if (count >= attackTimer)
-            {
-                Instantiate(projectile, gameObject.transform.position, Quaternion.identity);
-                count = 0;
-            }
-        }
-        else if (playerDistance <= vision)
+        if (playerDistance <= vision)
         {
-            Debug.Log("Moving To Player");
-            transform.position = Vector2.MoveTowards(gameObject.transform.position, player.transform.position, runSpeed * Time.deltaTime);
+            if (!player.GetComponent<PlayerStatsController>().beingAttacked || player.GetComponent<PlayerStatsController>().attackingEnemy == gameObject)
+            {
+                player.GetComponent<PlayerStatsController>().beingAttacked = true;
+                player.GetComponent<PlayerStatsController>().attackingEnemy = gameObject;
+
+                anim.SetBool("Moving", true);
+
+                if (hp <= 0)
+                {
+                    
+                }
+                else if (hp <= 2)
+                {
+                    //Debug.Log("Running Away");
+                    transform.position = Vector2.MoveTowards(gameObject.transform.position, -1 * player.transform.position, runSpeed * Time.deltaTime);
+                }
+                else if (playerDistance <= circleRadius)
+                {
+                    //Debug.Log("Attacking Player");
+
+                    if (clockwise)
+                    {
+                        // change to physics velocity
+                        // keep rotatearound but add raycasting instead of collision
+                        transform.RotateAround(player.transform.position, Vector3.forward, -(circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
+                        transform.Rotate(0, 0, (circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
+                    }
+                    else
+                    {
+                        transform.RotateAround(player.transform.position, Vector3.forward, (circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
+                        transform.Rotate(0, 0, -(circleSpeed * Mathf.Rad2Deg) * Time.deltaTime);
+                    }
+
+                    count += Time.deltaTime;
+                    if (count >= attackTimer)
+                    {
+                        anim.SetTrigger("Attack");
+                        
+                        count = 0;
+                    }
+                }
+                else
+                {
+                    //Debug.Log("Moving To Player");
+                    transform.position = Vector2.MoveTowards(gameObject.transform.position, player.transform.position, runSpeed * Time.deltaTime);
+                }
+            }
         }
         else
-            Debug.Log("Not Attacking Player");
+        {
+            //Debug.Log("Not Attacking Player");
+            anim.SetBool("Moving", false);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -82,7 +105,7 @@ public class CircleEnemyController : MonoBehaviour
         if (col.gameObject.tag == "Wall")
         {
             clockwise = !clockwise;
-            Debug.Log("Enter");
+            //Debug.Log("Enter");
         }
     }
 
@@ -90,17 +113,43 @@ public class CircleEnemyController : MonoBehaviour
     {
         if (col.gameObject.tag == "Wall")
         {
-            Debug.Log("Exit");
+            //Debug.Log("Exit");
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            col.gameObject.GetComponent<PlayerStatsController>().ChangeHealth(-dmg);
+            Vector2 relativeVelocity = transform.position - col.gameObject.transform.position;
+            col.GetComponent<Rigidbody2D>().velocity = -relativeVelocity.normalized * 10;
         }
     }
 
     public void takeDamage(float damageTaken)
     {
+        anim.SetTrigger("Hurt");
         hp -= damageTaken;
     }
 
     public void healDamage(float damageHealed)
     {
         hp += damageHealed;
+    }
+
+    public void ThrowUrchin()
+    {
+        Instantiate(projectile, gameObject.transform.position, Quaternion.identity);
+    }
+
+    public void CheckDead()
+    {
+        if (hp <= 0)
+        {
+            player.GetComponent<PlayerStatsController>().beingAttacked = false;
+            player.GetComponent<PlayerStatsController>().attackingEnemy = null;
+            Destroy(gameObject);
+        }
     }
 }

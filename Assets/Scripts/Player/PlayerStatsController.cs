@@ -83,6 +83,8 @@ public class PlayerStatsController : MonoBehaviour
 
         invulnerabilityTimer = 0;
 
+        GameObject.FindObjectOfType<LevelCatalog>().ChangeLevel += HandleLevelChange;
+
         GameManager.ChangeGameMode += HandleGameMode;
         beingAttacked = false;
     }
@@ -206,5 +208,11 @@ public class PlayerStatsController : MonoBehaviour
                 anim.updateMode = AnimatorUpdateMode.UnscaledTime;
                 break;
         }
+    }
+
+    void HandleLevelChange(string name)
+    {
+        beingAttacked = false;
+        attackingEnemy = null;
     }
 }

@@ -397,11 +397,11 @@ MonoBehaviour:
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   SwitchSettingsMigration: 1
-  HasSourceProject: 1
-  HasPlatforms: 1
+  HasSourceProject: 0
+  HasPlatforms: 0
   sourceProjectPath: High Tide FMOD Session/FMOD Session_High Tide/High Tide FMOD
     Session.fspro
-  sourceBankPath: High Tide FMOD Session/FMOD Session_High Tide/Build
+  sourceBankPath: Assets/Build/Desktop
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1

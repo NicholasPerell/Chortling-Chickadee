@@ -13530,6 +13530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1570815910}
   - component: {fileID: 1570815909}
+  - component: {fileID: 1570815911}
   m_Layer: 0
   m_Name: Game Manger
   m_TagString: Untagged
@@ -13568,6 +13569,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1570815911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570815908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce50f51dc7950041ae4dbcaa6451557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enterLightHouse:
+    yarn: {fileID: 2480198943629176163, guid: 1f49f4b21fba81a4e953cfc8293a14f7, type: 3}
+    nodeName: enterlighthouse.Start
+  exitLightHouse:
+    yarn: {fileID: 2480198943629176163, guid: eeb2f574101aa714eb7ff1f3bdafd252, type: 3}
+    nodeName: exitlighthouse.Start
+  atlasHouse:
+    yarn: {fileID: 2480198943629176163, guid: 4466fcb7a3ea2394c84bba7050fc9316, type: 3}
+    nodeName: enteratlashome.Start
 --- !u!1001 &1622700024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13581,7 +13603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440164, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: startNode
-      value: JulFirst.Start
+      value: EnterLevel.Start
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440164, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: startAutomatically
@@ -13589,12 +13611,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440164, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: yarnScripts.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440164, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: yarnScripts.Array.data[0]
       value: 
       objectReference: {fileID: 2480198943629176163, guid: f1f8be7df4a56ba4fa1f63150ca786d6, type: 3}
+    - target: {fileID: 1662241397675440164, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: yarnScripts.Array.data[1]
+      value: 
+      objectReference: {fileID: 2480198943629176163, guid: 1f49f4b21fba81a4e953cfc8293a14f7, type: 3}
+    - target: {fileID: 1662241397675440164, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: yarnScripts.Array.data[2]
+      value: 
+      objectReference: {fileID: 2480198943629176163, guid: eeb2f574101aa714eb7ff1f3bdafd252, type: 3}
+    - target: {fileID: 1662241397675440164, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: yarnScripts.Array.data[3]
+      value: 
+      objectReference: {fileID: 2480198943629176163, guid: 4466fcb7a3ea2394c84bba7050fc9316, type: 3}
+    - target: {fileID: 1662241397675440164, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: yarnScripts.Array.data[4]
+      value: 
+      objectReference: {fileID: 2480198943629176163, guid: 0f376eeb58c75b243866fa90364a0223, type: 3}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: textSpeed
       value: 0
@@ -13753,6 +13791,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440167, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1662241398205759088, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

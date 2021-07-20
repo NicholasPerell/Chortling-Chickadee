@@ -46,6 +46,46 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 6583
+--- !u!114 &-9012057450852368488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Celeste On
+  m_EditorClassIdentifier: 
+  Name: Celeste On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-8953594443944800186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Piano On
+  m_EditorClassIdentifier: 
+  Name: Piano On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-8400884760501771448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,7 +101,7 @@ MonoBehaviour:
   Path: event:/SFX Events/UI/MapSFX/MapSFXOpen
   guid: 6cf596b7e8a9574d8099f097e12d7488
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -167,7 +207,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Player/Sand Block
   guid: dc99a66c23967f4e97138659708904c6
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -277,6 +317,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 756
+--- !u!114 &-7441153447837910707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Timpani On
+  m_EditorClassIdentifier: 
+  Name: Timpani On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-7188521558201961823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +352,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Player Movement/Jump/land jump
   guid: d1dced4f318a654b814c88b064f996e1
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -315,7 +375,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Player/Death
   guid: 15591f282751824d985563128a479b6d
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -366,6 +426,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2972
+--- !u!114 &-6406173634471310813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Clarinet_Ukulele On
+  m_EditorClassIdentifier: 
+  Name: Clarinet_Ukulele On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-6350168876946389402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,7 +461,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Player/Sand Grab
   guid: 75b890b68696d941be8e8e632dc4d1ae
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -404,22 +484,22 @@ MonoBehaviour:
   Path: event:/MUSIC
   guid: ef4e97d2eee8e644ac521b7b82b26de9
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 305142002440830074}
-  - {fileID: 2658844155020182566}
-  - {fileID: 5870131388512480690}
-  - {fileID: 6973065863837007315}
-  - {fileID: -773628915735224659}
-  - {fileID: -3469985499643813090}
-  - {fileID: 2593983393112638304}
-  - {fileID: -8321831002646344765}
-  - {fileID: 6841242097609342468}
-  - {fileID: -96394640412862186}
-  - {fileID: -5155141203583747605}
+  - {fileID: 8972343541295099482}
+  - {fileID: 5884044536209263265}
+  - {fileID: -5587395125941197466}
+  - {fileID: -2681158065371151604}
+  - {fileID: -9012057450852368488}
+  - {fileID: 3593698756244865376}
+  - {fileID: -6406173634471310813}
+  - {fileID: -5369347793518314294}
+  - {fileID: 4081982942504439212}
+  - {fileID: 2793675976415823919}
+  - {fileID: 127640902738507034}
   MinDistance: 0
   MaxDistance: 0
   Length: 86666
@@ -438,7 +518,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Enemy/crabsfx/melee crab/crab death
   guid: 0beb85def1b9724090a334a3ceb8b708
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -461,7 +541,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Player Movement/Swimming/UD Swim
   guid: 82a66ca59dfab44d96bf4a4f22ccb450
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -484,7 +564,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Player Movement/Walking/Footsteps
   guid: 7f5f110aad88cb479d31b22ce34ca28a
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -492,6 +572,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 743
+--- !u!114 &-6010567294677767516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Bass On
+  m_EditorClassIdentifier: 
+  Name: Bass On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-5673860028740227900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,6 +615,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2229
+--- !u!114 &-5587395125941197466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Shaker On
+  m_EditorClassIdentifier: 
+  Name: Shaker On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-5496961452077987621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,7 +650,7 @@ MonoBehaviour:
   Path: event:/SFX Events/UI/MapSFX/MapSFXClose
   guid: d007ac288c04914b8be729a72d22d7d7
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -553,7 +673,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Player Movement/Dodge/water dodge
   guid: 21bba64a46af3842a48a1cca6e7e02c6
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -576,7 +696,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Enemy/crabsfx/melee crab/crab hurt
   guid: b1cfca7cdd2fee4c8e957e91dca40894
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -597,6 +717,26 @@ MonoBehaviour:
   m_Name: parameter:/MUSIC/Piano On
   m_EditorClassIdentifier: 
   Name: Piano On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-5369347793518314294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Cello On
+  m_EditorClassIdentifier: 
+  Name: Cello On
   Min: 0
   Max: 1
   Default: 0
@@ -772,6 +912,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2229
+--- !u!114 &-4219306631987219921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Celeste On
+  m_EditorClassIdentifier: 
+  Name: Celeste On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-4065589713440407402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -816,6 +976,26 @@ MonoBehaviour:
   - Name: 
     Value: 3186
   Exists: 1
+--- !u!114 &-3984941159402494182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/High Strings On
+  m_EditorClassIdentifier: 
+  Name: High Strings On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-3948579670030328510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -831,7 +1011,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Enemy/crabsfx/ranged crab/range crab hit
   guid: 7e55ec6a58f34e4097f0e61ec302a9e4
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -874,7 +1054,7 @@ MonoBehaviour:
   Path: event:/SFX Events/UI/OptionsButtons/Select
   guid: ca7b7822b499e54caceb4ad20c83ae9a
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -922,6 +1102,66 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-3125698133123610850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Flute On
+  m_EditorClassIdentifier: 
+  Name: Flute On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-3062116096249811457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Harp_Marimba On
+  m_EditorClassIdentifier: 
+  Name: Harp_Marimba On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-3052207648613892213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Cymbals On
+  m_EditorClassIdentifier: 
+  Name: Cymbals On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-2779600227501840474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,6 +1175,26 @@ MonoBehaviour:
   m_Name: parameter:/MUSIC/High Strings On
   m_EditorClassIdentifier: 
   Name: High Strings On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-2681158065371151604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Harp_Marimba On
+  m_EditorClassIdentifier: 
+  Name: Harp_Marimba On
   Min: 0
   Max: 1
   Default: 0
@@ -957,7 +1217,7 @@ MonoBehaviour:
   Path: event:/Stingers/Puzzle Complete
   guid: 214d617d763e9c46bfb80a5016ef791a
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -965,6 +1225,45 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 6583
+--- !u!114 &-2109083756641775839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/High Strings On
+  m_EditorClassIdentifier: 
+  Name: High Strings On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-1846802058172801368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637623082750000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-1835902173041433536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1034,6 +1333,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 750
+--- !u!114 &-1784965680654195759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Clarinet_Ukulele On
+  m_EditorClassIdentifier: 
+  Name: Clarinet_Ukulele On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-1766976183174962261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1049,7 +1368,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Enemy/crabsfx/ranged crab/ranged aggro
   guid: 778393cd19d10f4e93671c66161e915b
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1057,6 +1376,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1486
+--- !u!114 &-1729661511727046360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Timpani On
+  m_EditorClassIdentifier: 
+  Name: Timpani On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-1601236996108432974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1072,7 +1411,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Player/Sand Attack
   guid: 804379cadc11254e951911d5f130bea2
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1095,7 +1434,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Non Diegetic/No Sand
   guid: 6720c1c13dcdbf48a0b9a263cbef69ae
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1235,6 +1574,50 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-733617252128362199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Stingers
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Stingers
+  guid: 965c51f5385e6048b82b5f5b4e970363
+  Banks:
+  - {fileID: 2451273955551285054}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-420316941631394449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: High Tide FMOD Session/FMOD Session_High Tide/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637623960400000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 3186
+  Exists: 1
 --- !u!114 &-397357201476103980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1255,6 +1638,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-100851578677691333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Shaker On
+  m_EditorClassIdentifier: 
+  Name: Shaker On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-96394640412862186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1288,8 +1691,8 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -4052606542199755063}
-  - {fileID: -4412332101775511248}
+  - {fileID: -420316941631394449}
+  - {fileID: 2451273955551285054}
   EditorEvents:
   - {fileID: -6178637744995819381}
   - {fileID: -6957116233861709570}
@@ -1314,13 +1717,11 @@ MonoBehaviour:
   - {fileID: -6117247943012873204}
   - {fileID: 3553081928913717102}
   - {fileID: 7283654503285420080}
-  - {fileID: -4314679020794645204}
   - {fileID: 8031608223020815628}
   - {fileID: 2486657369236167874}
   - {fileID: 2589606001314934461}
   - {fileID: 4498969706963162084}
   - {fileID: -5377152398954882505}
-  - {fileID: 3229550415159721352}
   - {fileID: -3865812300403940310}
   - {fileID: -5496961452077987621}
   - {fileID: -7188521558201961823}
@@ -1328,13 +1729,55 @@ MonoBehaviour:
   - {fileID: 7209246498226093522}
   - {fileID: 1298867761236206285}
   - {fileID: -6262765362907921880}
+  - {fileID: -733617252128362199}
+  - {fileID: 5735968605180776990}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   StringsBanks:
-  - {fileID: -4052606542199755063}
-  stringsBankWriteTime: 637623114410000000
+  - {fileID: -420316941631394449}
+  stringsBankWriteTime: 637623960400000000
   cacheVersion: 6
+--- !u!114 &127640902738507034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Flute On
+  m_EditorClassIdentifier: 
+  Name: Flute On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &304019098520372893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Flute On
+  m_EditorClassIdentifier: 
+  Name: Flute On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &305142002440830074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1355,6 +1798,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &558899464962417122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Clarinet_Ukulele On
+  m_EditorClassIdentifier: 
+  Name: Clarinet_Ukulele On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &935303328092383156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1370,7 +1833,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Enemy/crabsfx/melee crab/crab aggro
   guid: 18110dd4f01802419d1f800ce59b587d
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1436,7 +1899,7 @@ MonoBehaviour:
   Path: event:/SFX Events/UI/Newgame/Newgame
   guid: e45abc3f878b7e4ebe2c6223c5929087
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1463,6 +1926,47 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &1680839476529370434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637623082750000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 3026
+  Exists: 0
+--- !u!114 &1744232198694267033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Cymbals On
+  m_EditorClassIdentifier: 
+  Name: Cymbals On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &1865090263662137652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1545,7 +2049,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Player Movement/Swimming/LR Swim
   guid: 63e0ab81cd619e4e8c2281b363f984af
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1617,6 +2121,25 @@ MonoBehaviour:
   - Name: Desktop
     Value: 3186
   Exists: 1
+--- !u!114 &2451273955551285054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: High Tide FMOD Session/FMOD Session_High Tide/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637623960400000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &2452450550696195149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1651,7 +2174,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Non Diegetic/Low Health
   guid: a5a085de8acbf741a9aabf634b1a9685
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1674,7 +2197,7 @@ MonoBehaviour:
   Path: event:/Stingers/Catalyst Unlock
   guid: a73c5c2533bc8b48b5e949fbd47a3053
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1715,6 +2238,26 @@ MonoBehaviour:
   m_Name: parameter:/MUSIC/High Strings On
   m_EditorClassIdentifier: 
   Name: High Strings On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &2793675976415823919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Piano On
+  m_EditorClassIdentifier: 
+  Name: Piano On
   Min: 0
   Max: 1
   Default: 0
@@ -1783,7 +2326,7 @@ MonoBehaviour:
   Path: event:/Backups/whole track (backupworst case scenario)
   guid: 55c476bd9584a74b804d66ac87d0f692
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1806,7 +2349,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Non Diegetic/Door
   guid: 4abd7421ade1fd4a9a0131374b815abe
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1860,6 +2403,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &3331376555569613873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Bass On
+  m_EditorClassIdentifier: 
+  Name: Bass On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &3342413810310844788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1944,7 +2507,7 @@ MonoBehaviour:
   Path: event:/SFX Events/UI/Loadgame/Loadgame
   guid: 8afb67dd211afd48b6e7aa425cc02da1
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1952,6 +2515,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 6687
+--- !u!114 &3593698756244865376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Bass On
+  m_EditorClassIdentifier: 
+  Name: Bass On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &3811179684254401105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1987,7 +2570,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Player/Sand Grab Launch
   guid: 25caf50b767f1d47a9dc319075f7c9be
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1995,6 +2578,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 870
+--- !u!114 &4081982942504439212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Timpani On
+  m_EditorClassIdentifier: 
+  Name: Timpani On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &4387633809284394588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2018,6 +2621,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2229
+--- !u!114 &4405618518106327456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Shaker On
+  m_EditorClassIdentifier: 
+  Name: Shaker On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &4498969706963162084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2033,7 +2656,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Enemy/crabsfx/ranged crab/ranged crab hurt
   guid: ad0d7864301b4647b5a43fbf47aca238
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2041,6 +2664,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2229
+--- !u!114 &4920468041985413676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Celeste On
+  m_EditorClassIdentifier: 
+  Name: Celeste On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &4985258867660382921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2107,6 +2750,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1000
+--- !u!114 &5214921274245128742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Cello On
+  m_EditorClassIdentifier: 
+  Name: Cello On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &5294646711050531565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2173,6 +2836,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &5735968605180776990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/EQ
+  m_EditorClassIdentifier: 
+  Path: snapshot:/EQ
+  guid: ca5c29bf27d3b04e851f81e6425dcd9b
+  Banks:
+  - {fileID: 2451273955551285054}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &5854111120817538879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2214,6 +2900,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &5884044536209263265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/High Strings On
+  m_EditorClassIdentifier: 
+  Name: High Strings On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &6016277038782940634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2229,7 +2935,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Enemy/crabsfx/ranged crab/ranged crab throw
   guid: 66879038fd404f40a461bd98689e6fc4
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2237,6 +2943,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1486
+--- !u!114 &6099902512414231407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Piano On
+  m_EditorClassIdentifier: 
+  Name: Piano On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &6104353267214406998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2295,7 +3021,7 @@ MonoBehaviour:
   Path: event:/SFX Events/UI/OptionsButtons/CloseExit
   guid: 5f95133317c6034087b8c403b074c670
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2341,7 +3067,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Player Movement/Dodge/land dash
   guid: 80cf7225bbc9644182cb710d4008a6d7
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2473,7 +3199,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Enemy/crabsfx/crab swim
   guid: e11dbc4f94516441a23e6f5d9a961801
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2519,7 +3245,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Enemy/crabsfx/ranged crab/ranged crab death
   guid: 8ed57b4ab127384aa9507b2fd205ea26
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2596,7 +3322,7 @@ MonoBehaviour:
   Path: event:/SFX Events/Player/Sand Grab Return
   guid: a13864f20bc39a4b80e4865200e01f99
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2604,6 +3330,66 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1499
+--- !u!114 &8155001403792717066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Cello On
+  m_EditorClassIdentifier: 
+  Name: Cello On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &8777880055803931974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Harp_Marimba On
+  m_EditorClassIdentifier: 
+  Name: Harp_Marimba On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &8972343541295099482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC/Cymbals On
+  m_EditorClassIdentifier: 
+  Name: Cymbals On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &9133800167670620628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2619,7 +3405,7 @@ MonoBehaviour:
   Path: 'event:/SFX Events/Enemy/crabsfx/melee crab/crab punched '
   guid: 488298e6e0230048bf6e4eb92a7c9150
   Banks:
-  - {fileID: -4412332101775511248}
+  - {fileID: 2451273955551285054}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

@@ -94,6 +94,6 @@ public class GameManager : MonoBehaviour
         blackScreen.DOFade(1, timeToFadeToGameOver);
         yield return new WaitForSeconds(timeToFadeToGameOver);
         SceneManager.LoadScene("g-death_screen");
-        FMODUnity.RuntimeManager.PlayOneShot("event:/death");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Player/Death");
     }
 }

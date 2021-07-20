@@ -35,7 +35,7 @@ public class WindowController : MonoBehaviour
         {
             Instantiate(shatterPrefab, transform.position, transform.rotation, transform.parent);
             Destroy(this.gameObject);
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Puzzle Complete");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Stingers/Puzzle Complete");
         }
     }
 }

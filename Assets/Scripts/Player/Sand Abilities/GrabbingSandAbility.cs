@@ -49,7 +49,7 @@ public class GrabbingSandAbility : MonoBehaviour
                 dist.connectedBody = GetComponent<Rigidbody2D>();
                 dist.distance = Vector3.Distance(transform.position,e.transform.position);
                 break;
-                FMODUnity.RuntimeManager.PlayOneShot("event:/Sand Grab");
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Player/Sand Grab");
             }
         }
     }

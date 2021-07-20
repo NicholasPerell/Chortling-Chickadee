@@ -151,7 +151,7 @@ public class SandMovement : MonoBehaviour
     {
         returning = true;
         GetComponent<CircleCollider2D>().enabled = false;
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Sand Grab Return");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Player/Sand Grab Return");
         if(!isGlass)
         {
             GetComponent<GrabbingSandAbility>().AttemptEndAttach();

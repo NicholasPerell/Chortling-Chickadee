@@ -220,7 +220,7 @@ public class PlayerMovementController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, jumpForce));
             onGround = false;
-            FMODUnity.RuntimeManager.PlayOneShot("event:/land jump");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Player Movement/Jump/land jump");
         }
     }
 

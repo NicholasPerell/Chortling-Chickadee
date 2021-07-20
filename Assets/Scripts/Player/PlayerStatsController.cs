@@ -169,7 +169,7 @@ public class PlayerStatsController : MonoBehaviour
 
         if (empty || !hasAbility[index] || inUse[index] || currentSand - costs[index] < 0) 
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/No Sand");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Non Diegetic/No Sand");
             return false;
         } 
 

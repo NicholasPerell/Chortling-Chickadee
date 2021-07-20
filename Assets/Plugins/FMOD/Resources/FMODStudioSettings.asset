@@ -401,7 +401,7 @@ MonoBehaviour:
   HasPlatforms: 0
   sourceProjectPath: High Tide FMOD Session/FMOD Session_High Tide/High Tide FMOD
     Session.fspro
-  sourceBankPath: Assets/Build/Desktop
+  sourceBankPath: High Tide FMOD Session/FMOD Session_High Tide/Build/Desktop
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1

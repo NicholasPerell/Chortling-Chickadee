@@ -68,6 +68,7 @@ public class DoorExit : MonoBehaviour
         if (!active && inRange && GameManager.mode == GameMode.PLAYING)
         {
             GetComponent<LevelExit>().ChangeLevel(GameObject.FindGameObjectWithTag("Player"));
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Door");
         }
     }
 

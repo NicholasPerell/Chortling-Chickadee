@@ -19,9 +19,12 @@ public class MeleeEnemyController : MonoBehaviour
     private float playerDistance;
     private float count;
 
+    private Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponentInChildren<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         count = 0f;
     }
@@ -35,6 +38,9 @@ public class MeleeEnemyController : MonoBehaviour
         {
             if (!player.GetComponent<PlayerStatsController>().beingAttacked || player.GetComponent<PlayerStatsController>().attackingEnemy == gameObject)
             {
+
+                anim.SetBool("Moving", true);
+
                 player.GetComponent<PlayerStatsController>().beingAttacked = true;
                 player.GetComponent<PlayerStatsController>().attackingEnemy = gameObject;
 
@@ -55,20 +61,28 @@ public class MeleeEnemyController : MonoBehaviour
                 }
             }
         }
+        else
+        {
+
+            anim.SetBool("Moving", false);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Player" && player.GetComponent<PlayerStatsController>().attackingEnemy != gameObject)
+        if (col.gameObject.tag == "Player")
         {
             col.gameObject.GetComponent<PlayerStatsController>().ChangeHealth(-dmg);
-            col.gameObject.GetComponent<PlayerStatsController>().Stun();
-            col.GetComponent<Rigidbody>().velocity = -col.relativeVelocity.normalized * 10;
+            Vector2 relativeVelocity = transform.position - col.gameObject.transform.position;
+            col.GetComponent<Rigidbody2D>().velocity = -relativeVelocity.normalized * 10;
+
+            anim.SetTrigger("Attack");
         }
     }
 
     public void takeDamage(float damageTaken)
     {
+        anim.SetTrigger("Hurt");
         hp -= damageTaken;
     }
 

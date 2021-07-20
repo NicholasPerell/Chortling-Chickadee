@@ -8,13 +8,14 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
+  baseLanguageID: en-US
   stringIDs:
   - EarnShield-EarnShield.Start-0
   - EarnShield-EarnShield.Start-1
   - EarnShield-EarnShield.Start-2
   - EarnShield-EarnShield.Start-3
   - EarnShield-EarnShield.Start-4
+  - EarnShield-EarnShield.Start-5
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 

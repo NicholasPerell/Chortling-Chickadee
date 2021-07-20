@@ -3,6 +3,9 @@ tags:
 colorID: 0
 position: -160,18
 ---
+<<changeSpeaker SpeakerDisplay Mystery>>
+We promise to protect you, always.
+<<changeSpeaker SpeakerDisplay Info>>
 <<Bestow SandProjectileEarn>>
 You have gained magic sand!
 This has unlocked the ability to harness sand as a SHIELD.

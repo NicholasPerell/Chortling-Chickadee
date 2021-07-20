@@ -3,6 +3,11 @@ tags:
 colorID: 0
 position: -110,68
 ---
+<<changeSpeaker SpeakerDisplay Mystery>>
+We've been asleep for so long. Thank you for waking us at last.
+<<changeSpeaker SpeakerDisplay Ocean>>
+What is this? No... That can't be.
+<<changeSpeaker SpeakerDisplay Info>>
 <<Bestow SandProjectileEarn>>
 You have gained magic sand!
 This has unlocked the ability to throw sand as a PROJECTILE.

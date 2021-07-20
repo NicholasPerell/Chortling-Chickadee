@@ -35,9 +35,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         instance = this;
-        mode = GameMode.PLAYING;
-        previousMode = GameMode.PLAYING;
-        Time.timeScale = 1;
+        //mode = GameMode.PLAYING;
+        //previousMode = GameMode.PLAYING;
+        //Time.timeScale = 1;
     }
 
     private void Update()

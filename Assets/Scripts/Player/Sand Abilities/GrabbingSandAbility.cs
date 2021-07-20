@@ -34,6 +34,17 @@ public class GrabbingSandAbility : MonoBehaviour
     //    controls.Player.EndGrab.Disable();
     //}
 
+    private void OnEnable()
+    {
+        useful = true;
+        dist = null;
+    }
+
+    private void OnDisable()
+    {
+        
+    }
+
     private void Update()
     {
         if(useful)

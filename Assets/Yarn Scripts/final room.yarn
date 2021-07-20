@@ -1,4 +1,4 @@
-title: final room Start
+title: finalroom.Start
 tags: 
 colorID: 0
 position: -551,-1330
@@ -18,7 +18,7 @@ Please, keep going!
 <<ChangeSpeaker SpeakerDisplay Sand>>
 ...
 <<ChangeSpeaker SpeakerDisplay Ocean>>
-[i]You?[/i]
+<i>You?</i>
 <<ChangeSpeaker SpeakerDisplay Sand>>
 This is only the beginning. There is so much more to learn.
 <<ChangeSpeaker SpeakerDisplay Sand>>
@@ -26,5 +26,5 @@ You wanted to get your locket back, no? Let us guide you.
 <<ChangeSpeaker SpeakerDisplay Sand>>
 Please, place your trust in us, just as we do in you, Atlas.
 <<ChangeSpeaker SpeakerDisplay Sand>>
-[b][i]Let us show you the truth of this world.[/i][/b]
+<b><i>Let us show you the truth of this world.</i></b>
 ===

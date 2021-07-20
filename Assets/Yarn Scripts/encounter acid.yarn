@@ -1,8 +1,8 @@
-title: encounter acid start
+title: encounteracid.Start
 tags: 
 colorID: 0
 position: -401,-940
 ---
-<<ChangeSpeaker SpeakerDisplay Ocean>>
+<<changeSpeaker SpeakerDisplay Ocean>>
 Be careful, now. I'm sure you don't want to become corroded like the rest.
 ===

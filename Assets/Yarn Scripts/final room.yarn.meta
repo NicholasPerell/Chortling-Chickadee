@@ -8,11 +8,23 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
-  stringIDs: []
-  compilationStatus: 0
-  isSuccesfullyCompiled: 0
+  baseLanguageID: en-US
+  stringIDs:
+  - final room-finalroom.Start-0
+  - final room-finalroom.Start-1
+  - final room-finalroom.Start-2
+  - final room-finalroom.Start-3
+  - final room-finalroom.Start-4
+  - final room-finalroom.Start-5
+  - final room-finalroom.Start-6
+  - final room-finalroom.Start-7
+  - final room-finalroom.Start-8
+  - final room-finalroom.Start-9
+  - final room-finalroom.Start-10
+  - final room-finalroom.Start-11
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
   compilationErrorMessage: "Error on line 21 at position 3:\nmismatched input ']'
     expecting FORMAT_FUNCTION_EXPRESSION_START\r\n[i]You?[/i]\r\r\n  ^"
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: 5def59c6bf1130549945c598295ba70b, type: 3}
   localizations: []

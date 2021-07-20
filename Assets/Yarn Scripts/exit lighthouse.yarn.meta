@@ -8,11 +8,12 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
-  stringIDs: []
-  compilationStatus: 0
-  isSuccesfullyCompiled: 0
+  baseLanguageID: en-US
+  stringIDs:
+  - exit lighthouse-exitlighthouse.Start-0
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
   compilationErrorMessage: The node 'exit lighthouse Start' contains illegal characters
     in its title.
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: eeb2f574101aa714eb7ff1f3bdafd252, type: 3}
   localizations: []

@@ -5066,9 +5066,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundRunForce: 40
   groundMaxRunSpeed: 5.5
-  groundLinearDrag: 0.9
+  groundLinearDrag: 0.99
   groundGravityScale: 2
-  jumpForce: 770
+  jumpForce: 780870
+  jumpCutForce: 10
   waterRunForce: 40
   waterMaxRunSpeed: 5
   waterLinearDrag: 1
@@ -5128,6 +5129,9 @@ MonoBehaviour:
   hasAbility: 000000
   timeStunned: 0.1
   timeInvulnerable: 0.2
+  beingAttacked: 0
+  attackingEnemy: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!114 &9150392492675701513
 MonoBehaviour:
   m_ObjectHideFlags: 0

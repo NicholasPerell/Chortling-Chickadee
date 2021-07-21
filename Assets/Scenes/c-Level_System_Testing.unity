@@ -13615,7 +13615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440164, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: yarnScripts.Array.size
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440164, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: yarnScripts.Array.data[0]
@@ -13637,6 +13637,22 @@ PrefabInstance:
       propertyPath: yarnScripts.Array.data[4]
       value: 
       objectReference: {fileID: 2480198943629176163, guid: 0f376eeb58c75b243866fa90364a0223, type: 3}
+    - target: {fileID: 1662241397675440164, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: yarnScripts.Array.data[5]
+      value: 
+      objectReference: {fileID: 2480198943629176163, guid: 5def59c6bf1130549945c598295ba70b, type: 3}
+    - target: {fileID: 1662241397675440164, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: yarnScripts.Array.data[6]
+      value: 
+      objectReference: {fileID: 2480198943629176163, guid: d49ff13af337a614b885fd75d58e9744, type: 3}
+    - target: {fileID: 1662241397675440164, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: yarnScripts.Array.data[7]
+      value: 
+      objectReference: {fileID: 2480198943629176163, guid: 648b0c5b88440bb4f8a967cda2235ec7, type: 3}
+    - target: {fileID: 1662241397675440164, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: yarnScripts.Array.data[8]
+      value: 
+      objectReference: {fileID: 2480198943629176163, guid: 653288deefbec8b44a776e743bd9e168, type: 3}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: textSpeed
       value: 0

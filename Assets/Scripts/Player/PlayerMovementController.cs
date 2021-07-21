@@ -280,7 +280,7 @@ public class PlayerMovementController : MonoBehaviour
 
     void SendAnimationData()
     {
-        anim.SetFloat("Speed",Mathf.Abs(rb.velocity.x));
+        anim.SetFloat("Speed",Mathf.Abs(onLand ? rb.velocity.x : rb.velocity.magnitude));
         anim.SetBool("OnLand",onLand);
         anim.SetBool("Strafing", strafeTimer > strafeCooldown);
 

@@ -13594,6 +13594,11 @@ MonoBehaviour:
   atlasHouse:
     yarn: {fileID: 2480198943629176163, guid: 4466fcb7a3ea2394c84bba7050fc9316, type: 3}
     nodeName: enteratlashome.Start
+  encounterNode: FirstEnemyEncounter.Start
+  defeatNode: firstenemydefeat.Start
+  acidNode: encounteracid.Start
+  finaleNode: finalroom.Start
+  killedCrab: 0
 --- !u!1001 &1622700024
 PrefabInstance:
   m_ObjectHideFlags: 0

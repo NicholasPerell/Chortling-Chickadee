@@ -16,15 +16,20 @@ public class NarrativeTriggerManager : MonoBehaviour
     [SerializeField] ScriptNodePair enterLightHouse;
     [SerializeField] ScriptNodePair exitLightHouse;
     [SerializeField] ScriptNodePair atlasHouse;
+    [SerializeField] string encounterNode, defeatNode, acidNode, finaleNode;
 
     DialogueRunner dialogueRunner;
 
-    bool enterLH = true, exitLH = true, atlasH = true;
+    bool enterLH = true, exitLH = true, atlasH = true, encounter = true, defeat = true, acid = true, finale = true;
 
+    PlayerStatsController plyStats;
     void Start()
     {
         LevelCatalog levelCatalog = GameObject.FindObjectOfType<LevelCatalog>();
         levelCatalog.ChangeLevel += HandleChangeLevel;
+        plyStats = GameObject.FindObjectOfType<PlayerStatsController>();
+        plyStats.AggroCrab += HandleEncounter;
+        CrabAnimationTriggers.CrabDeath += HandleCrabDeath;
 
         dialogueRunner = GameObject.FindObjectOfType<DialogueRunner>();
     }
@@ -43,13 +48,16 @@ public class NarrativeTriggerManager : MonoBehaviour
 
     void HandleChangeLevel(string name)
     {
-        switch(name)
+        bool changes = false;
+
+        switch (name)
         {
             case "Inside Light House":
                 if (enterLH)
                 {
                     StartNarrative(enterLightHouse.nodeName);
                     enterLH = false;
+                    changes = true;
                 }
                 break;
             case "Abandoned Town Lighthouseplace":
@@ -57,6 +65,7 @@ public class NarrativeTriggerManager : MonoBehaviour
                 {
                     StartNarrative(exitLightHouse.nodeName);
                     exitLH = false;
+                    changes = true;
                 }
                 break;
             case "Atlas House":
@@ -64,9 +73,33 @@ public class NarrativeTriggerManager : MonoBehaviour
                 {
                     StartNarrative(atlasHouse.nodeName);
                     atlasH = false;
+                    changes = true;
                 }
                 break;
         }
+
+        if (!changes)
+        {
+            if (killedCrab && defeat)
+            {
+                StartNarrative(defeatNode);
+                defeat = false;
+            }
+        }
+    }
+
+    void HandleEncounter()
+    {
+        StartNarrative(encounterNode);
+        encounter = false;
+        plyStats.AggroCrab -= HandleEncounter;
+    }
+
+    [SerializeField] bool killedCrab = false;
+    void HandleCrabDeath()
+    {
+        killedCrab = true;
+        CrabAnimationTriggers.CrabDeath -= HandleCrabDeath;
     }
 
     void StartNarrative(string startingNode)
@@ -77,4 +110,6 @@ public class NarrativeTriggerManager : MonoBehaviour
 
         GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Animator>().SetFloat("Speed", 0);
     }
+
+
 }

@@ -3,6 +3,6 @@ tags:
 colorID: 0
 position: -37,-134
 ---
-<<ChangeSpeaker SpeakerDisplay Ocean>>
+<<changeSpeaker SpeakerDisplay Ocean>>
 <i>Hm...</i> There's something different about you. This may be more difficult than I expected...
 ===

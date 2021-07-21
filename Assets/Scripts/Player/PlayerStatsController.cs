@@ -59,6 +59,8 @@ public class PlayerStatsController : MonoBehaviour
 
     bool empty;
 
+    public event Action AggroCrab;
+
     private void Awake()
     {
         anim = GetComponentInChildren<Animator>();
@@ -93,6 +95,8 @@ public class PlayerStatsController : MonoBehaviour
     void Update()
     {
         if(invulnerabilityTimer > 0) invulnerabilityTimer -= Time.deltaTime;
+
+        if (beingAttacked == true) AggroCrab?.Invoke();
 
         DeterminePlannedSand();
         RechargeSand();

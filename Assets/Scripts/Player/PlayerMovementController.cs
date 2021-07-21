@@ -60,7 +60,11 @@ public class PlayerMovementController : MonoBehaviour
         controls = new PlayerControls();
 
         controls.Player.Jump.performed += _ => AttemptJump();
+        controls.Player.Jump2.performed += _ => AttemptJump();
+        controls.Player.Jump3.performed += _ => AttemptJump();
         controls.Player.EndJump.performed += _ => AttemptEndJump();
+        controls.Player.EndJump2.performed += _ => AttemptEndJump();
+        controls.Player.EndJump3.performed += _ => AttemptEndJump();
 
         controls.Player.Strafe.performed += _ => AttemptStrafe();
 

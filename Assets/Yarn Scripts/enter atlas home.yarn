@@ -1,8 +1,8 @@
-title: enter atlas home Start
+title: enteratlashome.Start
 tags: 
 colorID: 0
 position: -251,-550
 ---
-<<ChangeSpeaker SpeakerDisplay Ocean>>
+<<changeSpeaker SpeakerDisplay Ocean>>
 You seem to be familiar with this place. Hm, I wonder why that could be?
 ===

@@ -8,12 +8,13 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
-  stringIDs: []
-  compilationStatus: 0
-  isSuccesfullyCompiled: 0
+  baseLanguageID: en-US
+  stringIDs:
+  - first enemy defeat-firstenemydefeat.Start-0
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
   compilationErrorMessage: "Error on line 7 at position 3:\nmismatched input ']'
     expecting FORMAT_FUNCTION_EXPRESSION_START\r\n[i]Hm...[/i] There's something
     different about you. This may be more difficult than I expected...\r\r\n  ^"
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: 648b0c5b88440bb4f8a967cda2235ec7, type: 3}
   localizations: []

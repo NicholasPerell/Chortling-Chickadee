@@ -49,6 +49,8 @@ public class PlayerStatsController : MonoBehaviour
     [Header("When Damaged")]
     [SerializeField] float timeStunned, timeInvulnerable;
     float invulnerabilityTimer;
+    public bool beingAttacked;
+    public GameObject attackingEnemy;
 
 
     PlayerMovementController movement;
@@ -56,6 +58,8 @@ public class PlayerStatsController : MonoBehaviour
     [SerializeField] Animator anim;
 
     bool empty;
+
+    public event Action AggroCrab;
 
     private void Awake()
     {
@@ -81,13 +85,18 @@ public class PlayerStatsController : MonoBehaviour
 
         invulnerabilityTimer = 0;
 
+        GameObject.FindObjectOfType<LevelCatalog>().ChangeLevel += HandleLevelChange;
+
         GameManager.ChangeGameMode += HandleGameMode;
+        beingAttacked = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         if(invulnerabilityTimer > 0) invulnerabilityTimer -= Time.deltaTime;
+
+        if (beingAttacked == true) AggroCrab?.Invoke();
 
         DeterminePlannedSand();
         RechargeSand();
@@ -207,5 +216,11 @@ public class PlayerStatsController : MonoBehaviour
                 anim.updateMode = AnimatorUpdateMode.UnscaledTime;
                 break;
         }
+    }
+
+    void HandleLevelChange(string name)
+    {
+        beingAttacked = false;
+        attackingEnemy = null;
     }
 }

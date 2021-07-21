@@ -9,16 +9,21 @@ public class EarningController : MonoBehaviour
     [SerializeField] float sandEarnt;
     FMOD.Studio.EventInstance snapshot;
 
+    PlayerStatsController ply;
+
     private void Start()
     {
         name = "SandProjectileEarn";
+        ply = GameObject.FindObjectOfType<PlayerStatsController>();
+        if (ply.hasAbility[(int)ability])
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     [YarnCommand("Bestow")]
     public void BestowAbility()
     {
-        PlayerStatsController ply = GameObject.FindObjectOfType<PlayerStatsController>();
-
         ply.currentMaxSand = ply.currentMaxSand + sandEarnt;
         ply.hasAbility[(int)ability] = true;
         FMODUnity.RuntimeManager.PlayOneShot("event:/Stingers/Catalyst Unlock");

@@ -613,18 +613,56 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1662241398205759088, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1662241398205759094, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4670054251707922517, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: m_text
+      value: ???
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670054251707922517, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: m_fontSize
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670054251707922517, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 47b953b7c87711743a41a7ef0c7c4a81, type: 2}
+    - target: {fileID: 4670054251707922517, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1991376877534288334, guid: 47b953b7c87711743a41a7ef0c7c4a81, type: 2}
     - target: {fileID: 5374860434867518431, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7372607415866228384, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c1267ebefe48fc745a005c60a1952f35, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+--- !u!1 &895483681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1662241397675440163, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+  m_PrefabInstance: {fileID: 895483680}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &895483682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895483681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2475e92d57d5834e990ae8ff4b6abb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2
 --- !u!1 &943135688
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,6 +694,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToFadeToGameOver: 1
   blackScreen: {fileID: 0}
+  disMode: 0
+  disPreviousMode: 0
 --- !u!4 &943135690
 Transform:
   m_ObjectHideFlags: 0
@@ -785,7 +825,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
   m_PrefabInstance: {fileID: 895483680}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 895483681}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04317fce65da54f4997a5c4465b4e93c, type: 3}
@@ -860,7 +900,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -878,7 +918,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 23
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

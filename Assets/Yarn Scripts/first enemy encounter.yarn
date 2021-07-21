@@ -1,8 +1,8 @@
-title: First Enemy Encounter Start
+title: FirstEnemyEncounter.Start
 tags: 
 colorID: 0
 position: 13,-4
 ---
-<<ChangeSpeaker SpeakerDisplay Ocean>>
+<<changeSpeaker SpeakerDisplay Ocean>>
 You land-folk never last terribly long. You should have known better to tread here.
 ===

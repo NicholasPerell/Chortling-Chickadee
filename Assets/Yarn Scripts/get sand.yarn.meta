@@ -8,11 +8,13 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
-  stringIDs: []
-  compilationStatus: 0
-  isSuccesfullyCompiled: 0
+  baseLanguageID: en-US
+  stringIDs:
+  - get sand-getsand.Start-0
+  - get sand-getsand.Start-1
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
   compilationErrorMessage: The node 'get sand Start' contains illegal characters
     in its title.
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: 2adf60ed416cc36408fd5e7793a904bc, type: 3}
   localizations: []

@@ -11,6 +11,8 @@ public class GrabbingSandAbility : MonoBehaviour
 
     DistanceJoint2D dist;
 
+    bool useful = true;
+
     //private void Awake()
     //{
     //    controls = new PlayerControls();
@@ -32,13 +34,27 @@ public class GrabbingSandAbility : MonoBehaviour
     //    controls.Player.EndGrab.Disable();
     //}
 
+    private void OnEnable()
+    {
+        useful = true;
+        dist = null;
+    }
+
+    private void OnDisable()
+    {
+        
+    }
+
     private void Update()
     {
-        AttemptGrabAttach();
+        if(useful)
+            AttemptGrabAttach();
     }
 
     private void AttemptGrabAttach()
     {
+        if (dist != null) return;
+
         Collider2D[] overlaps = Physics2D.OverlapCircleAll(transform.position, grabRange);
         foreach(Collider2D e in overlaps)
         {
@@ -60,5 +76,6 @@ public class GrabbingSandAbility : MonoBehaviour
         {
             dist.enabled = false;
         }
+        useful = false;
     }
 }

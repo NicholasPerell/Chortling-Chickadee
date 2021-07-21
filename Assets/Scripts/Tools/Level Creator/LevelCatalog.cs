@@ -26,6 +26,8 @@ public struct LevelData
     public LevelExitData[] exits;
 }
 
+public delegate void PassString(string name);
+
 public class LevelCatalog : MonoBehaviour
 {
     public string nameStartingLevel;
@@ -36,8 +38,12 @@ public class LevelCatalog : MonoBehaviour
 
     [HideInInspector]
     public LevelData currentLvl;
+    [HideInInspector]
+    public string currentLvlName;
 
     private GameObject player;
+
+    public event PassString ChangeLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +64,8 @@ public class LevelCatalog : MonoBehaviour
         levelManager.LoadLevel(catalog[name].levelTexture, catalog[name].foregroundArtTexture, catalog[name].waterTexture, catalog[name].backgroundArtTexture);
         currentLvl = catalog[name];
         Camera.main.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, Camera.main.transform.position.z);
+        
+        ChangeLevel?.Invoke(name);
     }
 
 

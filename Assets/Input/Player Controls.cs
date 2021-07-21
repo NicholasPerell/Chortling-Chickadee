@@ -35,9 +35,41 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
+                    ""name"": ""Jump2"",
+                    ""type"": ""Button"",
+                    ""id"": ""e74e1eab-5442-41ac-af6b-da1db3a8bec3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Jump3"",
+                    ""type"": ""Button"",
+                    ""id"": ""c327a187-ad81-4a86-8d3a-7a859a37534d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
                     ""name"": ""End Jump"",
                     ""type"": ""Button"",
                     ""id"": ""7afa58f9-2906-4c26-80ff-1d601b86008f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""End Jump2"",
+                    ""type"": ""Button"",
+                    ""id"": ""7cdda4e1-af4d-4d9d-87a0-77a6a5c0d8eb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""End Jump3"",
+                    ""type"": ""Button"",
+                    ""id"": ""fb67609a-6f5b-463c-ae5a-3f8e9a1db504"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -196,17 +228,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""4bbbe719-5973-4df4-baef-5165a4318906"",
-                    ""path"": ""2DVector(mode=1)"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement Input"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
                     ""name"": ""up"",
                     ""id"": ""84c6c843-cbfd-4967-bd1c-3f2bdb4aa8a5"",
                     ""path"": ""<Keyboard>/upArrow"",
@@ -243,6 +264,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""name"": ""right"",
                     ""id"": ""84e95714-36bf-4385-a38d-9df5eacdf48c"",
                     ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement Input"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""31013b04-af63-4fd0-85c0-e4056f1b33dd"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -414,6 +446,50 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""98456193-03eb-4034-afa0-fef4c67f597f"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4e736e4f-59c2-4d3d-adda-01a410213cd1"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""08675aa1-3e7c-466b-b13a-4f8641f5cb11"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""End Jump2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a777b344-efb8-4ea7-905a-372eb2753ffd"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""End Jump3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -424,7 +500,11 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_MovementInput = m_Player.FindAction("Movement Input", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+        m_Player_Jump2 = m_Player.FindAction("Jump2", throwIfNotFound: true);
+        m_Player_Jump3 = m_Player.FindAction("Jump3", throwIfNotFound: true);
         m_Player_EndJump = m_Player.FindAction("End Jump", throwIfNotFound: true);
+        m_Player_EndJump2 = m_Player.FindAction("End Jump2", throwIfNotFound: true);
+        m_Player_EndJump3 = m_Player.FindAction("End Jump3", throwIfNotFound: true);
         m_Player_Drop = m_Player.FindAction("Drop", throwIfNotFound: true);
         m_Player_Strafe = m_Player.FindAction("Strafe", throwIfNotFound: true);
         m_Player_MousePos = m_Player.FindAction("Mouse Pos", throwIfNotFound: true);
@@ -488,7 +568,11 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_MovementInput;
     private readonly InputAction m_Player_Jump;
+    private readonly InputAction m_Player_Jump2;
+    private readonly InputAction m_Player_Jump3;
     private readonly InputAction m_Player_EndJump;
+    private readonly InputAction m_Player_EndJump2;
+    private readonly InputAction m_Player_EndJump3;
     private readonly InputAction m_Player_Drop;
     private readonly InputAction m_Player_Strafe;
     private readonly InputAction m_Player_MousePos;
@@ -507,7 +591,11 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public PlayerActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @MovementInput => m_Wrapper.m_Player_MovementInput;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
+        public InputAction @Jump2 => m_Wrapper.m_Player_Jump2;
+        public InputAction @Jump3 => m_Wrapper.m_Player_Jump3;
         public InputAction @EndJump => m_Wrapper.m_Player_EndJump;
+        public InputAction @EndJump2 => m_Wrapper.m_Player_EndJump2;
+        public InputAction @EndJump3 => m_Wrapper.m_Player_EndJump3;
         public InputAction @Drop => m_Wrapper.m_Player_Drop;
         public InputAction @Strafe => m_Wrapper.m_Player_Strafe;
         public InputAction @MousePos => m_Wrapper.m_Player_MousePos;
@@ -535,9 +623,21 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @Jump2.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump2;
+                @Jump2.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump2;
+                @Jump2.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump2;
+                @Jump3.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump3;
+                @Jump3.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump3;
+                @Jump3.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump3;
                 @EndJump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndJump;
                 @EndJump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndJump;
                 @EndJump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndJump;
+                @EndJump2.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndJump2;
+                @EndJump2.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndJump2;
+                @EndJump2.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndJump2;
+                @EndJump3.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndJump3;
+                @EndJump3.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndJump3;
+                @EndJump3.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEndJump3;
                 @Drop.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDrop;
                 @Drop.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDrop;
                 @Drop.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDrop;
@@ -584,9 +684,21 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @Jump2.started += instance.OnJump2;
+                @Jump2.performed += instance.OnJump2;
+                @Jump2.canceled += instance.OnJump2;
+                @Jump3.started += instance.OnJump3;
+                @Jump3.performed += instance.OnJump3;
+                @Jump3.canceled += instance.OnJump3;
                 @EndJump.started += instance.OnEndJump;
                 @EndJump.performed += instance.OnEndJump;
                 @EndJump.canceled += instance.OnEndJump;
+                @EndJump2.started += instance.OnEndJump2;
+                @EndJump2.performed += instance.OnEndJump2;
+                @EndJump2.canceled += instance.OnEndJump2;
+                @EndJump3.started += instance.OnEndJump3;
+                @EndJump3.performed += instance.OnEndJump3;
+                @EndJump3.canceled += instance.OnEndJump3;
                 @Drop.started += instance.OnDrop;
                 @Drop.performed += instance.OnDrop;
                 @Drop.canceled += instance.OnDrop;
@@ -631,7 +743,11 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     {
         void OnMovementInput(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnJump2(InputAction.CallbackContext context);
+        void OnJump3(InputAction.CallbackContext context);
         void OnEndJump(InputAction.CallbackContext context);
+        void OnEndJump2(InputAction.CallbackContext context);
+        void OnEndJump3(InputAction.CallbackContext context);
         void OnDrop(InputAction.CallbackContext context);
         void OnStrafe(InputAction.CallbackContext context);
         void OnMousePos(InputAction.CallbackContext context);

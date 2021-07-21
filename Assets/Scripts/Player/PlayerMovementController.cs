@@ -11,7 +11,8 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] float groundLinearDrag = .1f;
     [SerializeField] float groundGravityScale = 3.0f;
     [SerializeField] float jumpForce = 400;
-    [SerializeField] float velocityCut = 0.125f;
+    [SerializeField] float jumpCutForce = 10f;
+    bool pushingDown = false;
 
     [Header("Water Movement")]
     [SerializeField] float waterRunForce = 100;
@@ -44,6 +45,7 @@ public class PlayerMovementController : MonoBehaviour
     PlayerControls controls;
     Rigidbody2D rb;
     Vector2 inputDir;
+    Vector2 effectiveDir;
 
     [Header("Animation")]
     public Transform appearanceModel;
@@ -58,7 +60,11 @@ public class PlayerMovementController : MonoBehaviour
         controls = new PlayerControls();
 
         controls.Player.Jump.performed += _ => AttemptJump();
+        controls.Player.Jump2.performed += _ => AttemptJump();
+        controls.Player.Jump3.performed += _ => AttemptJump();
         controls.Player.EndJump.performed += _ => AttemptEndJump();
+        controls.Player.EndJump2.performed += _ => AttemptEndJump();
+        controls.Player.EndJump3.performed += _ => AttemptEndJump();
 
         controls.Player.Strafe.performed += _ => AttemptStrafe();
 
@@ -106,16 +112,23 @@ public class PlayerMovementController : MonoBehaviour
         CheckForWalls(ref walledLeft,ref leftWallCheck);
         CheckForWalls(ref walledRight,ref rightWallCheck);
 
+        if (strafeTimer < strafeCooldown)
+        {
+            effectiveDir = inputDir;
+        }
+
+        HandleJumpPushDown();
+
         //Prevent pushing into the walls/getting stuck
-        if(strafeTimer < strafeCooldown)
+        if (strafeTimer < strafeCooldown)
         {
             if(walledLeft)
             {
-                inputDir.x = Mathf.Max(0, inputDir.x);
+                effectiveDir.x = Mathf.Max(0, effectiveDir.x);
             }
             else if(walledRight)
             {
-                inputDir.x = Mathf.Min(0, inputDir.x);
+                effectiveDir.x = Mathf.Min(0, effectiveDir.x);
             }
         }
 
@@ -172,33 +185,30 @@ public class PlayerMovementController : MonoBehaviour
 
     void UpdateDirInput(Vector2 dir)
     {
-        if (strafeTimer < strafeCooldown)
-        {
-            inputDir = dir;
-        }
+        inputDir = dir;
     }
 
     void StrafeMovement()
     {
         if (onLand)
         {
-            rb.velocity = new Vector2(inputDir.x * strafeSpeed, 0.0f);
+            rb.velocity = new Vector2(effectiveDir.x * strafeSpeed, 0.0f);
         }
         else
         {
-            rb.velocity = inputDir * strafeSpeed;
+            rb.velocity = effectiveDir * strafeSpeed;
         }
     }
 
     void WaterMovement()
     {
-        if (Mathf.Abs(inputDir.y) > .1f)
+        if (Mathf.Abs(effectiveDir.y) > .1f)
         {
-            rb.AddForce(inputDir * waterRunForce);
+            rb.AddForce(effectiveDir * waterRunForce);
         }
         else
         {
-            rb.AddForce(new Vector2(inputDir.x * waterRunForce, 0.0f));
+            rb.AddForce(new Vector2(effectiveDir.x * waterRunForce, 0.0f));
         }
 
         rb.velocity = Vector2.ClampMagnitude(rb.velocity, waterMaxRunSpeed);
@@ -206,7 +216,7 @@ public class PlayerMovementController : MonoBehaviour
 
     void GroundMovement()
     {
-        rb.AddForce(new Vector2(inputDir.x * groundRunForce, 0.0f));
+        rb.AddForce(new Vector2(effectiveDir.x * groundRunForce, 0.0f));
 
         rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x,-groundMaxRunSpeed, groundMaxRunSpeed), rb.velocity.y);
     }
@@ -230,7 +240,8 @@ public class PlayerMovementController : MonoBehaviour
 
         if(onLand && rb.velocity.y > 0)
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * velocityCut);
+            //rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * velocityCut);
+            pushingDown = true;
         }
     }
 
@@ -245,12 +256,40 @@ public class PlayerMovementController : MonoBehaviour
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Player Movement/Dash/land dash");
             else
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Player Movement/Dash/water dash");
+            if(onLand) //This could actually be MUCH shorter using a ? : BUT I'm certain someone would judge me for that.
+            {
+                if(effectiveDir.x == 0)
+                {
+                    if(appearanceModel.localScale.x == 1)
+                    {
+                        effectiveDir = new Vector2(1, 0);
+                    }
+                    else
+                    {
+                        effectiveDir = new Vector2(-1, 0);
+                    }
+                }
+            }
+            else
+            {
+                if (effectiveDir.sqrMagnitude == 0)
+                {
+                    if (appearanceModel.localScale.x == 1)
+                    {
+                        effectiveDir = new Vector2(1, 0);
+                    }
+                    else
+                    {
+                        effectiveDir = new Vector2(-1, 0);
+                    }
+                }
+            }
         }
     }
 
     void SendAnimationData()
     {
-        anim.SetFloat("Speed",Mathf.Abs(rb.velocity.x));
+        anim.SetFloat("Speed",Mathf.Abs(onLand ? rb.velocity.x : rb.velocity.magnitude));
         anim.SetBool("OnLand",onLand);
         anim.SetBool("Strafing", strafeTimer > strafeCooldown);
 
@@ -260,5 +299,21 @@ public class PlayerMovementController : MonoBehaviour
             appearanceModel.localScale = new Vector3(1, 1, 1);
         else if (rb.velocity.x < -buffering)
             appearanceModel.localScale = new Vector3(-1, 1, 1);
+    }
+
+    void HandleJumpPushDown()
+    {
+        if(strafeCooldown < strafeTimer ||
+            !onLand ||
+            onGround||
+            rb.velocity.y <= 0)
+        {
+            pushingDown = false;
+        }
+
+        if (pushingDown)
+        {
+            rb.AddForce(new Vector2(0, -jumpCutForce));
+        }
     }
 }

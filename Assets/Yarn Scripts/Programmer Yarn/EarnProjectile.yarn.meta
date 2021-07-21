@@ -8,12 +8,14 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
+  baseLanguageID: en-US
   stringIDs:
   - EarnProjectile-EarnProjectile.Start-0
   - EarnProjectile-EarnProjectile.Start-1
   - EarnProjectile-EarnProjectile.Start-2
   - EarnProjectile-EarnProjectile.Start-3
+  - EarnProjectile-EarnProjectile.Start-4
+  - EarnProjectile-EarnProjectile.Start-5
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 

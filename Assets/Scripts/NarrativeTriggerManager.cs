@@ -22,6 +22,11 @@ public class NarrativeTriggerManager : MonoBehaviour
 
     bool enterLH = true, exitLH = true, atlasH = true, encounter = true, defeat = true, acid = true, finale = true;
 
+    [Header("Acid Parameters")]
+    [SerializeField]
+    float secondsNotTouchedByAcid;
+    float acidTimer = 0;
+
     PlayerStatsController plyStats;
     void Start()
     {
@@ -30,19 +35,22 @@ public class NarrativeTriggerManager : MonoBehaviour
         plyStats = GameObject.FindObjectOfType<PlayerStatsController>();
         plyStats.AggroCrab += HandleEncounter;
         CrabAnimationTriggers.CrabDeath += HandleCrabDeath;
+        HazardousSurface.AcidHarm += HandleHurtByAcid;
 
         dialogueRunner = GameObject.FindObjectOfType<DialogueRunner>();
     }
 
-    bool oop = false;
     private void Update()
     {
-        if (oop)
+        if(acid && acidTimer > 0)
         {
-            dialogueRunner.Add(enterLightHouse.yarn);
-            dialogueRunner.Add(exitLightHouse.yarn);
-            dialogueRunner.Add(atlasHouse.yarn);
-            oop = false;
+            acidTimer -= Time.deltaTime;
+            if(acidTimer <= 0)
+            {
+                acid = false;
+                HazardousSurface.AcidHarm -= HandleHurtByAcid;
+                StartNarrative(acidNode);
+            }
         }
     }
 
@@ -112,4 +120,9 @@ public class NarrativeTriggerManager : MonoBehaviour
     }
 
 
+
+    void HandleHurtByAcid()
+    {
+        acidTimer = secondsNotTouchedByAcid;
+    }
 }

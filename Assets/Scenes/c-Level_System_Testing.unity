@@ -13598,6 +13598,7 @@ MonoBehaviour:
   defeatNode: firstenemydefeat.Start
   acidNode: encounteracid.Start
   finaleNode: finalroom.Start
+  secondsNotTouchedByAcid: 3
   killedCrab: 0
 --- !u!1001 &1622700024
 PrefabInstance:

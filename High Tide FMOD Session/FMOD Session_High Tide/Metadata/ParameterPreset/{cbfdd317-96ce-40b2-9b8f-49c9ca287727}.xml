@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="ParameterPreset" id="{cbfdd317-96ce-40b2-9b8f-49c9ca287727}">
 		<property name="name">
-			<value>High Strings On</value>
+			<value>High_Strings On</value>
 		</property>
 		<relationship name="folder">
 			<destination>{ddf7e68a-8126-4433-bf15-d012fb3ab049}</destination>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Snapshot" id="{bf295cca-d327-4eb0-851f-81e6425dcd9b}">
 		<property name="name">
-			<value>EQ</value>
+			<value>Text</value>
 		</property>
 		<property name="behavior">
 			<value>1</value>

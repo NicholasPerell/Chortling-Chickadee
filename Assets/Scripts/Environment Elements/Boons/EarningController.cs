@@ -7,6 +7,7 @@ public class EarningController : MonoBehaviour
 {
     [SerializeField] SandAbilities ability;
     [SerializeField] float sandEarnt;
+    FMOD.Studio.EventInstance snapshot;
 
     private void Start()
     {
@@ -22,6 +23,16 @@ public class EarningController : MonoBehaviour
         ply.hasAbility[(int)ability] = true;
         FMODUnity.RuntimeManager.PlayOneShot("event:/Stingers/Catalyst Unlock");
 
-        Destroy(this.gameObject);
+        StartCoroutine(nameof(StingerController));
+        Destroy(GetComponent<InteractableController>());
+    }
+
+    IEnumerator StingerController(){
+         snapshot = FMODUnity.RuntimeManager.CreateInstance("snapshot:/Stingers");
+            snapshot.start();
+            yield return new WaitForSeconds(7);
+             snapshot.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            snapshot.release();
+            Destroy(this.gameObject);
     }
 }

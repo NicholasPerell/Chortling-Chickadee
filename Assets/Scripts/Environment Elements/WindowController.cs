@@ -6,6 +6,7 @@ public class WindowController : MonoBehaviour
 {
     [SerializeField] float forceToBreak;
     [SerializeField] GameObject shatterPrefab;
+    FMOD.Studio.EventInstance snapshot;
 
     // Start is called before the first frame update
     void Start()
@@ -34,8 +35,18 @@ public class WindowController : MonoBehaviour
         if (collision.gameObject.name == "Grabbable Object")
         {
             Instantiate(shatterPrefab, transform.position, transform.rotation, transform.parent);
-            Destroy(this.gameObject);
             FMODUnity.RuntimeManager.PlayOneShot("event:/Stingers/Puzzle Complete");
+            
+            StartCoroutine(nameof(StingerController));
+        Destroy(GetComponent<SpriteRenderer>());
         }
+    }
+    IEnumerator StingerController(){
+         snapshot = FMODUnity.RuntimeManager.CreateInstance("snapshot:/Stingers");
+            snapshot.start();
+            yield return new WaitForSeconds(6);
+             snapshot.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            snapshot.release();
+            Destroy(this.gameObject);
     }
 }

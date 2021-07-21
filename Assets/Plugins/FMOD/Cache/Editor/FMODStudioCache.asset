@@ -66,6 +66,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-9004301531382975139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/High_Strings On
+  m_EditorClassIdentifier: 
+  Name: High_Strings On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 463349131
+    data2: 2794099184
+  Exists: 0
 --- !u!114 &-8953594443944800186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,6 +443,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-6697248421588938701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Celeste On
+  m_EditorClassIdentifier: 
+  Name: Celeste On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3505674282
+    data2: 133142746
+  Exists: 0
 --- !u!114 &-6424473345130456061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -721,8 +761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX Events/Player Movement/Dodge/water dodge
   guid: 21bba64a46af3842a48a1cca6e7e02c6
-  Banks:
-  - {fileID: 2451273955551285054}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -873,6 +912,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-4757330007778394934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Harp_Marimba On
+  m_EditorClassIdentifier: 
+  Name: Harp_Marimba On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 481115605
+    data2: 2397692540
+  Exists: 0
 --- !u!114 &-4706452626068247182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1111,6 +1170,49 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2229
+--- !u!114 &-3488889208979202600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX Events/Player Movement/Dash/water dash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX Events/Player Movement/Dash/water dash
+  guid: 21bba64a46af3842a48a1cca6e7e02c6
+  Banks:
+  - {fileID: 2451273955551285054}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2972
+--- !u!114 &-3480899085582598282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cymbals On
+  m_EditorClassIdentifier: 
+  Name: Cymbals On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3370311604
+    data2: 3283810040
+  Exists: 0
 --- !u!114 &-3469985499643813090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1150,6 +1252,26 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
+  Exists: 0
+--- !u!114 &-3317814844063188103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Clarinet_Ukulele On
+  m_EditorClassIdentifier: 
+  Name: Clarinet_Ukulele On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3257972220
+    data2: 762808310
   Exists: 0
 --- !u!114 &-3125698133123610850
 MonoBehaviour:
@@ -1271,6 +1393,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-2469888029608999363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Timpani On
+  m_EditorClassIdentifier: 
+  Name: Timpani On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1953287519
+    data2: 2700635742
+  Exists: 0
 --- !u!114 &-2246514580334067831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1623,6 +1765,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 7916
+--- !u!114 &-951858769219545585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cello On
+  m_EditorClassIdentifier: 
+  Name: Cello On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 632034973
+    data2: 998988446
+  Exists: 0
 --- !u!114 &-773628915735224659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1681,7 +1843,7 @@ MonoBehaviour:
   Path: High Tide FMOD Session/FMOD Session_High Tide/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637624880940000000
+  lastModified: 637624928230000000
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -1707,6 +1869,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-221057631791564124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX Events/Player Movement/Dash/land dash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX Events/Player Movement/Dash/land dash
+  guid: 80cf7225bbc9644182cb710d4008a6d7
+  Banks:
+  - {fileID: 2451273955551285054}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 743
 --- !u!114 &-126186792559683494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1787,7 +1972,6 @@ MonoBehaviour:
   - {fileID: -6957116233861709570}
   - {fileID: 935303328092383156}
   - {fileID: -2246514580334067831}
-  - {fileID: -5465797271655148689}
   - {fileID: 3976895721966207815}
   - {fileID: 9133800167670620628}
   - {fileID: 3206290597163455233}
@@ -1802,7 +1986,6 @@ MonoBehaviour:
   - {fileID: -3948579670030328510}
   - {fileID: -6088255527944417049}
   - {fileID: -1601236996108432974}
-  - {fileID: 6458040790135829642}
   - {fileID: -6117247943012873204}
   - {fileID: 3553081928913717102}
   - {fileID: 7283654503285420080}
@@ -1819,13 +2002,15 @@ MonoBehaviour:
   - {fileID: 1298867761236206285}
   - {fileID: -6262765362907921880}
   - {fileID: -733617252128362199}
-  - {fileID: 5735968605180776990}
+  - {fileID: -3488889208979202600}
+  - {fileID: -221057631791564124}
+  - {fileID: 5914281903672984919}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2451273955551285054}
   StringsBanks:
   - {fileID: -420316941631394449}
-  stringsBankWriteTime: 637624880940000000
+  stringsBankWriteTime: 637624928230000000
   cacheVersion: 6
 --- !u!114 &127640902738507034
 MonoBehaviour:
@@ -2142,6 +2327,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 743
+--- !u!114 &1921062576293083180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Piano On
+  m_EditorClassIdentifier: 
+  Name: Piano On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 559263456
+    data2: 3461664955
+  Exists: 0
 --- !u!114 &2003524637808935194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2229,6 +2434,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &2405995562686862682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Flute On
+  m_EditorClassIdentifier: 
+  Name: Flute On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1116088094
+    data2: 864819933
+  Exists: 0
 --- !u!114 &2433446476000381650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2265,7 +2490,7 @@ MonoBehaviour:
   Path: High Tide FMOD Session/FMOD Session_High Tide/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637624880940000000
+  lastModified: 637624928230000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -3005,6 +3230,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 870
+--- !u!114 &5411928564026647724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bass On
+  m_EditorClassIdentifier: 
+  Name: Bass On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4118134122
+    data2: 3177482939
+  Exists: 0
 --- !u!114 &5546092393691288737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3039,8 +3284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: snapshot:/EQ
   guid: ca5c29bf27d3b04e851f81e6425dcd9b
-  Banks:
-  - {fileID: 2451273955551285054}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -3109,6 +3353,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &5914281903672984919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Text
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Text
+  guid: ca5c29bf27d3b04e851f81e6425dcd9b
+  Banks:
+  - {fileID: 2451273955551285054}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &6016277038782940634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3255,8 +3522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX Events/Player Movement/Dodge/land dash
   guid: 80cf7225bbc9644182cb710d4008a6d7
-  Banks:
-  - {fileID: 2451273955551285054}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3373,6 +3639,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &7110487930291108324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Shaker On
+  m_EditorClassIdentifier: 
+  Name: Shaker On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2478698753
+    data2: 3054458189
+  Exists: 0
 --- !u!114 &7209246498226093522
 MonoBehaviour:
   m_ObjectHideFlags: 0

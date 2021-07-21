@@ -241,6 +241,10 @@ public class PlayerMovementController : MonoBehaviour
         if (strafeTimer <= 0)
         {
             strafeTimer = strafeLength + strafeCooldown;
+            if (onLand)
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Player Movement/Dash/land dash");
+            else
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Player Movement/Dash/water dash");
         }
     }
 

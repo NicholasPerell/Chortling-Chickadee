@@ -905,7 +905,7 @@ MonoBehaviour:
   ID:
     data1: 3370311604
     data2: 3283810040
-  Exists: 1
+  Exists: 0
 --- !u!114 &-6406173634471310813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1511,7 +1511,7 @@ MonoBehaviour:
   ID:
     data1: 559263456
     data2: 3461664955
-  Exists: 1
+  Exists: 0
 --- !u!114 &-5155141203583747605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1591,7 +1591,7 @@ MonoBehaviour:
   ID:
     data1: 3505674282
     data2: 133142746
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4872153727958654955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3263,7 +3263,7 @@ MonoBehaviour:
   Path: High Tide FMOD Session/FMOD Session_High Tide/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637625547920000000
+  lastModified: 637625566201392476
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -3505,24 +3505,12 @@ MonoBehaviour:
   - {fileID: -221057631791564124}
   - {fileID: 5914281903672984919}
   - {fileID: 3547258374557989799}
-  EditorParameters:
-  - {fileID: -5233427764384356874}
-  - {fileID: 3775365849763774271}
-  - {fileID: 1049996198904082641}
-  - {fileID: 6068531856978871042}
-  - {fileID: 7804491875256862782}
-  - {fileID: 3731572445862574154}
-  - {fileID: 4433016775514343418}
-  - {fileID: -4928894867873214971}
-  - {fileID: 7630320831536284536}
-  - {fileID: 6112221771669571137}
-  - {fileID: 7321162893971261212}
-  - {fileID: -6413688853636647157}
+  EditorParameters: []
   MasterBanks:
   - {fileID: 2451273955551285054}
   StringsBanks:
   - {fileID: -420316941631394449}
-  stringsBankWriteTime: 637625547920000000
+  stringsBankWriteTime: 637625566201392476
   cacheVersion: 6
 --- !u!114 &34293061294149841
 MonoBehaviour:
@@ -3846,7 +3834,7 @@ MonoBehaviour:
   ID:
     data1: 3257972220
     data2: 762808310
-  Exists: 1
+  Exists: 0
 --- !u!114 &1138646155277482526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4402,7 +4390,7 @@ MonoBehaviour:
   Path: High Tide FMOD Session/FMOD Session_High Tide/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637625547920000000
+  lastModified: 637625566201342615
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -5123,7 +5111,7 @@ MonoBehaviour:
   ID:
     data1: 632034973
     data2: 998988446
-  Exists: 1
+  Exists: 0
 --- !u!114 &3775365849763774271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5143,7 +5131,7 @@ MonoBehaviour:
   ID:
     data1: 1116088094
     data2: 864819933
-  Exists: 1
+  Exists: 0
 --- !u!114 &3811179684254401105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5329,7 +5317,7 @@ MonoBehaviour:
   ID:
     data1: 1953287519
     data2: 2700635742
-  Exists: 1
+  Exists: 0
 --- !u!114 &4464210215749629671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5893,7 +5881,7 @@ MonoBehaviour:
   ID:
     data1: 4118134122
     data2: 3177482939
-  Exists: 1
+  Exists: 0
 --- !u!114 &6099902512414231407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5956,7 +5944,7 @@ MonoBehaviour:
   ID:
     data1: 2478698753
     data2: 3054458189
-  Exists: 1
+  Exists: 0
 --- !u!114 &6122521217702314784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6422,7 +6410,7 @@ MonoBehaviour:
   ID:
     data1: 463349131
     data2: 2794099184
-  Exists: 1
+  Exists: 0
 --- !u!114 &7432565547970157932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6556,7 +6544,7 @@ MonoBehaviour:
   ID:
     data1: 481115605
     data2: 2397692540
-  Exists: 1
+  Exists: 0
 --- !u!114 &7804491875256862782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6576,7 +6564,7 @@ MonoBehaviour:
   ID:
     data1: 2759418039
     data2: 4164271915
-  Exists: 1
+  Exists: 0
 --- !u!114 &7896700538131795533
 MonoBehaviour:
   m_ObjectHideFlags: 0

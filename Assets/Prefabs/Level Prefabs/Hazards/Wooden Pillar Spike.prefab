@@ -187,7 +187,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  bounce: 1
+  bounce: {x: 2, y: 5}
+  inputBounce: 5
 --- !u!60 &1102658626859434963
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -213,6 +214,6 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.25, y: 0.15}
-      - {x: 0, y: 0.9}
-      - {x: 0.25, y: 0.15}
+    - - {x: -0.23, y: 0.15}
+      - {x: 0, y: 0.83}
+      - {x: 0.23, y: 0.15}

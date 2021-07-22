@@ -2207,6 +2207,23 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &605389420 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1662241397675440163, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+  m_PrefabInstance: {fileID: 1622700024}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &605389421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605389420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ac95ef61b5b4cfbb27c2297386489e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &649127710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13877,30 +13894,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1570815909}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 605389421}
+    - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1570815909}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 605389421}
+    - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
@@ -13908,7 +13945,15 @@ PrefabInstance:
       value: SetMode
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: CallEndTextSnapshot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
@@ -13916,8 +13961,16 @@ PrefabInstance:
       value: SetMode
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: CallTextSnapshot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: LastLittleAudioBits, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: onLineStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
@@ -13928,15 +13981,31 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: LastLittleAudioBits, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
@@ -13944,7 +14013,15 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
       propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1662241397675440165, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1662241397675440167, guid: 4100ab5243a75254494fa2713d82bb7e, type: 3}

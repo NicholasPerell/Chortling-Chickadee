@@ -44,7 +44,7 @@ public class WindowController : MonoBehaviour
     IEnumerator StingerController(){
          snapshot = FMODUnity.RuntimeManager.CreateInstance("snapshot:/Stingers");
             snapshot.start();
-            yield return new WaitForSeconds(6);
+            yield return new WaitForSecondsRealtime(6);
              snapshot.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             snapshot.release();
             Destroy(this.gameObject);

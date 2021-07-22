@@ -44,7 +44,8 @@ public class PlayerMovementController : MonoBehaviour
 
     PlayerControls controls;
     Rigidbody2D rb;
-    Vector2 inputDir;
+    [HideInInspector]
+    public Vector2 inputDir;
     Vector2 effectiveDir;
 
     [Header("Animation")]

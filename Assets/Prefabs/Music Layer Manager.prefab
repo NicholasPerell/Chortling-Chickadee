@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6799134890418158147}
   - component: {fileID: 6799134890418158144}
+  - component: {fileID: 2860290270946798398}
+  - component: {fileID: -3422844836897753953}
   m_Layer: 0
   m_Name: Music Layer Manager
   m_TagString: Untagged
@@ -45,32 +47,228 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameterNamesPerLayer:
     kalimba: 
-    harpMarimba: 
-    piano: 
-    celeste: 
-    shakerLatinPercussion: 
-    celli: 
-    flute: 
-    clarinetUkulele: 
-    bass: 
-    timpani: 
-    highStrings: 
-    orchestralPercussion: 
+    harpMarimba: Harp_Marimba On
+    piano: Piano On
+    celeste: Celeste On
+    shakerLatinPercussion: Shaker On
+    celli: Cello On
+    flute: Flute On
+    clarinetUkulele: Clarinet_Ukulele On
+    bass: Bass On
+    timpani: Timpani On
+    highStrings: High_Strings On
+    orchestralPercussion: Cymbals On
   levelSettings:
   - name: Beginning Level
     layerSettings:
+      kalimba: 1
+      harpMarimba: 2
+      piano: 2
+      celeste: 2
+      shakerLatinPercussion: 2
+      celli: 2
+      flute: 2
+      clarinetUkulele: 2
+      bass: 2
+      timpani: 2
+      highStrings: 2
+      orchestralPercussion: 2
+  - name: Beginning Corridor
+    layerSettings:
       kalimba: 0
-      harpMarimba: 0
-      piano: 0
-      celeste: 0
-      shakerLatinPercussion: 0
-      celli: 0
+      harpMarimba: 2
+      piano: 2
+      celeste: 2
+      shakerLatinPercussion: 2
+      celli: 2
+      flute: 2
+      clarinetUkulele: 2
+      bass: 2
+      timpani: 2
+      highStrings: 2
+      orchestralPercussion: 2
+  - name: Path Chooser
+    layerSettings:
+      kalimba: 0
+      harpMarimba: 1
+      piano: 1
+      celeste: 1
+      shakerLatinPercussion: 2
+      celli: 2
       flute: 0
       clarinetUkulele: 0
-      bass: 0
-      timpani: 0
-      highStrings: 0
-      orchestralPercussion: 0
+      bass: 2
+      timpani: 2
+      highStrings: 2
+      orchestralPercussion: 2
+  - name: Sticky Hand Place
+    layerSettings:
+      kalimba: 0
+      harpMarimba: 2
+      piano: 1
+      celeste: 1
+      shakerLatinPercussion: 2
+      celli: 2
+      flute: 0
+      clarinetUkulele: 0
+      bass: 2
+      timpani: 2
+      highStrings: 2
+      orchestralPercussion: 2
+  - name: Inside Light House
+    layerSettings:
+      kalimba: 0
+      harpMarimba: 1
+      piano: 2
+      celeste: 2
+      shakerLatinPercussion: 2
+      celli: 2
+      flute: 0
+      clarinetUkulele: 0
+      bass: 2
+      timpani: 2
+      highStrings: 2
+      orchestralPercussion: 2
+  - name: Abandoned Town Lighthouseplace
+    layerSettings:
+      kalimba: 0
+      harpMarimba: 1
+      piano: 2
+      celeste: 2
+      shakerLatinPercussion: 1
+      celli: 2
+      flute: 0
+      clarinetUkulele: 0
+      bass: 2
+      timpani: 2
+      highStrings: 2
+      orchestralPercussion: 2
+  - name: Abandoned Town Towards Atlas
+    layerSettings:
+      kalimba: 0
+      harpMarimba: 1
+      piano: 2
+      celeste: 1
+      shakerLatinPercussion: 1
+      celli: 2
+      flute: 2
+      clarinetUkulele: 2
+      bass: 2
+      timpani: 2
+      highStrings: 2
+      orchestralPercussion: 2
+  - name: Atlas House
+    layerSettings:
+      kalimba: 0
+      harpMarimba: 1
+      piano: 2
+      celeste: 1
+      shakerLatinPercussion: 2
+      celli: 2
+      flute: 1
+      clarinetUkulele: 2
+      bass: 2
+      timpani: 2
+      highStrings: 2
+      orchestralPercussion: 2
+  - name: Abandoned Town Main
+    layerSettings:
+      kalimba: 0
+      harpMarimba: 1
+      piano: 1
+      celeste: 1
+      shakerLatinPercussion: 1
+      celli: 2
+      flute: 0
+      clarinetUkulele: 1
+      bass: 2
+      timpani: 2
+      highStrings: 2
+      orchestralPercussion: 2
+  - name: Chandelier Puzzle
+    layerSettings:
+      kalimba: 0
+      harpMarimba: 1
+      piano: 1
+      celeste: 1
+      shakerLatinPercussion: 1
+      celli: 2
+      flute: 0
+      clarinetUkulele: 0
+      bass: 2
+      timpani: 2
+      highStrings: 2
+      orchestralPercussion: 2
+  - name: Cave Entrance
+    layerSettings:
+      kalimba: 0
+      harpMarimba: 2
+      piano: 2
+      celeste: 2
+      shakerLatinPercussion: 2
+      celli: 2
+      flute: 2
+      clarinetUkulele: 2
+      bass: 2
+      timpani: 2
+      highStrings: 2
+      orchestralPercussion: 2
+  - name: Cave Main
+    layerSettings:
+      kalimba: 0
+      harpMarimba: 2
+      piano: 2
+      celeste: 2
+      shakerLatinPercussion: 2
+      celli: 2
+      flute: 2
+      clarinetUkulele: 2
+      bass: 2
+      timpani: 2
+      highStrings: 2
+      orchestralPercussion: 2
+  - name: Shield Puzzle
+    layerSettings:
+      kalimba: 0
+      harpMarimba: 2
+      piano: 2
+      celeste: 2
+      shakerLatinPercussion: 2
+      celli: 2
+      flute: 2
+      clarinetUkulele: 2
+      bass: 2
+      timpani: 2
+      highStrings: 2
+      orchestralPercussion: 2
+  - name: End Corridor
+    layerSettings:
+      kalimba: 0
+      harpMarimba: 2
+      piano: 2
+      celeste: 2
+      shakerLatinPercussion: 2
+      celli: 2
+      flute: 2
+      clarinetUkulele: 2
+      bass: 2
+      timpani: 2
+      highStrings: 2
+      orchestralPercussion: 2
+  - name: End Level
+    layerSettings:
+      kalimba: 0
+      harpMarimba: 2
+      piano: 2
+      celeste: 2
+      shakerLatinPercussion: 2
+      celli: 2
+      flute: 2
+      clarinetUkulele: 2
+      bass: 2
+      timpani: 2
+      highStrings: 2
+      orchestralPercussion: 2
   startingLayerSettings:
     kalimba: 1
     harpMarimba: 2
@@ -84,3 +282,30 @@ MonoBehaviour:
     timpani: 2
     highStrings: 2
     orchestralPercussion: 2
+--- !u!114 &2860290270946798398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6799134890418158145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4277801f8cdb45119e817398221a861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX Events/Player Movement/Dash/land dash
+--- !u!114 &-3422844836897753953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6799134890418158145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1

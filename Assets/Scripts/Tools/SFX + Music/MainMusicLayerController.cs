@@ -157,10 +157,10 @@ public class MainMusicLayerController : MonoBehaviour
             case ChangeMusicLayerDirection.KEEP_PREVIOUS:
                 break;
             case ChangeMusicLayerDirection.TURN_ON:
-                //FMODUnity.RuntimeManager.StudioSystem.setParameterByName(param, 1);
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName(param, 1);
                 break;
             case ChangeMusicLayerDirection.TURN_OFF:
-                //FMODUnity.RuntimeManager.StudioSystem.setParameterByName(param, 0);
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName(param, 0);
                 break;
         }
     }

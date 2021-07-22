@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{3d51f989-3a99-4ffa-9762-ea8e90007ea0}">
+		<property name="name">
+			<value>Kalimba On</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ddf7e68a-8126-4433-bf15-d012fb3ab049}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{ec253d59-b00b-4e59-a79b-2bc007df485c}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{ec253d59-b00b-4e59-a79b-2bc007df485c}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

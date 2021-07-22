@@ -130,6 +130,130 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2860290270946798398, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: fmodEvent
+      value: event:/MUSIC
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[10].layerSettings.bass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[11].layerSettings.bass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[12].layerSettings.bass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[10].layerSettings.celli
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[10].layerSettings.piano
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[11].layerSettings.celli
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[11].layerSettings.flute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[11].layerSettings.piano
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[12].layerSettings.celli
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[12].layerSettings.flute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[12].layerSettings.piano
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[13].layerSettings.piano
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[10].layerSettings.celeste
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[11].layerSettings.celeste
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[11].layerSettings.timpani
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[12].layerSettings.celeste
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[13].layerSettings.celeste
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[14].layerSettings.celeste
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[10].layerSettings.harpMarimba
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[11].layerSettings.harpMarimba
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[11].layerSettings.highStrings
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[12].layerSettings.harpMarimba
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[13].layerSettings.harpMarimba
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[14].layerSettings.harpMarimba
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[11].layerSettings.clarinetUkulele
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[12].layerSettings.clarinetUkulele
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[11].layerSettings.orchestralPercussion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[10].layerSettings.shakerLatinPercussion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[11].layerSettings.shakerLatinPercussion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[12].layerSettings.shakerLatinPercussion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6799134890418158145, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
       propertyPath: m_Name
       value: Music Layer Manager
@@ -178,7 +302,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -3422844836897753953, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
 --- !u!1 &258763975
 GameObject:

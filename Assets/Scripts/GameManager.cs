@@ -92,8 +92,8 @@ public class GameManager : MonoBehaviour
         //TODO trigger stinger here
         blackScreen.enabled = true;
         blackScreen.DOFade(1, timeToFadeToGameOver);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Player/Death");
         yield return new WaitForSeconds(timeToFadeToGameOver);
         SceneManager.LoadScene("g-death_screen");
-        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Player/Death");
     }
 }

@@ -60,7 +60,7 @@ public class MeleeEnemyController : MonoBehaviour
                 else
                 {
                     transform.position = Vector2.MoveTowards(gameObject.transform.position, player.transform.position, runSpeed * Time.deltaTime);
-                    FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Enemy/crabsfx/melee crab/crab aggro");
+                    //FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Enemy/crabsfx/melee crab/crab aggro");
                 }
             }
         }

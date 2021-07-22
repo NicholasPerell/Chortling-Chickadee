@@ -91,7 +91,7 @@ public class CircleEnemyController : MonoBehaviour
                 {
                     //Debug.Log("Moving To Player");
                     transform.position = Vector2.MoveTowards(gameObject.transform.position, player.transform.position, runSpeed * Time.deltaTime);
-                    FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Enemy/crabsfx/ranged crab/ranged aggro");
+                    //FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Enemy/crabsfx/ranged crab/ranged aggro");
                 }
             }
         }

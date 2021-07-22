@@ -165,6 +165,7 @@ public class PlayerStatsController : MonoBehaviour
             anim.SetTrigger("Hurt");
             Stun();
             invulnerabilityTimer = timeInvulnerable;
+            if(currentHealth <= .25f * currentMaxHealth) FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Non Diegetic/Low Health");
         }
 
         currentHealth = Mathf.Min(currentHealth, currentMaxHealth);

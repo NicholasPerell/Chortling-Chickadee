@@ -12,18 +12,17 @@ public string fmodEvent;
     void Start()
     {
         instance = FMODUnity.RuntimeManager.CreateInstance("event:/MUSIC");
-        //instance.start();
+        instance.start();
         instance.setParameterByName("Kalimba On", 1);
     }
 
     // Update is called once per frame
-    bool oop = true;
-    void Update()
-    {
-        if (oop)
-        {
-            instance.start();
-            oop = false;
-        }
-    }
+    //bool oop = true;
+    //void Update()
+    // {
+    //     if (oop)
+    //     {
+    //         oop = false;
+    //     }
+    // }
 }

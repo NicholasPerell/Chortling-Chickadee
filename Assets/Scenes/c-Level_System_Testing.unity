@@ -191,6 +191,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[0].layerSettings.kalimba
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
       propertyPath: levelSettings.Array.data[10].layerSettings.celeste
       value: 1
       objectReference: {fileID: 0}

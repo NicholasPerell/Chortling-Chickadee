@@ -49,15 +49,18 @@ public class MeleeEnemyController : MonoBehaviour
                     Destroy(gameObject);
                     player.GetComponent<PlayerStatsController>().beingAttacked = false;
                     player.GetComponent<PlayerStatsController>().attackingEnemy = null;
+                    
                 }
                 else if (playerDistance <= attackRange)
                 {
                     transform.position = new Vector3(player.transform.position.x + attackRange * Mathf.Cos(attackSpeed * count), transform.position.y, transform.position.z);
                     count += Time.deltaTime;
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Enemy/crabsfx/crab swim");
                 }
                 else
                 {
                     transform.position = Vector2.MoveTowards(gameObject.transform.position, player.transform.position, runSpeed * Time.deltaTime);
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Enemy/crabsfx/melee crab/crab aggro");
                 }
             }
         }
@@ -77,6 +80,7 @@ public class MeleeEnemyController : MonoBehaviour
             col.GetComponent<Rigidbody2D>().velocity = -relativeVelocity.normalized * 10;
 
             anim.SetTrigger("Attack");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Enemy/crabsfx/melee crab/crab punch");
         }
     }
 
@@ -84,6 +88,7 @@ public class MeleeEnemyController : MonoBehaviour
     {
         anim.SetTrigger("Hurt");
         hp -= damageTaken;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Enemy/crabsfx/melee crab/crab hurt");
     }
 
     public void healDamage(float damageHealed)

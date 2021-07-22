@@ -54,7 +54,7 @@ public class CircleEnemyController : MonoBehaviour
 
                 if (hp <= 0)
                 {
-                    
+                   
                 }
                 else if (hp <= 2)
                 {
@@ -64,7 +64,8 @@ public class CircleEnemyController : MonoBehaviour
                 else if (playerDistance <= circleRadius)
                 {
                     //Debug.Log("Attacking Player");
-
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Enemy/crabsfx/crab swim");
+                
                     if (clockwise)
                     {
                         // change to physics velocity
@@ -90,6 +91,7 @@ public class CircleEnemyController : MonoBehaviour
                 {
                     //Debug.Log("Moving To Player");
                     transform.position = Vector2.MoveTowards(gameObject.transform.position, player.transform.position, runSpeed * Time.deltaTime);
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Enemy/crabsfx/ranged crab/ranged aggro");
                 }
             }
         }
@@ -131,6 +133,7 @@ public class CircleEnemyController : MonoBehaviour
     {
         anim.SetTrigger("Hurt");
         hp -= damageTaken;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Enemy/crabsfx/ranged crab/ranged crab hurt");
     }
 
     public void healDamage(float damageHealed)

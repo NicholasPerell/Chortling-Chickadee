@@ -25,7 +25,7 @@ public class CrabAnimationTriggers : MonoBehaviour
     public void ThrowUrchin()
     {
         Instantiate(projectile, projSpawn.position, Quaternion.identity);
-
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Enemy/crabsfx/ranged crab/ranged crab throw");
     }
 
     public void CheckCircleDead()
@@ -35,6 +35,7 @@ public class CrabAnimationTriggers : MonoBehaviour
             CrabDeath?.Invoke();
             player.GetComponent<PlayerStatsController>().beingAttacked = false;
             player.GetComponent<PlayerStatsController>().attackingEnemy = null;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Enemy/crabsfx/ranged crab/ranged crab death");
             Destroy(transform.parent.parent.gameObject);
         }
     }
@@ -46,6 +47,7 @@ public class CrabAnimationTriggers : MonoBehaviour
             CrabDeath?.Invoke();
             player.GetComponent<PlayerStatsController>().beingAttacked = false;
             player.GetComponent<PlayerStatsController>().attackingEnemy = null;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Enemy/crabsfx/melee crab/crab death");
             Destroy(transform.parent.parent.gameObject);
         }
     }

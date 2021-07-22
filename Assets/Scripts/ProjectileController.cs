@@ -14,6 +14,7 @@ public class ProjectileController : MonoBehaviour
         if(other.tag == "Player")
         {
             other.GetComponent<PlayerStatsController>().ChangeHealth(-damage);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Enemy/crabsfx/ranged crab/range crab hit");
             Destroy(gameObject);
         }
         else if(other.name == "Shield Particles" || diesContactingWith == (diesContactingWith | (1 << other.gameObject.layer)))

@@ -35,7 +35,7 @@ public class EarningController : MonoBehaviour
     IEnumerator StingerController(){
          snapshot = FMODUnity.RuntimeManager.CreateInstance("snapshot:/Stingers");
             snapshot.start();
-            yield return new WaitForSeconds(7);
+            yield return new WaitForSeconds(5);
              snapshot.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             snapshot.release();
             Destroy(this.gameObject);

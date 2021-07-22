@@ -135,6 +135,10 @@ PrefabInstance:
       value: event:/MUSIC
       objectReference: {fileID: 0}
     - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: parameterNamesPerLayer.kalimba
+      value: Kalimba On
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
       propertyPath: levelSettings.Array.data[10].layerSettings.bass
       value: 1
       objectReference: {fileID: 0}
@@ -145,6 +149,10 @@ PrefabInstance:
     - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
       propertyPath: levelSettings.Array.data[12].layerSettings.bass
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[6].layerSettings.flute
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
       propertyPath: levelSettings.Array.data[10].layerSettings.celli
@@ -229,6 +237,10 @@ PrefabInstance:
     - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
       propertyPath: levelSettings.Array.data[14].layerSettings.harpMarimba
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
+      propertyPath: levelSettings.Array.data[6].layerSettings.clarinetUkulele
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6799134890418158144, guid: 7d49b0df4ada81546abf53433c6f5849, type: 3}
       propertyPath: levelSettings.Array.data[11].layerSettings.clarinetUkulele

@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  bounce: 2
+  bounce: {x: 3, y: 0}
 --- !u!1 &1840194025296317279
 GameObject:
   m_ObjectHideFlags: 0

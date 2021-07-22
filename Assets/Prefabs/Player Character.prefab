@@ -5128,7 +5128,7 @@ MonoBehaviour:
   grabCostPerUnit: 0.1
   hasAbility: 000000
   timeStunned: 0.1
-  timeInvulnerable: 0.2
+  timeInvulnerable: 0.6
   beingAttacked: 0
   attackingEnemy: {fileID: 0}
   anim: {fileID: 0}

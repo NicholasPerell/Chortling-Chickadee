@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour
 
     public static void QuitLevel()
     {
+        SetMode(GameMode.DEATH);
         SceneManager.LoadScene(1);
     }
 
@@ -94,5 +95,20 @@ public class GameManager : MonoBehaviour
         blackScreen.DOFade(1, timeToFadeToGameOver);
         yield return new WaitForSeconds(timeToFadeToGameOver);
         SceneManager.LoadScene("g-death_screen");
+    }
+
+    public static void TriggerGameWin()
+    {
+        SetMode(GameMode.DEATH);
+        instance.StartCoroutine(nameof(FadeToBlackWin));
+    }
+
+    IEnumerator FadeToBlackWin()
+    {
+        //TODO trigger stinger here
+        blackScreen.enabled = true;
+        blackScreen.DOFade(1, timeToFadeToGameOver);
+        yield return new WaitForSeconds(timeToFadeToGameOver);
+        SceneManager.LoadScene("i-credits");
     }
 }

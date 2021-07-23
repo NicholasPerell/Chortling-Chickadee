@@ -16,6 +16,10 @@ Oh?
 <<changeSpeaker SpeakerDisplay Mystery>>
 Please, keep going!
 <<changeSpeaker SpeakerDisplay Sand>>
+<<revealSand FakeSand>>
+<<changeSpeaker SpeakerDisplay Sand>>
+<<wait 3>>
+<<changeSpeaker SpeakerDisplay Sand>>
 ...
 <<changeSpeaker SpeakerDisplay Ocean>>
 <i>You?</i>
@@ -27,4 +31,6 @@ You wanted to get your locket back, no? Let us guide you.
 Please, place your trust in us, just as we do in you, Atlas.
 <<changeSpeaker SpeakerDisplay Sand>>
 <b><i>Let us show you the truth of this world.</i></b>
+<<returnSand FakeSand>>
+<<wait 3>>
 ===

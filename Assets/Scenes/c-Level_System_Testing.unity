@@ -608,6 +608,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 314804384, guid: 15073aaf41ea46941ae10075a271212a, type: 3}
+      propertyPath: levelCatalog.Array.data[15].data.exits.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 314804384, guid: 15073aaf41ea46941ae10075a271212a, type: 3}
       propertyPath: levelCatalog.Array.data[1].data.backgroundArtTexture
       value: 
       objectReference: {fileID: 2800000, guid: 77dd8a39d3c976f4b840728504cea4b9, type: 3}
@@ -820,6 +824,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 314804384, guid: 15073aaf41ea46941ae10075a271212a, type: 3}
+      propertyPath: levelCatalog.Array.data[15].data.exits.Array.data[0].exitNumber
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 314804384, guid: 15073aaf41ea46941ae10075a271212a, type: 3}
       propertyPath: levelCatalog.Array.data[1].data.exits.Array.data[0].nameExitsTo
       value: Beginning Corridor
       objectReference: {fileID: 0}
@@ -933,11 +941,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 314804384, guid: 15073aaf41ea46941ae10075a271212a, type: 3}
       propertyPath: levelCatalog.Array.data[14].data.exits.Array.data[0].nameExitsTo
-      value: Test
+      value: End Level
       objectReference: {fileID: 0}
     - target: {fileID: 314804384, guid: 15073aaf41ea46941ae10075a271212a, type: 3}
       propertyPath: levelCatalog.Array.data[14].data.exits.Array.data[1].nameExitsTo
       value: Cave Main
+      objectReference: {fileID: 0}
+    - target: {fileID: 314804384, guid: 15073aaf41ea46941ae10075a271212a, type: 3}
+      propertyPath: levelCatalog.Array.data[15].data.exits.Array.data[0].nameExitsTo
+      value: End Corridor
       objectReference: {fileID: 0}
     - target: {fileID: 1399521651164407776, guid: 15073aaf41ea46941ae10075a271212a, type: 3}
       propertyPath: m_Name

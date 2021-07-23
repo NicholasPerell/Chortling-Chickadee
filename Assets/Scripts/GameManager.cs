@@ -109,6 +109,6 @@ public class GameManager : MonoBehaviour
         blackScreen.enabled = true;
         blackScreen.DOFade(1, timeToFadeToGameOver);
         yield return new WaitForSeconds(timeToFadeToGameOver);
-        SceneManager.LoadScene("i-credits");
+        SceneManager.LoadScene(6);
     }
 }

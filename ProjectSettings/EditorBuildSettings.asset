@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/i-credits.unity
     guid: 6e6de3c31753e7441ac196080478c65a
+  - enabled: 1
+    path: Assets/Scenes/j-win-screen.unity
+    guid: 0bf1187e99bea4a46814c21cad0ac23f
   m_configObjects: {}

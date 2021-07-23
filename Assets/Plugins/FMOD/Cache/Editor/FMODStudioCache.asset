@@ -43,6 +43,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-9092055188963166522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Flute On
+  m_EditorClassIdentifier: 
+  Name: Flute On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1116088094
+    data2: 864819933
+  Exists: 0
 --- !u!114 &-9041651214250480448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -803,6 +823,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 6910
+--- !u!114 &-6956874223329254150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Harp_Marimba On
+  m_EditorClassIdentifier: 
+  Name: Harp_Marimba On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 481115605
+    data2: 2397692540
+  Exists: 0
 --- !u!114 &-6868228015808968796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -966,6 +1006,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-6356985436243731670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cello On
+  m_EditorClassIdentifier: 
+  Name: Cello On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 632034973
+    data2: 998988446
+  Exists: 0
 --- !u!114 &-6350168876946389402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1304,6 +1364,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2229
+--- !u!114 &-5636131419366408687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Piano On
+  m_EditorClassIdentifier: 
+  Name: Piano On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 559263456
+    data2: 3461664955
+  Exists: 0
 --- !u!114 &-5587395125941197466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1343,6 +1423,26 @@ MonoBehaviour:
   ID:
     data1: 481115605
     data2: 2397692540
+  Exists: 0
+--- !u!114 &-5556439599272976408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bass On
+  m_EditorClassIdentifier: 
+  Name: Bass On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4118134122
+    data2: 3177482939
   Exists: 0
 --- !u!114 &-5496961452077987621
 MonoBehaviour:
@@ -1900,6 +2000,26 @@ MonoBehaviour:
     data1: 1116088094
     data2: 864819933
   Exists: 1
+--- !u!114 &-4091756404496955111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Timpani On
+  m_EditorClassIdentifier: 
+  Name: Timpani On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1953287519
+    data2: 2700635742
+  Exists: 0
 --- !u!114 &-4065589713440407402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2069,6 +2189,26 @@ MonoBehaviour:
   ID:
     data1: 3505674282
     data2: 133142746
+  Exists: 0
+--- !u!114 &-3803328716866326944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Piano On
+  m_EditorClassIdentifier: 
+  Name: Piano On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 559263456
+    data2: 3461664955
   Exists: 0
 --- !u!114 &-3798407150725926768
 MonoBehaviour:
@@ -2453,6 +2593,26 @@ MonoBehaviour:
     data1: 1116088094
     data2: 864819933
   Exists: 1
+--- !u!114 &-2743098015909883140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cymbals On
+  m_EditorClassIdentifier: 
+  Name: Cymbals On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3370311604
+    data2: 3283810040
+  Exists: 0
 --- !u!114 &-2720309645707276849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2635,6 +2795,46 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
+  Exists: 0
+--- !u!114 &-2016136528900312070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Clarinet_Ukulele On
+  m_EditorClassIdentifier: 
+  Name: Clarinet_Ukulele On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3257972220
+    data2: 762808310
+  Exists: 0
+--- !u!114 &-1969181196589266877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Kalimba On
+  m_EditorClassIdentifier: 
+  Name: Kalimba On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2759418039
+    data2: 4164271915
   Exists: 0
 --- !u!114 &-1846802058172801368
 MonoBehaviour:
@@ -3288,6 +3488,26 @@ MonoBehaviour:
     data1: 2478698753
     data2: 3054458189
   Exists: 0
+--- !u!114 &-549281616166273823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MASTER VOLUME
+  m_EditorClassIdentifier: 
+  Name: MASTER VOLUME
+  Min: 0
+  Max: 100
+  Default: 100
+  ID:
+    data1: 3484581378
+    data2: 1074911248
+  Exists: 0
 --- !u!114 &-548500495919041214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3363,11 +3583,11 @@ MonoBehaviour:
   Path: High Tide FMOD Session/FMOD Session_High Tide/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637625657630000000
+  lastModified: 637626490270000000
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 3268
+    Value: 3314
   Exists: 1
 --- !u!114 &-418338598102314592
 MonoBehaviour:
@@ -3468,6 +3688,26 @@ MonoBehaviour:
   ID:
     data1: 4118134122
     data2: 3177482939
+  Exists: 0
+--- !u!114 &-298145959546570824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Celeste On
+  m_EditorClassIdentifier: 
+  Name: Celeste On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3505674282
+    data2: 133142746
   Exists: 0
 --- !u!114 &-221057631791564124
 MonoBehaviour:
@@ -3645,12 +3885,13 @@ MonoBehaviour:
   - {fileID: -221057631791564124}
   - {fileID: 5914281903672984919}
   - {fileID: 3547258374557989799}
+  - {fileID: 2797940211063986616}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2451273955551285054}
   StringsBanks:
   - {fileID: -420316941631394449}
-  stringsBankWriteTime: 637625657630000000
+  stringsBankWriteTime: 637626490270000000
   cacheVersion: 6
 --- !u!114 &34293061294149841
 MonoBehaviour:
@@ -3691,6 +3932,26 @@ MonoBehaviour:
   ID:
     data1: 559263456
     data2: 3461664955
+  Exists: 0
+--- !u!114 &59372297786207468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Flute On
+  m_EditorClassIdentifier: 
+  Name: Flute On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1116088094
+    data2: 864819933
   Exists: 0
 --- !u!114 &127640902738507034
 MonoBehaviour:
@@ -3871,6 +4132,26 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
+  Exists: 0
+--- !u!114 &778604060524446555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Shaker On
+  m_EditorClassIdentifier: 
+  Name: Shaker On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2478698753
+    data2: 3054458189
   Exists: 0
 --- !u!114 &923714437439271552
 MonoBehaviour:
@@ -4200,6 +4481,26 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 3026
+  Exists: 0
+--- !u!114 &1691478428480402102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cello On
+  m_EditorClassIdentifier: 
+  Name: Cello On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 632034973
+    data2: 998988446
   Exists: 0
 --- !u!114 &1744232198694267033
 MonoBehaviour:
@@ -4550,7 +4851,7 @@ MonoBehaviour:
   Path: High Tide FMOD Session/FMOD Session_High Tide/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637625657630000000
+  lastModified: 637626490270000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -4759,6 +5060,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &2797940211063986616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Prologue Music
+  m_EditorClassIdentifier: 
+  Path: event:/Prologue Music
+  guid: 4d3f9e7223b06143ac253b4a29848d56
+  Banks:
+  - {fileID: 2451273955551285054}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 170898
 --- !u!114 &2837426068899544464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4842,6 +5166,26 @@ MonoBehaviour:
     data1: 3257972220
     data2: 762808310
   Exists: 1
+--- !u!114 &3037018479484986365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cymbals On
+  m_EditorClassIdentifier: 
+  Name: Cymbals On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3370311604
+    data2: 3283810040
+  Exists: 0
 --- !u!114 &3072986749417896162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5272,6 +5616,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 6687
+--- !u!114 &3562425224727942041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Kalimba On
+  m_EditorClassIdentifier: 
+  Name: Kalimba On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2759418039
+    data2: 4164271915
+  Exists: 0
 --- !u!114 &3562621937352772398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5475,6 +5839,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &4344342950603431465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Shaker On
+  m_EditorClassIdentifier: 
+  Name: Shaker On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2478698753
+    data2: 3054458189
+  Exists: 0
 --- !u!114 &4387633809284394588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5517,6 +5901,26 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
+  Exists: 0
+--- !u!114 &4422471081628887251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Harp_Marimba On
+  m_EditorClassIdentifier: 
+  Name: Harp_Marimba On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 481115605
+    data2: 2397692540
   Exists: 0
 --- !u!114 &4433016775514343418
 MonoBehaviour:
@@ -5621,6 +6025,26 @@ MonoBehaviour:
     data1: 2759418039
     data2: 4164271915
   Exists: 1
+--- !u!114 &4637786634119850641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bass On
+  m_EditorClassIdentifier: 
+  Name: Bass On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4118134122
+    data2: 3177482939
+  Exists: 0
 --- !u!114 &4911087310512484743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6102,6 +6526,26 @@ MonoBehaviour:
     data1: 4118134122
     data2: 3177482939
   Exists: 0
+--- !u!114 &6081641663343378943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Timpani On
+  m_EditorClassIdentifier: 
+  Name: Timpani On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1953287519
+    data2: 2700635742
+  Exists: 0
 --- !u!114 &6099902512414231407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6251,6 +6695,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1499
+--- !u!114 &6415084385444475599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/High_Strings On
+  m_EditorClassIdentifier: 
+  Name: High_Strings On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 463349131
+    data2: 2794099184
+  Exists: 0
 --- !u!114 &6458040790135829642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6419,6 +6883,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &6888363669578822312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Clarinet_Ukulele On
+  m_EditorClassIdentifier: 
+  Name: Clarinet_Ukulele On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3257972220
+    data2: 762808310
+  Exists: 0
 --- !u!114 &6922965879334355647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6442,6 +6926,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 6687
+--- !u!114 &6944756067160436483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Celeste On
+  m_EditorClassIdentifier: 
+  Name: Celeste On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3505674282
+    data2: 133142746
+  Exists: 0
 --- !u!114 &6973065863837007315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6501,6 +7005,26 @@ MonoBehaviour:
   ID:
     data1: 2478698753
     data2: 3054458189
+  Exists: 0
+--- !u!114 &7156701319471442785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/High_Strings On
+  m_EditorClassIdentifier: 
+  Name: High_Strings On
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 463349131
+    data2: 2794099184
   Exists: 0
 --- !u!114 &7209246498226093522
 MonoBehaviour:
@@ -6784,6 +7308,26 @@ MonoBehaviour:
   ID:
     data1: 2759418039
     data2: 4164271915
+  Exists: 0
+--- !u!114 &7845212460212564624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MASTER VOLUME
+  m_EditorClassIdentifier: 
+  Name: MASTER VOLUME
+  Min: 0
+  Max: 100
+  Default: 100
+  ID:
+    data1: 3484581378
+    data2: 1074911248
   Exists: 0
 --- !u!114 &7896700538131795533
 MonoBehaviour:

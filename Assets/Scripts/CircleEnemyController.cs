@@ -133,7 +133,7 @@ public class CircleEnemyController : MonoBehaviour
     {
         anim.SetTrigger("Hurt");
         hp -= damageTaken;
-        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Enemy/crabsfx/ranged crab/ranged crab hurt");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/Enemy/crabsfx/melee crab/crab death");
     }
 
     public void healDamage(float damageHealed)

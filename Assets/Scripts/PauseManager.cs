@@ -28,7 +28,7 @@ public class PauseManager : MonoBehaviour
         controls.Player.Pause.Disable();
     }
 
-    void ManageEsc()
+    public void ManageEsc()
     {
         switch(GameManager.mode)
         {

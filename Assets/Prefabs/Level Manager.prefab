@@ -274,6 +274,10 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 4287245311
       tile: {fileID: 11400000, guid: f0ad4566d295f1b4eb8ba5560bc4327d, type: 2}
+    - color:
+        serializedVersion: 2
+        rgba: 4287245567
+      tile: {fileID: 11400000, guid: b4e9365ec50aedb438a142cb0d6da49a, type: 2}
     prefab:
     - {fileID: 0}
     - {fileID: 6612540415799428813, guid: 3c3abb5a8d91a0b41a75e176f07f73f3, type: 3}
@@ -331,6 +335,7 @@ MonoBehaviour:
     - {fileID: 1206229007995246286, guid: 131394ea911795849a34cc6fa99ad967, type: 3}
     - {fileID: 4176359950795653385, guid: 55fc4a0e8a4642b4b9778d90985a2abc, type: 3}
     - {fileID: 5261594713238917284, guid: e6f7528ef96b0104d81cb7b07aa935bc, type: 3}
+    - {fileID: 7050691431207083739, guid: 1d4365f6d1f93c4469c29f9b6b2a4b83, type: 3}
   artMapDictionary:
   - color:
       serializedVersion: 2

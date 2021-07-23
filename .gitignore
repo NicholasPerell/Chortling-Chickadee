@@ -60,3 +60,7 @@ crashlytics-build.properties
 
 .DS_Store
 .DS_Store
+
+fmod_editor.log
+UserSettings/EditorUserSettings.asset
+UserSettings/EditorUserSettings.asset

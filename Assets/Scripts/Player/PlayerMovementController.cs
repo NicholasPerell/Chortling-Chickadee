@@ -38,12 +38,14 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] public LayerMask dropLayer;
     [SerializeField] LayerMask waterLayer;
     bool onLand = true;
-    bool onGround = false;
+    [HideInInspector]
+    public bool onGround = false;
     bool walledLeft = false;
     bool walledRight = false;
 
     PlayerControls controls;
-    Rigidbody2D rb;
+    [HideInInspector]
+    public Rigidbody2D rb;
     [HideInInspector]
     public Vector2 inputDir;
     Vector2 effectiveDir;
